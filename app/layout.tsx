@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Nav from "./components/Nav";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +16,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="m-[2rem] rounded-lg border border-[#1E2D3D] bg-[#011627]">
-          {children}
+        <div>
+          <header className="m-[2rem] rounded-lg border border-[#1E2D3D] bg-[#011627]">
+            {" "}
+            <Nav />
+          </header>
+          <div>{children}</div>
         </div>
       </body>
     </html>
