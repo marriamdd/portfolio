@@ -21,7 +21,7 @@ const NavBar: React.FC = () => {
   return (
     <div className="navbar h-[55px]  ">
       <div className="logo">
-        <h2 className="pr-[14rem]">Mariam Davitashvili</h2>
+        <h2 className="sm:pr-[14rem] pr-[0px]">Mariam Davitashvili</h2>
       </div>
       <div className="menu text-greyText">
         <Menu style={{}} className="bg-[#011627]" mode="horizontal">
@@ -92,13 +92,21 @@ const NavBar: React.FC = () => {
         >
           <Menu mode="vertical">
             <Menu.Item className="border-t-[1px] border-[#1E2D3D]" key="home">
-              <Link style={{ color: "#fff" }} href="/">
+              <Link
+                onClick={() => setVisible(false)}
+                style={{ color: "#fff" }}
+                href="/"
+              >
                 {" "}
                 _hello
               </Link>
             </Menu.Item>
             <Menu.Item className="border-t-[1px] border-[#1E2D3D]" key="about">
-              <Link style={{ color: "#fff" }} href="/about">
+              <Link
+                onClick={() => setVisible(false)}
+                style={{ color: "#fff" }}
+                href="/about"
+              >
                 _About-me
               </Link>
             </Menu.Item>
@@ -106,7 +114,11 @@ const NavBar: React.FC = () => {
               className="border-t-[1px] border-[#1E2D3D]"
               key="projects"
             >
-              <Link style={{ color: "#fff" }} href="/projects">
+              <Link
+                onClick={() => setVisible(false)}
+                style={{ color: "#fff" }}
+                href="/projects"
+              >
                 _projects
               </Link>
             </Menu.Item>
@@ -114,7 +126,11 @@ const NavBar: React.FC = () => {
               className="border-t-[1px] border-[#1E2D3D]"
               key="contact"
             >
-              <Link style={{ color: "#fff" }} href="/contact">
+              <Link
+                onClick={() => setVisible(false)}
+                style={{ color: "#fff" }}
+                href="/contact"
+              >
                 _contact-me
               </Link>
             </Menu.Item>

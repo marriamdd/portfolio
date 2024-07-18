@@ -12,6 +12,10 @@ const config: Config = {
       greyText: "#607B96",
       whiteText: "#FFF",
     },
+    backgroundImage: {
+      bgDesktop: "url('/bg-main-desktop.png')",
+      bgMobile: "url('/bg-main-mobile.png')",
+    },
   },
   plugins: [],
 };

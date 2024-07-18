@@ -13,6 +13,7 @@ html {
 body {
   font-family: "Fira Code", monospace;
   background-color: #010c15;
+
   color: #fff;
 }
 button {
@@ -82,8 +83,8 @@ header {
 }
 .content {
   width: 92vw !important;
-  padding-inline: 2rem;
-  padding-block: 3rem;
+  /* padding-inline: 2rem;
+  padding-block: 3rem; */
   position: fixed;
   left: 50% !important;
   transform: translateX(-50%) !important;
@@ -99,11 +100,21 @@ h2 {
   font-weight: 450;
   line-height: normal;
 }
-/* styles/globals.css or styles.css */
+
 .ant-drawer-header .ant-drawer-title {
   color: #607b96 !important;
   font-family: "Fira Code", monospace !important;
   font-size: 16px !important;
   font-style: normal !important;
   font-weight: 450 !important;
+}
+
+.mainPage {
+  background-image: url("/bg-main-desktop.png") !important;
+  background-color: transparent !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  width: 100% !important;
+  height: 100vh;
 }
