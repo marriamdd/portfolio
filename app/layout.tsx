@@ -15,13 +15,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="flex">
         <div>
           <header className="m-[2rem] rounded-lg border border-[#1E2D3D] bg-[#011627]">
             {" "}
             <Nav />
           </header>
-          <div>{children}</div>
+          <div className="content mt-[7rem] mx-[6.1rem]  border border-[#1E2D3D] bg-[#011627]">
+            {children}
+          </div>
         </div>
       </body>
     </html>

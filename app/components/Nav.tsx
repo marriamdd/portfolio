@@ -1,11 +1,12 @@
 // components/NavBar.tsx
 "use client"; // Add this directive
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, Drawer, Button } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import Link from "next/link";
-
+import CloseIcon from "../../assets/Vector.svg";
+import Image from "next/image";
 const NavBar: React.FC = () => {
   const [visible, setVisible] = useState(false);
 
@@ -18,21 +19,19 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <div className="navbar h-[55px] ">
+    <div className="navbar h-[55px]  ">
       <div className="logo">
-        <h2 style={{ color: " #607B96" }} className="pr-[14rem]">
-          Mariam Davitashvili
-        </h2>
+        <h2 className="pr-[14rem]">Mariam Davitashvili</h2>
       </div>
-      <div className="menu  text-greyText">
-        <Menu style={{}} className="bg-[#011627]  " mode="horizontal">
+      <div className="menu text-greyText">
+        <Menu style={{}} className="bg-[#011627]" mode="horizontal">
           <Menu.Item
-            className="border-l-[1px] border-r-[1px] border-[#1E2D3D]"
+            className=" border-l-[1px] border-r-[1px] border-[#1E2D3D]"
             key="/"
           >
             <Link
-              style={{ color: " #607B96" }}
-              className=" text-greyText"
+              style={{ color: "#607B96" }}
+              className="text-greyText"
               href="/"
             >
               _hello
@@ -43,27 +42,24 @@ const NavBar: React.FC = () => {
             key="about"
           >
             <Link
-              style={{ color: " #607B96" }}
-              className=" text-greyText"
+              style={{ color: "#607B96" }}
+              className="text-greyText"
               href="/about"
             >
               _about-me
             </Link>
           </Menu.Item>
-          <Menu.Item
-            className=" border-r-[1px] border-[#1E2D3D]"
-            key="services"
-          >
-            <Link style={{ color: " #607B96" }} href="/projects">
+          <Menu.Item className="border-r-[1px] border-[#1E2D3D]" key="services">
+            <Link style={{ color: "#607B96" }} href="/projects">
               _projects
             </Link>
           </Menu.Item>
           <Menu.Item
             style={{ marginLeft: "auto" }}
-            className=" border-l-[1px] border-[#1E2D3D]"
+            className="border-l-[1px] border-[#1E2D3D]"
             key="contact"
           >
-            <Link style={{ color: " #607B96" }} href="/contact">
+            <Link style={{ color: "#607B96" }} href="/contact">
               Contact
             </Link>
           </Menu.Item>
@@ -78,28 +74,53 @@ const NavBar: React.FC = () => {
         <MenuOutlined />
       </Button>
 
-      <Drawer
-        title="Menu"
-        placement="right"
-        closable={false}
-        onClose={onClose}
-        visible={visible}
-      >
-        <Menu mode="vertical">
-          <Menu.Item key="home">
-            <Link href="/">Home</Link>
-          </Menu.Item>
-          <Menu.Item key="about">
-            <Link href="/about">About</Link>
-          </Menu.Item>
-          <Menu.Item key="services">
-            <Link href="/services">Services</Link>
-          </Menu.Item>
-          <Menu.Item key="contact">
-            <Link href="/contact">Contact</Link>
-          </Menu.Item>
-        </Menu>
-      </Drawer>
+      {visible && (
+        <Drawer
+          title="Mariam Davitashvili"
+          placement="right"
+          onClose={onClose}
+          open={visible}
+          closeIcon={
+            <Image
+              src={CloseIcon}
+              alt="Close"
+              width={24}
+              height={24}
+              style={{ cursor: "pointer" }}
+            />
+          }
+        >
+          <Menu mode="vertical">
+            <Menu.Item className="border-t-[1px] border-[#1E2D3D]" key="home">
+              <Link style={{ color: "#fff" }} href="/">
+                {" "}
+                _hello
+              </Link>
+            </Menu.Item>
+            <Menu.Item className="border-t-[1px] border-[#1E2D3D]" key="about">
+              <Link style={{ color: "#fff" }} href="/about">
+                _About-me
+              </Link>
+            </Menu.Item>
+            <Menu.Item
+              className="border-t-[1px] border-[#1E2D3D]"
+              key="projects"
+            >
+              <Link style={{ color: "#fff" }} href="/projects">
+                _projects
+              </Link>
+            </Menu.Item>
+            <Menu.Item
+              className="border-t-[1px] border-[#1E2D3D]"
+              key="contact"
+            >
+              <Link style={{ color: "#fff" }} href="/contact">
+                _contact-me
+              </Link>
+            </Menu.Item>
+          </Menu>
+        </Drawer>
+      )}
       <style jsx>{`
         .navbar {
           display: flex;
@@ -120,7 +141,7 @@ const NavBar: React.FC = () => {
         .menu-button {
           display: none;
         }
-        @media (min-width: 768px) {
+        @media (min-width: 1280px) {
           .menu {
             display: block;
           }

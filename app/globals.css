@@ -15,3 +15,95 @@ body {
   background-color: #010c15;
   color: #fff;
 }
+button {
+  cursor: pointer;
+}
+a {
+  cursor: pointer !important;
+}
+:where(.css-dev-only-do-not-override-p8b6i).ant-drawer-right
+  > .ant-drawer-content-wrapper {
+  width: 92vw !important;
+  height: calc(-58px + 95.8vh);
+  top: 2rem;
+
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+.ant-drawer-content {
+  background-color: rgb(1, 22, 39) !important;
+}
+.ant-menu {
+  background-color: rgb(1, 22, 39) !important;
+}
+.ant-drawer-header {
+  all: unset !important;
+  padding-top: 3rem !important;
+  padding-inline: 3rem !important;
+
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.ant-drawer-title {
+  all: unset !important;
+
+  color: #607b96 !important;
+}
+
+.ant-drawer-header-title {
+  all: unset !important;
+  width: 100% !important;
+  display: flex !important;
+}
+.anticon {
+  all: unset !important;
+}
+.ant-drawer-close {
+  margin-left: auto !important;
+  order: 2 !important;
+}
+.ant-drawer-content-wrapper {
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+.ant-drawer-mask {
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+header {
+  width: 92vw !important;
+  position: fixed;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  margin: 0px !important;
+  margin-top: 2rem !important;
+}
+.content {
+  width: 92vw !important;
+  padding-inline: 2rem;
+  padding-block: 3rem;
+  position: fixed;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  margin: 0px !important;
+  margin-top: 7.6rem !important;
+  border-radius: 0px 0px 8px 8px;
+}
+h2 {
+  color: #607b96;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+}
+/* styles/globals.css or styles.css */
+.ant-drawer-header .ant-drawer-title {
+  color: #607b96 !important;
+  font-family: "Fira Code", monospace !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 450 !important;
+}
