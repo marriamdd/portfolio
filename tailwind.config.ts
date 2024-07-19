@@ -16,6 +16,9 @@ const config: Config = {
       bgDesktop: "url('/bg-main-desktop.png')",
       bgMobile: "url('/bg-main-mobile.png')",
     },
+    animation: {
+      fadeIn: "fadeIn 1s ease-out",
+    },
   },
   plugins: [],
 };

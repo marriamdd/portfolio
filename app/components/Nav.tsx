@@ -1,5 +1,4 @@
-// components/NavBar.tsx
-"use client"; // Add this directive
+"use client";
 
 import React, { useEffect, useState } from "react";
 import { Menu, Drawer, Button } from "antd";
@@ -90,51 +89,56 @@ const NavBar: React.FC = () => {
             />
           }
         >
-          <Menu mode="vertical">
-            <Menu.Item className="border-t-[1px] border-[#1E2D3D]" key="home">
-              <Link
-                onClick={() => setVisible(false)}
-                style={{ color: "#fff" }}
-                href="/"
+          <div className="menuDiv animate-fadeIn">
+            <Menu mode="vertical">
+              <Menu.Item className="border-t-[1px] border-[#1E2D3D]" key="home">
+                <Link
+                  onClick={() => setVisible(false)}
+                  style={{ color: "#fff" }}
+                  href="/"
+                >
+                  {" "}
+                  _hello
+                </Link>
+              </Menu.Item>
+              <Menu.Item
+                className="border-t-[1px] border-[#1E2D3D]"
+                key="about"
               >
-                {" "}
-                _hello
-              </Link>
-            </Menu.Item>
-            <Menu.Item className="border-t-[1px] border-[#1E2D3D]" key="about">
-              <Link
-                onClick={() => setVisible(false)}
-                style={{ color: "#fff" }}
-                href="/about"
+                <Link
+                  onClick={() => setVisible(false)}
+                  style={{ color: "#fff" }}
+                  href="/about"
+                >
+                  _About-me
+                </Link>
+              </Menu.Item>
+              <Menu.Item
+                className="border-t-[1px] border-[#1E2D3D]"
+                key="projects"
               >
-                _About-me
-              </Link>
-            </Menu.Item>
-            <Menu.Item
-              className="border-t-[1px] border-[#1E2D3D]"
-              key="projects"
-            >
-              <Link
-                onClick={() => setVisible(false)}
-                style={{ color: "#fff" }}
-                href="/projects"
+                <Link
+                  onClick={() => setVisible(false)}
+                  style={{ color: "#fff" }}
+                  href="/projects"
+                >
+                  _projects
+                </Link>
+              </Menu.Item>
+              <Menu.Item
+                className="border-t-[1px] border-[#1E2D3D]"
+                key="contact"
               >
-                _projects
-              </Link>
-            </Menu.Item>
-            <Menu.Item
-              className="border-t-[1px] border-[#1E2D3D]"
-              key="contact"
-            >
-              <Link
-                onClick={() => setVisible(false)}
-                style={{ color: "#fff" }}
-                href="/contact"
-              >
-                _contact-me
-              </Link>
-            </Menu.Item>
-          </Menu>
+                <Link
+                  onClick={() => setVisible(false)}
+                  style={{ color: "#fff" }}
+                  href="/contact"
+                >
+                  _contact-me
+                </Link>
+              </Menu.Item>
+            </Menu>
+          </div>
         </Drawer>
       )}
       <style jsx>{`

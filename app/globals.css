@@ -81,10 +81,17 @@ header {
   margin: 0px !important;
   margin-top: 2rem !important;
 }
+footer {
+  width: 92vw !important;
+  position: fixed;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  margin: 0px !important;
+  margin-top: 2rem !important;
+}
 .content {
   width: 92vw !important;
-  /* padding-inline: 2rem;
-  padding-block: 3rem; */
+
   position: fixed;
   left: 50% !important;
   transform: translateX(-50%) !important;
@@ -110,11 +117,37 @@ h2 {
 }
 
 .mainPage {
-  background-image: url("/bg-main-desktop.png") !important;
-  background-color: transparent !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
+  background-image: url("/code-snippet.png") !important;
+  background-size: contain !important;
+  transition: all 0.5s ease;
   width: 100% !important;
-  height: 100vh;
+  height: 85vh;
+  @media screen and (min-width: 1280px) {
+    background-image: url("/bg-main-desktop.png") !important;
+    background-color: transparent !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+  }
+}
+
+.menuDiv {
+  .ant-menu-item {
+    padding-block: 3rem;
+    height: 100px !important;
+  }
+}
+.ant-drawer-content {
+  height: 92vh !important ;
+  border-radius: 8px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

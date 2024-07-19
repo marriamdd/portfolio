@@ -23,7 +23,7 @@ export default function RootLayout({
             {" "}
             <Nav />
           </header>
-          <div className="content  mt-[7rem] mx-[6.1rem] rounded-lg border border-[#1E2D3D] bg-[#011627]">
+          <div className="content h-[85vh]  mt-[7rem] mx-[6.1rem] rounded-lg border border-[#1E2D3D] bg-[#011627]">
             {children}
           </div>
           <div>
