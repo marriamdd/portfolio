@@ -6,6 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Fira Code", monospace;
 }
 html {
   font-size: 62.5%;
@@ -150,4 +151,41 @@ h2 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.ant-layout {
+  background-color: rgb(1, 22, 39) !important;
+  span {
+    color: white !important;
+  }
+}
+.MuiBox-root {
+  background-color: rgb(1, 22, 39) !important;
+}
+.MuiBox-root {
+  display: flex !important;
+  /* flex-direction: column !important; */
+  width: 200px !important;
+}
+.css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root {
+  background: #1e2d3d;
+  width: 300px;
+  height: 31px;
+  flex-shrink: 0;
+}
+.css-1p823my-MuiListItem-root {
+  width: 343px;
+  padding: 0;
+  font-family: "Fira Code", monospace;
+}
+.css-10hburv-MuiTypography-root {
+  font-family: "Fira Code", monospace;
+}
+.css-ix1f03-MuiTypography-root {
+  p {
+    width: 100% !important;
+  }
+}
+
+.MuiBox-root {
+  width: 100% !important;
 }

@@ -1,5 +1,10 @@
 import React from "react";
+import RouterBreadcrumbs from "../components/RouterBreadcrumbs";
 
-export default function About() {
-  return <div>about</div>;
+export default function page() {
+  return (
+    <div>
+      <RouterBreadcrumbs />
+    </div>
+  );
 }
