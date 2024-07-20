@@ -87,7 +87,9 @@ export default function RouterBreadcrumbs() {
   return (
     <>
       <div className="pt-[2rem] animate-fadeIn">
-        <h2 className="text-[1.4rem] font-[450] pl-[2rem] ">_about-me</h2>
+        <h2 className="text-[1.4rem] text-[#fff] leading-140 font-[450] pl-[2rem] ">
+          _about-me
+        </h2>
       </div>
       <Box sx={{ display: "flex", flexDirection: "column", width: 360 }}>
         <Box

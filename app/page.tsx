@@ -1,9 +1,14 @@
 import Image from "next/image";
-import bgMobile from "../assets/bg-main-desktop.png";
-import { url } from "inspector";
+
 import Link from "next/link";
+
 import code from "/Users/mariamidavitashvili/portfolio/public/code-snippet-no-opacity (1).svg";
 import codeOp from "/Users/mariamidavitashvili/portfolio/public/code-snippet.png";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Hello",
+  description: "Learn more about me",
+};
 export default function Home() {
   return (
     <div className="mainPage  xl:flex animate-fadeIn justify-center">

@@ -89,7 +89,7 @@ const NavBar: React.FC = () => {
             />
           }
         >
-          <div className="menuDiv animate-fadeIn">
+          <div className="menuDiv ">
             <Menu mode="vertical">
               <Menu.Item className="border-t-[1px] border-[#1E2D3D]" key="home">
                 <Link
