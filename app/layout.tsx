@@ -19,7 +19,8 @@ export default function RootLayout({
           </header>
           <div
             className="content
-           h-[85vh]
+        
+        
             overflow-y-scroll pb-[5rem] mt-[7rem] mx-[6.1rem] rounded-lg border border-[#1E2D3D] bg-[#011627]"
           >
             {children}

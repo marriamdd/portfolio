@@ -14,8 +14,8 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import CloseIcon from "@mui/icons-material/Close";
 import Image from "next/image";
-import fileIcon1 from "/public/Vector (5).svg";
-import fileIcon2 from "/public/Vector (4).svg";
+import fileIcon1 from "/public/shared/Vector (5).svg";
+import fileIcon2 from "/public/shared/Vector (4).svg";
 import DownloadBtn from "./DownloadBtn";
 import SkillsIcons from "./SkillsIcons";
 
@@ -65,8 +65,8 @@ export default function RouterBreadcrumbs() {
   console.log(selectedOptions);
 
   return (
-    <div className="xl:flex ">
-      <div className="xl:h-[100vh] xl:w-[400px] border-r-[1px] border-[#1E2D3D] xl:bg ">
+    <div className="xl:flex xl:h-[80vh] ">
+      <div className="xl:h-[80vh] xl:w-[400px] xl:border-r-[1px] xl:border-[#1E2D3D]  ">
         <div className="pt-[2rem] animate-fadeIn xl:w-[400px]">
           <h2 className="about-me text-[1.4rem] text-[#fff] leading-140 font-[450] pl-[2rem] ">
             _about-me
@@ -181,7 +181,8 @@ export default function RouterBreadcrumbs() {
             variant="body1"
             sx={{ mt: 2 }}
           >
-            <span className="text-[1.6rem] font-[450]">{"// Info  "}</span>
+            <span className="text-[1.6rem] font-[450]">{"// Info "}</span>
+
             <span className="text-greyText font-[450] text-[1.6rem]">
               {"/ " + selectedOptions.join(", ")}
             </span>
@@ -194,7 +195,7 @@ export default function RouterBreadcrumbs() {
             <div
               key={option}
               onClick={() => setSelectedOptions([option])}
-              className="flex border-r-[1px] border-[#1E2D3D] items-center bg-gray-200 p-2 m-2 rounded"
+              className="flex border-r-[1px] animate-fadeIn border-[#1E2D3D] items-center bg-gray-200 p-2 m-2 rounded"
             >
               <Typography className="text-[greyText]" sx={{ mr: 1 }}>
                 {option}
@@ -212,11 +213,17 @@ export default function RouterBreadcrumbs() {
         </div>
         <div className="flex">
           {" "}
-          <div className="border-r-[1px] border-[#1E2D3D] xl:w-[500px]  xl:min-h-[100vh]">
-            <Typography className="pl-[2rem] " variant="body1" sx={{ mt: 2 }}>
-              <span className="text-[1.6rem] font-[450]">{"// Info  "}</span>
+          <div className="xl:border-r-[1px] animate-fadeIn xl:border-[#1E2D3D] xl:w-[500px]  xl:min-h-[74vh]">
+            <Typography
+              className="pl-[2rem] hidden xl:flex "
+              variant="body1"
+              sx={{ mt: 2 }}
+            >
+              <span className="text-[1.6rem] font-[450]">
+                {"// Info "}&nbsp;
+              </span>
               <span className="text-greyText font-[450] text-[1.6rem]">
-                {"/ " + selectedOptions.join(", ")}
+                {" / " + selectedOptions.join(", ")}
               </span>
             </Typography>
             {selectedOptions.includes("Personal") && (
@@ -264,7 +271,7 @@ export default function RouterBreadcrumbs() {
               </div>
             )}
           </div>
-          <div className="skills">
+          <div className="skills  animate-fadeIn">
             <p>Skills</p>
             <SkillsIcons />
             <a download href="/Doc/CV Mariam Davitashvili .pdf">

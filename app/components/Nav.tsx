@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Menu, Drawer, Button } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import Link from "next/link";
-import CloseIcon from "../../assets/Vector.svg";
+import CloseIcon from "/public/shared/vercel.svg";
 import Image from "next/image";
 const NavBar: React.FC = () => {
   const [visible, setVisible] = useState(false);

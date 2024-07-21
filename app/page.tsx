@@ -2,8 +2,8 @@ import Image from "next/image";
 
 import Link from "next/link";
 
-import code from "/Users/mariamidavitashvili/portfolio/public/code-snippet-no-opacity (1).svg";
-import codeOp from "/Users/mariamidavitashvili/portfolio/public/code-snippet.png";
+import code from "/public/shared/code-snippet-no-opacity (1).svg";
+import codeOp from "/public/shared/code-snippet.png";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Hello",

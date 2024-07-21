@@ -102,7 +102,7 @@ footer {
   margin-top: 7.6rem;
   border-radius: 0 0 8px 8px;
   background-image: url("/code-snippet.png");
-
+  height: 85vh;
   @media screen and (min-width: 1280px) {
     background-image: none;
   }
@@ -185,22 +185,13 @@ h2 {
   flex-shrink: 0;
 }
 .css-1p823my-MuiListItem-root {
-  /* width: 343px; */
-  min-width: 91.5vw !important;
-  padding: 0;
-  font-family: "Fira Code", monospace;
-  @media screen and (min-width: 1280px) {
-    min-width: 400px !important;
-  }
 }
 .about-me {
   @media screen and (min-width: 1280px) {
     width: 400px !important;
   }
 }
-.css-10hburv-MuiTypography-root {
-  font-family: "Fira Code", monospace;
-}
+
 .css-ix1f03-MuiTypography-root {
   p {
     width: 100% !important;
@@ -210,16 +201,16 @@ h2 {
 .MuiBox-root {
   width: 100% !important;
 }
-.css-10hburv-MuiTypography-root {
-  font-size: 14px;
-}
+
 .grey {
   color: rgb(96, 123, 150);
 }
 .MuiList-root {
   display: flex !important;
   flex-direction: column !important;
-  gap: 0.7rem !important;
+  li {
+    padding: 0 !important;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -257,6 +248,12 @@ h2 {
   }
 }
 .css-1p823my-MuiListItem-root {
+  min-width: 91.5vw !important;
+  padding: 0;
+  font-family: "Fira Code", monospace;
+  @media screen and (min-width: 1280px) {
+    min-width: 400px !important;
+  }
   @media screen and (min-width: 1280px) {
     width: 300px !important;
   }
@@ -275,6 +272,14 @@ h2 {
   line-height: normal;
   margin-right: 2rem;
 }
+
+.css-10hburv-MuiTypography-root {
+  font-size: 16px !important;
+
+  font-style: normal !important;
+  font-weight: 300 !important;
+  line-height: normal !important;
+}
 .css-i4bv87-MuiSvgIcon-root {
   color: #607b96;
   width: 1.2em;
@@ -285,6 +290,10 @@ h2 {
   flex-direction: column;
 
   align-items: center;
+  display: none;
+  @media screen and (min-width: 1280px) {
+    display: flex;
+  }
   p {
     font-size: 3.4rem;
     color: rgb(77, 91, 206);
@@ -293,4 +302,9 @@ h2 {
     text-align: center;
     margin-top: 2rem;
   }
+}
+.css-1fbouff-MuiTypography-root {
+  font-size: 16px !important;
+  line-height: 200% !important;
+  font-weight: 700 !important;
 }

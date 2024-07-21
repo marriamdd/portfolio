@@ -5,9 +5,9 @@ import { Button, Menu } from "antd";
 import Link from "next/link";
 import Image from "next/image";
 import { MenuOutlined } from "@ant-design/icons";
-import linkedin from "/public/linkedin.svg";
-import facebook from "/public/facebook.svg";
-import github from "/public/github.svg";
+import linkedin from "/public/shared/linkedin.svg";
+import facebook from "/public/shared/facebook.svg";
+import github from "/public/shared/github.svg";
 function Footer() {
   return (
     <footer
