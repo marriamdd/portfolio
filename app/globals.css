@@ -8,6 +8,7 @@
   padding: 0;
   font-family: "Fira Code", monospace;
 }
+
 html {
   font-size: 62.5%;
 }
@@ -93,15 +94,18 @@ footer {
   margin-top: 2rem !important;
 }
 .content {
-  width: 92vw !important;
-
+  width: 92vw;
   position: fixed;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  margin: 0px !important;
-  margin-top: 7.6rem !important;
-  border-radius: 0px 0px 8px 8px;
-  background-image: url("/code-snippet.png") !important;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  margin-top: 7.6rem;
+  border-radius: 0 0 8px 8px;
+  background-image: url("/code-snippet.png");
+
+  @media screen and (min-width: 1280px) {
+    background-image: none;
+  }
 }
 h2 {
   color: #607b96;
@@ -185,6 +189,14 @@ h2 {
   min-width: 91.5vw !important;
   padding: 0;
   font-family: "Fira Code", monospace;
+  @media screen and (min-width: 1280px) {
+    min-width: 400px !important;
+  }
+}
+.about-me {
+  @media screen and (min-width: 1280px) {
+    width: 400px !important;
+  }
 }
 .css-10hburv-MuiTypography-root {
   font-family: "Fira Code", monospace;
@@ -228,4 +240,53 @@ h2 {
 }
 .css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root {
   background-color: rgb(0, 30, 54) !important;
+}
+.css-h4y409-MuiList-root {
+  @media screen and (min-width: 1280px) {
+    width: 300px !important;
+  }
+}
+.MuiBox-root {
+  @media screen and (min-width: 1280px) {
+    width: 300px !important;
+  }
+  li {
+    @media screen and (min-width: 1280px) {
+      width: 300px !important;
+    }
+  }
+}
+.css-1p823my-MuiListItem-root {
+  @media screen and (min-width: 1280px) {
+    width: 300px !important;
+  }
+}
+.css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root {
+  @media screen and (min-width: 1280px) {
+    width: 300px !important;
+  }
+}
+.css-1fbouff-MuiTypography-root {
+  color: #607b96;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+  margin-right: 2rem;
+}
+.css-i4bv87-MuiSvgIcon-root {
+  color: #607b96;
+  width: 1.2em;
+}
+.skills {
+  width: 100% !important;
+  p {
+    font-size: 3.4rem;
+    color: rgb(77, 91, 206);
+    font-weight: 700;
+    line-height: 200%;
+    text-align: center;
+    margin-top: 2rem;
+  }
 }
