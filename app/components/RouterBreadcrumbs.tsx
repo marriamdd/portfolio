@@ -61,6 +61,7 @@ export default function RouterBreadcrumbs() {
     });
   };
   console.log(selectedOptions);
+
   return (
     <div className="xl:flex ">
       <div className="xl:h-[100vh] xl:w-[400px] border-r-[1px] border-[#1E2D3D] xl:bg ">
@@ -263,6 +264,9 @@ export default function RouterBreadcrumbs() {
           </div>
           <div className="skills">
             <p>Skills</p>
+            <a download href="/CV Mariam Davitashvili .pdf">
+              download
+            </a>
           </div>
         </div>
       </div>
