@@ -17,9 +17,10 @@ import Image from "next/image";
 import fileIcon1 from "/public/Vector (5).svg";
 import fileIcon2 from "/public/Vector (4).svg";
 import DownloadBtn from "./DownloadBtn";
+import SkillsIcons from "./SkillsIcons";
 
 export default function RouterBreadcrumbs() {
-  const [open, setOpen] = React.useState<string | null>(null);
+  const [open, setOpen] = React.useState<string | null>("info");
   const [selectedOptions, setSelectedOptions] = React.useState<string[]>([
     "Personal",
   ]);
@@ -265,7 +266,8 @@ export default function RouterBreadcrumbs() {
           </div>
           <div className="skills">
             <p>Skills</p>
-            <a download href="/CV Mariam Davitashvili .pdf">
+            <SkillsIcons />
+            <a download href="/Doc/CV Mariam Davitashvili .pdf">
               <DownloadBtn />
             </a>
           </div>
