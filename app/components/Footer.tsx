@@ -12,11 +12,11 @@ function Footer() {
   return (
     <footer
       style={{ position: "fixed", bottom: "2rem" }}
-      className="m-[2rem]   h-[55px] rounded-lg border border-[#1E2D3D] bg-[#011627]"
+      className="m-[2rem]   h-[5.5rem] rounded-lg border border-[#1E2D3D] bg-[#011627]"
     >
-      <div className="navbar h-[55px]  ">
+      <div className="navbar h-[5.5rem]  ">
         <div className="menu text-greyText">
-          <Menu className="bg-[#011627] h-[55px] " mode="horizontal">
+          <Menu className="bg-[#011627] h-[5.5rem] " mode="horizontal">
             <h2 className="sm:pr-[10rem] text-[#607B96] text-[1.6rem] font-[600] pr-[0px] pl-[2rem] pt-[1.5rem]">
               find me in :
             </h2>
@@ -59,7 +59,7 @@ function Footer() {
                 href="https://github.com/marriamdd"
                 target="_blank"
               >
-                <span className="hidden  xl:inline text-[16px] text-[#607B96] font-[650]">
+                <span className="hidden  xl:inline text-[1.6rem] text-[#607B96] font-[650]">
                   @marriamdd &nbsp;
                 </span>
                 <Image

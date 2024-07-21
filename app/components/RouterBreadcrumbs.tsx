@@ -213,7 +213,7 @@ export default function RouterBreadcrumbs() {
         </div>
         <div className="flex">
           {" "}
-          <div className="xl:border-r-[1px] animate-fadeIn xl:border-[#1E2D3D] xl:w-[500px]  xl:min-h-[74vh]">
+          <div className="xl:border-r-[1px] animate-fadeIn xl:border-[#1E2D3D] xl:w-[50rem]  xl:min-h-[74vh]">
             <Typography
               className="pl-[2rem] hidden xl:flex "
               variant="body1"
@@ -229,7 +229,7 @@ export default function RouterBreadcrumbs() {
             {selectedOptions.includes("Personal") && (
               <div className="px-[2rem]   py-[2rem]">
                 <p
-                  className="text-greyText xl:w-[400px]  
+                  className="text-greyText xl:w-[40rem]  
              animate-fadeIn leading-150 text-[1.6rem] font-[450]"
                   // eslint-disable-next-line react/jsx-no-comment-textnodes
                 >
@@ -251,7 +251,7 @@ export default function RouterBreadcrumbs() {
             {selectedOptions.includes("Professional") && (
               <div className="px-[2rem] py-[2rem]">
                 <p
-                  className="text-greyText xl:w-[400px]
+                  className="text-greyText xl:w-[40rem]
              animate-fadeIn leading-150 text-[1.6rem] font-[450]"
                   // eslint-disable-next-line react/jsx-no-comment-textnodes
                 >

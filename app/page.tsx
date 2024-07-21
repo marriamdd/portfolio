@@ -25,7 +25,7 @@ export default function Home() {
             &gt; Front-end developer
           </span>
         </div>
-        <div className="flex flex-col h-[60px] ">
+        <div className="flex flex-col h-[6rem] ">
           <span className="text-[#607B96]">\\ find my profile on Github:</span>
           <br />
           <Link target="_blank" href={"https://github.com/marriamdd"}>
@@ -38,7 +38,7 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="hidden all-transition animate-fadeIn duration-[1s] ease-out xl:flex flex-col gap-[2rem] xl:ml-[1rem] xl:pt-[8rem] flex-1">
+      <div className="hidden all-transition animate-fadeIn duration-[1s] ease-out xl:flex flex-col gap-[2rem] xl:ml-[-4rem] xl:pt-[8rem] flex-1">
         <Image src={codeOp} alt="" />
         <Image src={code} alt="" />
         <Image src={codeOp} alt="" />
