@@ -16,6 +16,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import Image from "next/image";
 import fileIcon1 from "/public/Vector (5).svg";
 import fileIcon2 from "/public/Vector (4).svg";
+import DownloadBtn from "./DownloadBtn";
 
 export default function RouterBreadcrumbs() {
   const [open, setOpen] = React.useState<string | null>(null);
@@ -265,7 +266,7 @@ export default function RouterBreadcrumbs() {
           <div className="skills">
             <p>Skills</p>
             <a download href="/CV Mariam Davitashvili .pdf">
-              download
+              <DownloadBtn />
             </a>
           </div>
         </div>
