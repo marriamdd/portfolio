@@ -1,11 +1,6 @@
 "use client";
 import React from "react";
-import { Button, Form, Input, InputNumber } from "antd";
-
-const layout = {
-  labelCol: { span: 8 },
-  wrapperCol: { span: 16 },
-};
+import { Button, Form, Input, InputNumber, Layout } from "antd";
 
 /* eslint-disable no-template-curly-in-string */
 const validateMessages = {
@@ -26,36 +21,35 @@ const onFinish = (values: any) => {
 
 const FormComp: React.FC = () => (
   <Form
-    {...layout}
+    className="xl:border-r-[1px]   animate-fadeIn xl:border-[#1E2D3D]"
     name="nest-messages"
     onFinish={onFinish}
-    style={{ maxWidth: 600 }}
     validateMessages={validateMessages}
+    layout="vertical"
   >
     <Form.Item
       name={["user", "name"]}
-      label="Name"
+      label="_name:"
       rules={[{ required: true }]}
     >
       <Input />
     </Form.Item>
     <Form.Item
       name={["user", "email"]}
-      label="Email"
+      label="_email:"
       rules={[{ type: "email" }]}
     >
       <Input />
     </Form.Item>
 
-    <Form.Item name={["user", "introduction"]} label="Introduction">
+    <Form.Item name={["user", "introduction"]} label="_message:">
       <Input.TextArea />
     </Form.Item>
-    <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
-      <Button type="primary" htmlType="submit">
-        Submit
+    <Form.Item>
+      <Button className="bg-[#1C2B3A]" type="primary" htmlType="submit">
+        submit-message
       </Button>
     </Form.Item>
   </Form>
 );
-
 export default FormComp;

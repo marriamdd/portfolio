@@ -41,7 +41,7 @@ export default function RouterBreadcrumbs() {
       setChosenOptions((prevChosen) => [...prevChosen, option]);
     }
   };
-
+  console.log(chosenOptions, "chosenOptions");
   const handleInfoClick = (info: string) => {
     if (!click.includes(info)) {
       setClick((prevClick) => [info]);

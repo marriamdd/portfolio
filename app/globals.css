@@ -179,6 +179,9 @@ h2 {
 }
 
 .about-me {
+  font-size: 18px !important;
+  font-family: "Fira Code", sans-serif;
+  font-weight: 600 !important;
   @media screen and (min-width: 1280px) {
     width: 40rem !important;
   }
@@ -277,13 +280,29 @@ h2 {
   )::before {
   content: "";
 }
+
 form {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column;
+  padding-top: 5rem !important;
+  @media screen and (min-width: 1280px) {
+    padding-inline: 3rem !important;
+    width: 58rem !important;
+  }
+
   label {
+    align-self: start !important;
     color: #607b96 !important;
     font-size: 1.6rem !important;
     font-weight: 450 !important;
+    display: block !important;
+    flex: 1 !important;
+    cursor: pointer !important;
   }
   input {
+    width: 100% !important;
+    height: 41px !important;
     color: #fff !important;
     border-radius: 8px !important;
     border: 1px solid #607b96 !important;
@@ -291,10 +310,24 @@ form {
     box-shadow: 0px 0px 0px 2px rgba(96, 123, 150, 0.3) !important;
   }
   textArea {
+    width: 100% !important;
     color: #fff !important;
     border-radius: 8px !important;
     border: 1px solid #607b96 !important;
     background: #011221 !important;
     box-shadow: 0px 0px 0px 2px rgba(96, 123, 150, 0.3) !important;
   }
+}
+
+.pink {
+  color: #c98bdf;
+}
+.grey {
+  color: #607b96;
+}
+.blue {
+  color: #5565e8;
+}
+.orange {
+  color: #fea55f;
 }

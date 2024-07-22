@@ -59,7 +59,7 @@ const NavBar: React.FC = () => {
             key="contact"
           >
             <Link style={{ color: "#607B96" }} href="/contact">
-              Contact
+              Contacts
             </Link>
           </Menu.Item>
         </Menu>
