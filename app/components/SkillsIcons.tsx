@@ -1,48 +1,23 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Antd from "/public/skills/antd.png";
-import Css from "/public/skills/css-3.png";
-import Git from "/public/skills/git.png";
-import Html from "/public/skills/html.png";
-import Api from "/public/skills/icons8-rest-api-96.png";
-import Next from "/public/skills/next.svg";
-import Js from "/public/skills/js.png";
-import MaterialUI from "/public/skills/png-transparent-material-ui-hd-logo.png";
-import React from "/public/skills/reactLogo.png";
-import Styled from "/public/skills/styled-components.png";
-import Tailwind from "/public/skills/tailwind.png";
-import Type from "/public/skills/typescript.png";
+
 import { useState } from "react";
+import Data from "/Users/mariamidavitashvili/portfolio/data.json";
 
 const SkillsIcons = () => {
-  const icons = [
-    Js,
-    Css,
-    Html,
-    Next,
-    React,
-    Git,
-    Type,
-    Api,
-    Antd,
-    MaterialUI,
-    Styled,
-    Tailwind,
-  ];
-
-  const [rotate, setRotate] = useState(Array(icons.length).fill(false));
+  const [rotate, setRotate] = useState(Array(Data.skills.length).fill(false));
 
   const handleIconClick = (index: number) => {
     setRotate((prevRotate) =>
       prevRotate.map((rot, idx) => (idx === index ? !rot : rot))
     );
   };
-
+  console.log(Data.skills.length);
   return (
     <div className="flex gap-[2rem] flex-col items-center pt-[3rem] pb-[5rem]">
       <div className="grid grid-cols-5 gap-[4rem] p-4">
-        {icons.slice(0, 5).map((icon, index) => (
+        {Data.skills.slice(0, 5).map((icon, index) => (
           <motion.div
             key={index}
             animate={{
@@ -63,7 +38,7 @@ const SkillsIcons = () => {
             <Image
               width={50}
               height={50}
-              src={icon}
+              src={icon.logo}
               alt={`Icon ${index}`}
               style={{ cursor: "pointer" }}
             />
@@ -71,7 +46,7 @@ const SkillsIcons = () => {
         ))}
       </div>
       <div className="grid grid-cols-4 gap-[3rem] p-4 align-middle">
-        {icons.slice(5, 9).map((icon, index) => (
+        {Data.skills.slice(5, 9).map((icon, index) => (
           <motion.div
             key={index}
             animate={{
@@ -92,7 +67,7 @@ const SkillsIcons = () => {
             <Image
               width={50}
               height={50}
-              src={icon}
+              src={icon.logo}
               alt={`Icon ${index}`}
               style={{ cursor: "pointer" }}
             />
@@ -100,7 +75,7 @@ const SkillsIcons = () => {
         ))}
       </div>
       <div className="grid grid-cols-3 gap-[2rem] p-4">
-        {icons.slice(9, 12).map((icon, index) => (
+        {Data.skills.slice(9, 12).map((icon, index) => (
           <motion.div
             key={index}
             animate={{
@@ -121,7 +96,7 @@ const SkillsIcons = () => {
             <Image
               width={50}
               height={50}
-              src={icon}
+              src={icon.logo}
               alt={`Icon ${index}`}
               style={{ cursor: "pointer" }}
             />

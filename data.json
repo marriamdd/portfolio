@@ -1,0 +1,67 @@
+{
+  "position": "Front-End Developer",
+  "personalInfo": "blbl.",
+  "proffesionalInfo": "As a Software developer I am constantly striving to improve my skills and learn new technologies.  I stepped into this big Tech world 2 years ago and I found myself very flexible and adaptive to learning new things. At the moment I am a Co-founder/Lecturer/Mentor at AlgoUni and Full-Stack Developer at Tetrobyte.",
+  "techStacks": [
+    "React",
+    "Javascript",
+    "Typescript",
+    "Next",
+    "Tailwind CSS",
+    "Styled Components",
+    "Rest API",
+    "Ant Design",
+    "MUI"
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "logo": "/skills/html.png"
+    },
+    {
+      "name": "CSS",
+      "logo": "/skills/css-3.png"
+    },
+    {
+      "name": "Tailwind CSS",
+      "logo": "/skills/tailwind.png"
+    },
+    {
+      "name": "React",
+      "logo": "/skills/reactLogo.png"
+    },
+    {
+      "name": "Styled Components",
+      "logo": "/skills/styled-components.png"
+    },
+    {
+      "name": "Javascript",
+      "logo": "/skills/js.png"
+    },
+    {
+      "name": "Typescript",
+      "logo": "/skills/typescript.png"
+    },
+    {
+      "name": "Next",
+      "logo": "/skills/next.svg"
+    },
+
+    {
+      "name": "Git",
+      "logo": "/skills/git.png"
+    },
+    {
+      "name": "Rest API",
+      "logo": "/skills/icons8-rest-api-96.png"
+    },
+    {
+      "name": "Ant Design",
+      "logo": "/skills/antd (1).png"
+    },
+    {
+      "name": "MIU",
+      "logo": "/skills/png-transparent-material-ui-logo.png"
+    }
+  ]
+}
