@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Button, ConfigProvider, Space } from "antd";
-import { AntDesignOutlined, DownloadOutlined } from "@ant-design/icons";
+import { DownloadOutlined } from "@ant-design/icons";
 import { css } from "@emotion/css";
 
 const DownloadBtn: React.FC = () => {

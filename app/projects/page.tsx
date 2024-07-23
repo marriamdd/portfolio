@@ -8,8 +8,7 @@ export const metadata: Metadata = {
 };
 export default function Projects() {
   return (
-    <div>
-      Projects
+    <div className="flex w-[100%] ">
       <CustomizedAccordions />
     </div>
   );

@@ -17,7 +17,7 @@ import Image from "next/image";
 import fileIcon2 from "/public/shared/Vector (4).svg";
 import DownloadBtn from "./DownloadBtn";
 import SkillsIcons from "./SkillsIcons";
-
+import Data from "/Users/mariamidavitashvili/portfolio/data.json";
 export default function RouterBreadcrumbs() {
   const [open, setOpen] = React.useState<string | null>("info");
   const [selectedOptions, setSelectedOptions] = React.useState<string[]>([
@@ -176,7 +176,7 @@ export default function RouterBreadcrumbs() {
                           : "text-greyText all-transition duration-[1s] ease-out"
                       }`}
                     >
-                      davitahvili.m3@gmail.com
+                      {Data.gmail}
                     </h2>
                   </div>
                   <div
@@ -192,7 +192,7 @@ export default function RouterBreadcrumbs() {
                       }`}
                     >
                       {" "}
-                      (+995) 551-10-48-62
+                      {Data.phone}
                     </h2>
                   </div>
                 </div>
@@ -257,18 +257,7 @@ export default function RouterBreadcrumbs() {
              animate-fadeIn leading-150 text-[1.6rem] font-[450]"
                   // eslint-disable-next-line react/jsx-no-comment-textnodes
                 >
-                  /* Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Fugit illo aut amet nesciunt atque blanditiis, quam et id sed
-                  tempore pariatur ratione. Quo nihil eaque molestias in, ipsa
-                  error accusantium. Lorem ipsum dolor sit amet, consectetur
-                  adipisicing elit. Amet quos reiciendis odio quidem
-                  praesentium! Reprehenderit delectus laudantium numquam nihil
-                  hic saepe repellat ratione consequuntur, veniam ullam. Quia
-                  autem consectetur nihil! Lorem ipsum dolor sit amet
-                  consectetur, adipisicing elit. Cupiditate repellat placeat
-                  vitae nobis porro dolorum beatae error ducimus repudiandae
-                  dicta. Sint quos perferendis accusamus temporibus in quaerat
-                  cumque illum! Quo? */
+                  /* {Data.personalInfo}*/
                 </p>
               </div>
             )}
@@ -279,18 +268,7 @@ export default function RouterBreadcrumbs() {
              animate-fadeIn leading-150 text-[1.6rem] font-[450]"
                   // eslint-disable-next-line react/jsx-no-comment-textnodes
                 >
-                  /* Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Fugit illo aut amet nesciunt atque blanditiis, quam et id sed
-                  tempore pariatur ratione. Quo nihil eaque molestias in, ipsa
-                  error accusantium. Lorem ipsum dolor sit amet, consectetur
-                  adipisicing elit. Amet quos reiciendis odio quidem
-                  praesentium! Reprehenderit delectus laudantium numquam nihil
-                  hic saepe repellat ratione consequuntur, veniam ullam. Quia
-                  autem consectetur nihil! Lorem ipsum dolor sit amet
-                  consectetur, adipisicing elit. Cupiditate repellat placeat
-                  vitae nobis porro dolorum beatae error ducimus repudiandae
-                  dicta. Sint quos perferendis accusamus temporibus in quaerat
-                  cumque illum! Quo? */
+                  /*{Data.proffesionalInfo} */
                 </p>
               </div>
             )}

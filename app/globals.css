@@ -147,12 +147,6 @@ h2 {
     transform: translateY(0);
   }
 }
-/* .ant-layout {
-  background-color: transparent !important;
-  span {
-    color: white !important;
-  }
-} */
 
 .MuiBox-root {
   background-color: transparent !important;
@@ -335,7 +329,7 @@ form {
 }
 
 .css-1fderfv-MuiPaper-root-MuiAccordion-root {
-  background-color: rgb(1, 22, 39) !important;
+  background-color: transparent !important;
 }
 .css-v84d5j-MuiSvgIcon-root {
   color: white;
@@ -355,7 +349,7 @@ form {
 .ant-checkbox-inner {
   border: 1px solid #607b96 !important;
 
-  background-color: #011627 !important;
+  background-color: transparent !important;
 }
 
 .ant-checkbox-checked .ant-checkbox-inner {
@@ -371,6 +365,19 @@ form {
 .css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label {
   margin-left: 1rem;
 }
-/* .MuiAccordionDetails-root .css-ta84vm-MuiAccordionDetails-root {
-  max-width: 100px !important;
-} */
+
+.css-ta84vm-MuiAccordionDetails-root {
+  padding: 0 !important;
+}
+
+.css-uvvswg-MuiButtonBase-root-MuiAccordionSummary-root {
+  padding: 0 !important;
+}
+
+.css-1fderfv-MuiPaper-root-MuiAccordion-root {
+  width: 100% !important;
+}
+
+.css-pwcg7p-MuiCollapse-root {
+  margin-left: 2rem;
+}

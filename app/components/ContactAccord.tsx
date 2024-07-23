@@ -8,7 +8,7 @@ import {
   ListItemButton,
   ListItemText,
 } from "@mui/material";
-
+import Data from "/Users/mariamidavitashvili/portfolio/data.json";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
@@ -111,64 +111,26 @@ export default function ContactAccord() {
                 unmountOnExit
               >
                 <List disablePadding>
-                  <ListItem>
-                    <ListItemButton sx={{ pl: 4 }}>
-                      <Image
-                        className="mr-[0.8rem]"
-                        width={10}
-                        height={10}
-                        alt="blank"
-                        src="/shared/Vector (8).svg"
-                      />
-                      <Link
-                        className="text-[14px] hover:text-[#99a3ac] text-greyText font-[ 450]"
-                        target="_blank"
-                        href={"https://www.instagram.com/marriam.d/"}
-                      >
-                        Instagram
-                      </Link>
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem>
-                    <ListItemButton sx={{ pl: 4 }}>
-                      <Image
-                        className="mr-[0.8rem]"
-                        width={10}
-                        height={10}
-                        alt="blank"
-                        src="/shared/Vector (8).svg"
-                      />
-                      <Link
-                        className="text-[14px] hover:text-[#99a3ac] text-greyText  font-[ 450]"
-                        target="_blank"
-                        href={
-                          "https://www.facebook.com/profile.php?id=100002604311818"
-                        }
-                      >
-                        Facebook
-                      </Link>
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem>
-                    <ListItemButton sx={{ pl: 4 }}>
-                      <Image
-                        className="mr-[0.8rem]"
-                        width={10}
-                        height={10}
-                        alt="blank"
-                        src="/shared/Vector (8).svg"
-                      />
-                      <Link
-                        className="text-[14px] hover:text-[#99a3ac] text-greyText font-[ 450]"
-                        target="_blank"
-                        href={
-                          "https://www.linkedin.com/in/mariam--davitashvili/"
-                        }
-                      >
-                        Linkedin
-                      </Link>
-                    </ListItemButton>
-                  </ListItem>
+                  {Data.social.map((social) => (
+                    <ListItem key={social.name}>
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <Image
+                          className="mr-[0.8rem]"
+                          width={10}
+                          height={10}
+                          alt="blank"
+                          src="/shared/Vector (8).svg"
+                        />
+                        <Link
+                          className="text-[14px] hover:text-[#99a3ac] text-greyText font-[ 450]"
+                          target="_blank"
+                          href={social.link}
+                        >
+                          {social.name}
+                        </Link>
+                      </ListItemButton>
+                    </ListItem>
+                  ))}
                 </List>
               </Collapse>
             </List>

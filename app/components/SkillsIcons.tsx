@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
 import { useState } from "react";
 import Data from "/Users/mariamidavitashvili/portfolio/data.json";
 
@@ -15,7 +14,7 @@ const SkillsIcons = () => {
   };
   console.log(Data.skills.length);
   return (
-    <div className="flex gap-[2rem] flex-col items-center pt-[3rem] pb-[5rem]">
+    <div className="flex gap-[2rem]  flex-col items-center pt-[3rem] pb-[5rem]">
       <div className="grid grid-cols-5 gap-[4rem] p-4">
         {Data.skills.slice(0, 5).map((icon, index) => (
           <motion.div

@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import Link from "next/link";
+import Data from "/Users/mariamidavitashvili/portfolio/data.json";
 
 import code from "/public/shared/code-snippet-no-opacity (1).svg";
 import codeOp from "/public/shared/code-snippet.png";
@@ -22,7 +23,7 @@ export default function Home() {
           </h2>
           <span className="text-[#43D9AD] text-[2rem] font-[450]">
             {" "}
-            &gt; Front-end developer
+            &gt; {Data.position}
           </span>
         </div>
         <div className="flex flex-col h-[6rem] ">
@@ -32,16 +33,14 @@ export default function Home() {
             <span style={{ color: "rgb(77, 91, 206)" }}> const</span>{" "}
             <span style={{ color: "rgb(67, 217, 173)" }}>githubLink</span>
             <span>&nbsp; = </span>{" "}
-            <span style={{ color: "#FEA55F" }}>
-              https://github.com/marriamdd
-            </span>
+            <span style={{ color: "#FEA55F" }}>{Data.github}</span>
           </Link>
         </div>
       </div>
       <div className="hidden all-transition animate-fadeIn duration-[1s] ease-out xl:flex flex-col gap-[2rem] xl:ml-[-4rem] xl:pt-[8rem] flex-1">
-        <Image src={codeOp} alt="" />
-        <Image src={code} alt="" />
-        <Image src={codeOp} alt="" />
+        <Image src={codeOp} alt="code" />
+        <Image src={code} alt="code" />
+        <Image src={codeOp} alt="code" />
       </div>
     </div>
   );
