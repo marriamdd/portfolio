@@ -14,7 +14,6 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import CloseIcon from "@mui/icons-material/Close";
 import Image from "next/image";
-import fileIcon1 from "/public/shared/Vector (5).svg";
 import fileIcon2 from "/public/shared/Vector (4).svg";
 import DownloadBtn from "./DownloadBtn";
 import SkillsIcons from "./SkillsIcons";
@@ -99,8 +98,22 @@ export default function RouterBreadcrumbs() {
                   <ListItem onClick={() => handleOptionClick("Personal")}>
                     <ListItemButton sx={{ pl: 4 }}>
                       <Image
-                        className="pr-[0.7rem]"
-                        src={fileIcon1}
+                        className={`mr-[1rem] h-[7px] all-transition duration-[0.5s] ease-out ${
+                          selectedOptions.includes("Personal")
+                            ? "rotate-90"
+                            : ""
+                        }`}
+                        width={12.728}
+                        height={4.778}
+                        alt="arrowDown"
+                        src="/shared/Vector (6).svg"
+                      />
+
+                      <Image
+                        width={12.728}
+                        height={7.8}
+                        className="mr-[0.7rem]"
+                        src="/shared/Vector (5).svg"
                         alt="fileIcon"
                       />
                       <ListItemText
@@ -115,6 +128,17 @@ export default function RouterBreadcrumbs() {
                   </ListItem>
                   <ListItem onClick={() => handleOptionClick("Professional")}>
                     <ListItemButton sx={{ pl: 4 }}>
+                      <Image
+                        className={`mr-[1rem] h-[7px] all-transition duration-[0.5s] ease-out ${
+                          selectedOptions.includes("Professional")
+                            ? "rotate-90"
+                            : ""
+                        }`}
+                        width={12.728}
+                        height={4.778}
+                        alt="arrowDown"
+                        src="/shared/Vector (6).svg"
+                      />
                       <Image
                         className="pr-[0.7rem]"
                         src={fileIcon2}

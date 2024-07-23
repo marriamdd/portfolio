@@ -8,13 +8,20 @@ import {
   ListItemButton,
   ListItemText,
 } from "@mui/material";
+
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
+import Image from "next/image";
+import Link from "next/link";
 export default function ContactAccord() {
-  const [open, setOpen] = React.useState<string | null>("info");
+  const [open, setOpen] = React.useState<string[]>([]);
   const handleClick = (prop: string) => {
-    setOpen((prevOpen) => (prevOpen === prop ? null : prop));
+    setOpen((prevClick) =>
+      prevClick.includes(prop)
+        ? prevClick.filter((item) => item !== prop)
+        : [...prevClick, prop]
+    );
   };
   const [click, setClick] = React.useState<string[]>([]);
   const handleInfoClick = (info: string) => {
@@ -35,6 +42,7 @@ export default function ContactAccord() {
             _Contact-me
           </h2>
         </div>
+
         <Box>
           <Box
             sx={{
@@ -48,10 +56,10 @@ export default function ContactAccord() {
               <ListItem onClick={() => handleClick("contact")}>
                 <ListItemButton>
                   <ListItemText className="pl-[1rem]" primary="Contacts" />
-                  {open === "contact" ? <ExpandLess /> : <ExpandMore />}
+                  {open.includes("contact") ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
               </ListItem>
-              {open === "contact" && (
+              {open.includes("contact") && (
                 <div className="px-[2rem] py-[1rem] animate-fadeIn flex gap-[1.3rem] flex-col">
                   <div
                     onClick={() => handleInfoClick("email")}
@@ -61,7 +69,7 @@ export default function ContactAccord() {
                     <h2
                       className={`${
                         click.includes("email")
-                          ? "text-[#3f5161] all-transition duration-[1s] ease-out"
+                          ? "text-[#3f5161]  all-transition duration-[1s] ease-out"
                           : "text-greyText all-transition duration-[1s] ease-out"
                       }`}
                     >
@@ -92,43 +100,73 @@ export default function ContactAccord() {
                     className="pl-[1rem]"
                     primary="find-me-also-in"
                   />
-                  {open === "info" ? <ExpandLess /> : <ExpandMore />}
+                  {open.includes("info") ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
               </ListItem>
               <Collapse
                 className="animate-fadeIn"
                 component="li"
-                in={open === "info"}
+                in={open.includes("info")}
                 timeout="auto"
                 unmountOnExit
               >
                 <List disablePadding>
-                  <ListItem
-                  // onClick={() => handleOptionClick("Personal")}
-                  >
+                  <ListItem>
                     <ListItemButton sx={{ pl: 4 }}>
-                      <ListItemText
-                        // className={`${
-                        //   selectedOptions.includes("Personal")
-                        //     ? "text-[#fff]"
-                        //     : "text-greyText"
-                        // }`}
-                        primary="Personal"
+                      <Image
+                        className="mr-[0.8rem]"
+                        width={10}
+                        height={10}
+                        alt="blank"
+                        src="/shared/Vector (8).svg"
                       />
+                      <Link
+                        className="text-[14px] hover:text-[#99a3ac] text-greyText font-[ 450]"
+                        target="_blank"
+                        href={"https://www.instagram.com/marriam.d/"}
+                      >
+                        Instagram
+                      </Link>
                     </ListItemButton>
                   </ListItem>
-                  <ListItem
-                  //  onClick={() => handleOptionClick("Professional")}
-                  >
+                  <ListItem>
                     <ListItemButton sx={{ pl: 4 }}>
-                      <ListItemText
-                        // className={`${
-                        //   selectedOptions.includes("Professional")
-                        //     ? "text-[#fff]"
-                        //     : "text-greyText"
-                        // }`}
-                        primary="Professional"
+                      <Image
+                        className="mr-[0.8rem]"
+                        width={10}
+                        height={10}
+                        alt="blank"
+                        src="/shared/Vector (8).svg"
                       />
+                      <Link
+                        className="text-[14px] hover:text-[#99a3ac] text-greyText  font-[ 450]"
+                        target="_blank"
+                        href={
+                          "https://www.facebook.com/profile.php?id=100002604311818"
+                        }
+                      >
+                        Facebook
+                      </Link>
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem>
+                    <ListItemButton sx={{ pl: 4 }}>
+                      <Image
+                        className="mr-[0.8rem]"
+                        width={10}
+                        height={10}
+                        alt="blank"
+                        src="/shared/Vector (8).svg"
+                      />
+                      <Link
+                        className="text-[14px] hover:text-[#99a3ac] text-greyText font-[ 450]"
+                        target="_blank"
+                        href={
+                          "https://www.linkedin.com/in/mariam--davitashvili/"
+                        }
+                      >
+                        Linkedin
+                      </Link>
                     </ListItemButton>
                   </ListItem>
                 </List>

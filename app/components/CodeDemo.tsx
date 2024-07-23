@@ -61,7 +61,7 @@ export default function CodeDemo({
           <span className="orange">&quot;{employerInfo.message} &quot;</span>
           <span className="grey">,</span>
           <br />
-          <span className="grey">date:</span>
+          <span className="grey">date:</span>&nbsp;
           <span className="orange">&quot;{formattedDate}&quot;</span> <br />
           <span className="grey">{`}`}</span>
         </p>
