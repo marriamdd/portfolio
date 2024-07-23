@@ -10,6 +10,7 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 
 import { Checkbox } from "antd";
 
+import { FormControlLabel } from "@mui/material";
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -70,18 +71,18 @@ export default function CustomizedAccordions() {
           <h2>TechStacks</h2>
         </AccordionSummary>
         <AccordionDetails>
-          <Checkbox
-            checked={checked}
-            onChange={(e) => handleCheckboxChange(e)}
-            aria-label="controlled"
-            value={"mari"}
+          <FormControlLabel
+            label="react"
+            control={
+              <Checkbox
+                checked={checked}
+                onChange={(e) => handleCheckboxChange(e)}
+                aria-label="controlled"
+                value={"mari"}
+                className="custom-checkbox"
+              />
+            }
           />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
-          </p>
         </AccordionDetails>
       </Accordion>
     </div>
