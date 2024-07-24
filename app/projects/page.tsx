@@ -1,6 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import CustomizedAccordions from "../components/Accordion";
+import MultiActionAreaCard from "../components/ProjectsCard";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -8,8 +9,9 @@ export const metadata: Metadata = {
 };
 export default function Projects() {
   return (
-    <div className="flex w-[100%] ">
+    <div className="flex flex-col xl:flex-row w-[100%] ">
       <CustomizedAccordions />
+      <MultiActionAreaCard />
     </div>
   );
 }

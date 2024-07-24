@@ -64,7 +64,7 @@ export default function CustomizedAccordions() {
   };
   console.log(checked);
   return (
-    <div className="flex w-[100%] animate-fadeIn">
+    <div className="flex w-[100%] xl:w-[23%] xl:border-r border-[#1E2D3D]  animate-fadeIn ">
       <Accordion
         expanded={expanded === "panel1"}
         onChange={handleAccordionChange("panel1")}

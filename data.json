@@ -84,7 +84,7 @@
   "projects": [
     {
       "id": 1,
-      "name": "task management wep",
+      "name": "task management web",
       "teckstack": ["React", "Tailwind CSS", "Typescript"],
       "img": "/projects/Screenshot 2024-07-24 at 8.38.41 PM.png",
       "liveLink": "https://task-manager-web1.vercel.app/",
@@ -137,7 +137,7 @@
     {
       "id": 14,
       "name": "Pomodoro ",
-      "teckstack": ["React", "Javascript", "Styled Components"],
+      "teckstack": ["React", "Typescript", "Javascript", "Styled Components"],
       "img": "/projects/Screenshot 2024-07-24 at 8.46.43 PM.png",
       "liveLink": "https://pomodoro-app-lyart.vercel.app/",
       "githubLink": "https://github.com/marriamdd/pomodoro-App"
@@ -146,7 +146,7 @@
     {
       "id": 16,
       "name": "single-page-design-portfolio",
-      "teckstack": ["React", "Javascript", "Styled Components"],
+      "teckstack": ["React", "Typescript", "Javascript", "Styled Components"],
       "img": "/assets/projects/single-page-design-portfolio.png",
       "liveLink": "https://beqa200.github.io/single-page-design-portfolio/",
       "githubLink": "https://github.com/beqa200/single-page-design-portfolio"
@@ -154,26 +154,10 @@
     {
       "id": 17,
       "name": "Netflix inspired web",
-      "teckstack": ["React", "Javascript", "Styled Components"],
+      "teckstack": ["React", "Typescript", "Styled Components"],
       "img": "/projects/Screenshot 2024-07-24 at 8.47.14 PM.png",
       "liveLink": "https://netflix1-yn6u.vercel.app/MainPage",
-      "githubLink": "https://github.com/beqa200/faq-accordion-card"
-    },
-    {
-      "id": 18,
-      "name": "art-gallery",
-      "teckstack": [],
-      "img": "/assets/projects/art-gallery.png",
-      "liveLink": "https://beqa200.github.io/art-gallery/",
-      "githubLink": "https://github.com/beqa200/art-gallery"
-    },
-    {
-      "id": 19,
-      "name": "interactive-rating-component",
-      "teckstack": ["React", "Javascript", "Styled Components"],
-      "img": "/assets/projects/interactive-rating-component.png",
-      "liveLink": "https://interactive-rating-component-beqa200.vercel.app/",
-      "githubLink": "https://github.com/beqa200/interactive-rating-component"
+      "githubLink": "https://github.com/marriamdd/netfilx"
     }
   ]
 }
