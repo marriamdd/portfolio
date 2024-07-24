@@ -84,41 +84,28 @@
   "projects": [
     {
       "id": 1,
-      "name": "maso-erp",
-      "teckstack": [
-        "React",
-        "Styled Components",
-        "Typescript",
-        "Ant Design",
-        "GraphQL"
-      ],
-      "img": "/assets/projects/maso-erp.png",
-      "liveLink": "https://erp.maso.ge/",
-      "githubLink": "https://github.com/Tetrobyte/maso-admin"
+      "name": "task management wep",
+      "teckstack": ["React", "Tailwind CSS", "Typescript"],
+      "img": "/projects/Screenshot 2024-07-24 at 8.38.41 PM.png",
+      "liveLink": "https://task-manager-web1.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/task_manager"
     },
-    {
-      "id": 2,
-      "name": "deliverow-erp",
-      "teckstack": ["Next", "Tailwind CSS", "Typescript", "Ant Design"],
-      "img": "/assets/projects/deliverow.png",
-      "liveLink": "https://b2b-delivery-admin.vercel.app/",
-      "githubLink": "https://github.com/AlgoSoft-ge/b2b-delivery-admin"
-    },
+
     {
       "id": 3,
-      "name": "task-management-app",
+      "name": "Ecommerce Website",
       "teckstack": ["React", "Styled Components", "Typescript"],
-      "img": "/assets/projects/task-management-website.png",
-      "liveLink": "https://task-management-website-ten.vercel.app/platform-launch",
-      "githubLink": "https://github.com/beqa200/task-management-website"
+      "img": "/projects/audiophile-ecommerce-website.png",
+      "liveLink": "https://audiophile-ecommerce-website-mocha.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/audiophile-ecommerce-website-"
     },
     {
       "id": 4,
-      "name": "entertainment-web-app",
-      "teckstack": ["Next", "Styled Components", "Typescript", "MongoDB"],
-      "img": "/assets/projects/entertainment-web-app.png",
-      "liveLink": "https://entertainment-web-app-chi-cyan.vercel.app/",
-      "githubLink": "https://github.com/beqa200/entertainment-web-app"
+      "name": "planets-fact-site",
+      "teckstack": ["React", "Styled Components", "Typescript"],
+      "img": "/projects/Screenshot 2024-07-24 at 8.48.37 PM.png",
+      "liveLink": "https://planets-fact-site-eight-ashen.vercel.app/Saturn",
+      "githubLink": "https://github.com/marriamdd/Planets-fact-site"
     },
     {
       "id": 5,
@@ -128,100 +115,48 @@
       "liveLink": "https://audiophile-ecommerce-website-theta.vercel.app/",
       "githubLink": "https://github.com/beqa200/audiophile-ecommerce-website"
     },
-    {
-      "id": 6,
-      "name": "axioma-chatbot-demo",
-      "teckstack": ["Next", "Tailwind CSS", "Typescript", "Rest API"],
-      "img": "/assets/projects/axioma-chatbot.png",
-      "liveLink": "https://axioma-chatbot.vercel.app/",
-      "githubLink": ""
-    },
+
     {
       "id": 7,
       "name": "cv-generator-redberry",
       "teckstack": ["React", "Styled Components", "Rest API", "Typescript"],
-      "img": "/assets/projects/cv-generator-redberry.png",
-      "liveLink": "https://cv-generator-redberry.vercel.app/",
-      "githubLink": "https://github.com/beqa200/cv-generator-redberry"
+      "img": "/projects/Screenshot 2024-07-24 at 8.58.00 PM.png",
+      "liveLink": "https://team-6-cyan.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/RedBerry_resume-Website"
     },
-    {
-      "id": 8,
-      "name": "job-listing-api",
-      "teckstack": ["Node", "MongoDB", "Typescript"],
-      "img": "/assets/projects/job-listing-front.png",
-      "liveLink": "https://github.com/beqa200/job-listing-api",
-      "githubLink": "https://github.com/beqa200/job-listing-api"
-    },
-    {
-      "id": 9,
-      "name": "ecommerce-product-page",
-      "teckstack": ["React", "Typescript", "Styled Components"],
-      "img": "/assets/projects/ecommerce-product-page.png",
-      "liveLink": "https://ecommerce-product-page-beqa200.vercel.app/",
-      "githubLink": "https://github.com/beqa200/ecommerce-product-page"
-    },
-    {
-      "id": 10,
-      "name": "todo-app",
-      "teckstack": ["React", "Typescript", "Styled Components"],
-      "img": "/assets/projects/todo-app.png",
-      "liveLink": "https://todo-app-delta-orpin.vercel.app/",
-      "githubLink": "https://github.com/beqa200/todo-app"
-    },
+
     {
       "id": 11,
       "name": "github-user-search",
       "teckstack": ["React", "Javascript", "Styled Components", "Rest API"],
-      "img": "/assets/projects/github-user-search.png",
-      "liveLink": "https://github-user-search-ashy.vercel.app/",
-      "githubLink": "https://github.com/beqa200/github-user-search"
+      "img": "/projects/Screenshot 2024-07-24 at 8.49.33 PM.png",
+      "liveLink": "https://github-user-search-app-xi-peach.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/github-user-search-app"
     },
-    {
-      "id": 12,
-      "name": "interactive-credit-card-details-form",
-      "teckstack": ["React", "Typescript", "Styled Components"],
-      "img": "/assets/projects/interactive-credit-card-details-form.png",
-      "liveLink": "https://interactive-credit-card-details-form-git-main-beqa200.vercel.app/",
-      "githubLink": "https://github.com/beqa200/interactive-credit-card-details-form"
-    },
-    {
-      "id": 13,
-      "name": "interactive-pricing-component",
-      "teckstack": ["Javascript", "Tailwind CSS"],
-      "img": "/assets/projects/interactive-pricing-component.png",
-      "liveLink": "https://interactive-credit-card-details-form-git-main-beqa200.vercel.app/",
-      "githubLink": "https://github.com/beqa200/interactive-credit-card-details-form"
-    },
+
     {
       "id": 14,
-      "name": "tip-calculator-app",
+      "name": "Pomodoro ",
       "teckstack": ["React", "Javascript", "Styled Components"],
-      "img": "/assets/projects/tip-calculator-app.png",
-      "liveLink": "https://tip-calculator-app-react-orcin.vercel.app/",
-      "githubLink": "https://github.com/beqa200/tip-calculator-app-react"
+      "img": "/projects/Screenshot 2024-07-24 at 8.46.43 PM.png",
+      "liveLink": "https://pomodoro-app-lyart.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/pomodoro-App"
     },
-    {
-      "id": 15,
-      "name": "tic-tac-toe",
-      "teckstack": ["Javascript"],
-      "img": "/assets/projects/tic-tac-toe.png",
-      "liveLink": "https://beqa200.github.io/tic-tac-toe/",
-      "githubLink": "https://github.com/beqa200/tic-tac-toe"
-    },
+
     {
       "id": 16,
       "name": "single-page-design-portfolio",
-      "teckstack": ["Javascript", "Tailwind CSS"],
+      "teckstack": ["React", "Javascript", "Styled Components"],
       "img": "/assets/projects/single-page-design-portfolio.png",
       "liveLink": "https://beqa200.github.io/single-page-design-portfolio/",
       "githubLink": "https://github.com/beqa200/single-page-design-portfolio"
     },
     {
       "id": 17,
-      "name": "faq-accordion-card",
-      "teckstack": ["Javascript"],
-      "img": "/assets/projects/faq-accordion-card.png",
-      "liveLink": "https://faq-accordion-card-lilac-five.vercel.app/",
+      "name": "Netflix inspired web",
+      "teckstack": ["React", "Javascript", "Styled Components"],
+      "img": "/projects/Screenshot 2024-07-24 at 8.47.14 PM.png",
+      "liveLink": "https://netflix1-yn6u.vercel.app/MainPage",
       "githubLink": "https://github.com/beqa200/faq-accordion-card"
     },
     {

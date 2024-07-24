@@ -5,23 +5,27 @@ import { useState } from "react";
 import Data from "/Users/mariamidavitashvili/portfolio/data.json";
 
 const SkillsIcons = () => {
-  const [rotate, setRotate] = useState(Array(Data.skills.length).fill(false));
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  const handleIconClick = (index: number) => {
-    setRotate((prevRotate) =>
-      prevRotate.map((rot, idx) => (idx === index ? !rot : rot))
-    );
+  const handleIconMouseEnter = (index: number) => {
+    setHoveredIndex(index);
   };
-  console.log(Data.skills.length);
+
+  const handleIconMouseLeave = () => {
+    setHoveredIndex(null);
+  };
+
   return (
-    <div className="flex gap-[2rem]  flex-col items-center pt-[3rem] pb-[5rem]">
+    <div className="flex gap-[2rem] flex-col items-center pt-[3rem] pb-[5rem]">
       <div className="grid grid-cols-5 gap-[4rem] p-4">
         {Data.skills.slice(0, 5).map((icon, index) => (
           <motion.div
             key={index}
+            onMouseEnter={() => handleIconMouseEnter(index)}
+            onMouseLeave={handleIconMouseLeave}
             animate={{
               scale: [1, 1.2, 1],
-              rotate: rotate[index] ? 360 : 0,
+              rotate: hoveredIndex === index ? 360 : 0,
             }}
             transition={{
               scale: {
@@ -30,16 +34,20 @@ const SkillsIcons = () => {
                 repeatType: "loop",
                 ease: "easeInOut",
               },
-              rotate: { duration: 1 },
+              rotate: { duration: 0.5 },
             }}
-            onClick={() => handleIconClick(index)}
+            style={{
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
           >
             <Image
               width={50}
               height={50}
               src={icon.logo}
               alt={`Icon ${index}`}
-              style={{ cursor: "pointer" }}
             />
           </motion.div>
         ))}
@@ -48,9 +56,11 @@ const SkillsIcons = () => {
         {Data.skills.slice(5, 9).map((icon, index) => (
           <motion.div
             key={index}
+            onMouseEnter={() => handleIconMouseEnter(index + 5)}
+            onMouseLeave={handleIconMouseLeave}
             animate={{
               scale: [1, 1.2, 1],
-              rotate: rotate[index + 5] ? 360 : 0,
+              rotate: hoveredIndex === index + 5 ? 360 : 0,
             }}
             transition={{
               scale: {
@@ -59,16 +69,20 @@ const SkillsIcons = () => {
                 repeatType: "loop",
                 ease: "easeInOut",
               },
-              rotate: { duration: 1 },
+              rotate: { duration: 0.5 },
             }}
-            onClick={() => handleIconClick(index + 5)}
+            style={{
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
           >
             <Image
               width={50}
               height={50}
               src={icon.logo}
-              alt={`Icon ${index}`}
-              style={{ cursor: "pointer" }}
+              alt={`Icon ${index + 5}`}
             />
           </motion.div>
         ))}
@@ -77,9 +91,11 @@ const SkillsIcons = () => {
         {Data.skills.slice(9, 12).map((icon, index) => (
           <motion.div
             key={index}
+            onMouseEnter={() => handleIconMouseEnter(index + 9)}
+            onMouseLeave={handleIconMouseLeave}
             animate={{
               scale: [1, 1.2, 1],
-              rotate: rotate[index + 9] ? 360 : 0,
+              rotate: hoveredIndex === index + 9 ? 360 : 0,
             }}
             transition={{
               scale: {
@@ -88,16 +104,20 @@ const SkillsIcons = () => {
                 repeatType: "loop",
                 ease: "easeInOut",
               },
-              rotate: { duration: 1 },
+              rotate: { duration: 0.5 },
             }}
-            onClick={() => handleIconClick(index + 9)}
+            style={{
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
           >
             <Image
               width={50}
               height={50}
               src={icon.logo}
-              alt={`Icon ${index}`}
-              style={{ cursor: "pointer" }}
+              alt={`Icon ${index + 9}`}
             />
           </motion.div>
         ))}
