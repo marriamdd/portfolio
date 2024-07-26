@@ -242,7 +242,7 @@ h2 {
   font-size: 1.6rem !important;
 
   font-style: normal !important;
-  font-weight: 300 !important;
+  font-weight: 560 !important;
   line-height: normal !important;
 }
 .css-i4bv87-MuiSvgIcon-root {
@@ -399,4 +399,22 @@ form {
 
 .animate-zoom {
   animation: zoomInOut 1s infinite;
+}
+
+/* .css-h4y409-MuiList-root {
+  max-width: 100% !important;
+
+  მობაილზე კჯონტრაქტის საიზი 
+} */
+
+.css-ahj2mt-MuiTypography-root {
+  font-size: 1.6rem !important;
+
+  font-weight: 400 !important;
+}
+.css-sz7ec1-MuiAccordionDetails-root {
+  padding: 0;
+}
+.css-1gmt4nj-MuiAccordionDetails-root {
+  padding: 0;
 }

@@ -60,7 +60,7 @@ export default function ContactAccord() {
                 </ListItemButton>
               </ListItem>
               {open.includes("contact") && (
-                <div className="px-[2rem] py-[1rem] animate-fadeIn flex gap-[1.3rem] flex-col">
+                <div className="px-[2rem] py-[1rem] animate-fadeIn  flex gap-[1.3rem] flex-col">
                   <div
                     onClick={() => handleInfoClick("email")}
                     className="flex gap-[1rem] items-center"
@@ -78,27 +78,27 @@ export default function ContactAccord() {
                   </div>
                   <div
                     onClick={() => handleInfoClick("number")}
-                    className="flex gap-[1rem] items-center"
+                    className=" number flex gap-[1rem] items-center"
                   >
                     <PhoneIcon style={{ color: "#607B96" }} />
                     <h2
-                      className={`${
+                      className={` number ${
                         click.includes("number")
-                          ? "text-[#3f5161] all-transition duration-[1s] ease-out"
+                          ? "text-[#3f5161]  all-transition duration-[1s] ease-out"
                           : "text-greyText all-transition duration-[1s] ease-out"
                       }`}
                     >
-                      {" "}
                       (+995) 551-10-48-62
                     </h2>
                   </div>
                 </div>
               )}
+
               <ListItem onClick={() => handleClick("info")}>
                 <ListItemButton>
                   <ListItemText
-                    className="pl-[1rem]"
-                    primary="find-me-also-in"
+                    className="pl-[1rem] "
+                    primary="Find-me-also-in"
                   />
                   {open.includes("info") ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
@@ -113,7 +113,7 @@ export default function ContactAccord() {
                 <List disablePadding>
                   {Data.social.map((social) => (
                     <ListItem key={social.name}>
-                      <ListItemButton sx={{ pl: 4 }}>
+                      <ListItemButton sx={{ pl: 0.5 }}>
                         <Image
                           className="mr-[0.8rem]"
                           width={10}
@@ -122,7 +122,7 @@ export default function ContactAccord() {
                           src="/shared/Vector (8).svg"
                         />
                         <Link
-                          className="text-[14px] hover:text-[#99a3ac] text-greyText font-[ 450]"
+                          className="text-[16px] hover:text-[#99a3ac] text-greyText font-[450]"
                           target="_blank"
                           href={social.link}
                         >

@@ -10,6 +10,8 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Data from "/Users/mariamidavitashvili/portfolio/data.json";
 import { Checkbox } from "antd";
 import { FormControlLabel } from "@mui/material";
+import { ISetFilteredProducts } from "../projects/page";
+
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -46,9 +48,14 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
-export default function CustomizedAccordions() {
+export default function CustomizedAccordions({
+  setChecked,
+  checked,
+}: {
+  setChecked: React.Dispatch<React.SetStateAction<string[]>>;
+  checked: string[];
+}) {
   const [expanded, setExpanded] = React.useState<string | false>("panel1");
-  const [checked, setChecked] = React.useState<string[]>([]);
 
   const handleAccordionChange =
     (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
@@ -62,9 +69,9 @@ export default function CustomizedAccordions() {
         : [...prevChecked, name]
     );
   };
-  console.log(checked);
+
   return (
-    <div className="flex w-[100%] xl:w-[23%] xl:border-r border-[#1E2D3D]  animate-fadeIn ">
+    <div className="flex w-[100%] xl:w-[23%] xl:border-r border-[#1E2D3D] animate-fadeIn">
       <Accordion
         expanded={expanded === "panel1"}
         onChange={handleAccordionChange("panel1")}
@@ -73,7 +80,7 @@ export default function CustomizedAccordions() {
           sx={{
             width: "100%",
             "&:hover": {
-              background: " #1E2D3D",
+              background: "#1E2D3D",
             },
           }}
           aria-controls="panel1d-content"
@@ -81,9 +88,14 @@ export default function CustomizedAccordions() {
         >
           <h2>TechStacks</h2>
         </AccordionSummary>
-
         {Data.skills.map((skill) => (
-          <AccordionDetails className="animate-fadeIn" key={skill.name}>
+          <AccordionDetails
+            sx={{
+              color: checked.includes(skill.name) ? "#fff" : "#607b96",
+            }}
+            className="animate-fadeIn"
+            key={skill.name}
+          >
             <FormControlLabel
               label={skill.name}
               control={

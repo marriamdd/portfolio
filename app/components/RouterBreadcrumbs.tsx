@@ -96,7 +96,7 @@ export default function RouterBreadcrumbs() {
               >
                 <List disablePadding>
                   <ListItem onClick={() => handleOptionClick("Personal")}>
-                    <ListItemButton sx={{ pl: 4 }}>
+                    <ListItemButton sx={{ ml: -2 }}>
                       <Image
                         className={`mr-[1rem] h-[7px] all-transition duration-[0.5s] ease-out ${
                           selectedOptions.includes("Personal")
@@ -127,7 +127,7 @@ export default function RouterBreadcrumbs() {
                     </ListItemButton>
                   </ListItem>
                   <ListItem onClick={() => handleOptionClick("Professional")}>
-                    <ListItemButton sx={{ pl: 4 }}>
+                    <ListItemButton sx={{ ml: -2 }}>
                       <Image
                         className={`mr-[1rem] h-[7px] all-transition duration-[0.5s] ease-out ${
                           selectedOptions.includes("Professional")

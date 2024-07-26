@@ -9,8 +9,13 @@ import Image from "next/image";
 import Link from "next/link";
 import Data from "/Users/mariamidavitashvili/portfolio/data.json";
 
-export default function MultiActionAreaCard() {
+export default function MultiActionAreaCard({
+  checked,
+}: {
+  checked: string[];
+}) {
   const [hoveredCard, setHoveredCard] = React.useState<number | null>(null);
+  const [filteredProjects, setFilteredProducts] = React.useState(Data.projects);
 
   const onHover = (cardId: number) => {
     setHoveredCard(cardId);
@@ -37,76 +42,89 @@ export default function MultiActionAreaCard() {
       ));
   };
 
+  React.useEffect(() => {
+    if (checked.length === 0) {
+      setFilteredProducts(Data.projects);
+    } else {
+      setFilteredProducts(
+        Data.projects.filter((project) =>
+          checked.every((check) => project.teckstack.includes(check))
+        )
+      );
+    }
+  }, [checked]);
+
   return (
     <div
       className="w-full grid gap-[14rem] px-[1rem] xl:px-[10rem] py-[5rem] place-items-center"
       style={{ gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))" }}
     >
-      {Data.projects.map((project) => (
-        <Card
-          key={project.id}
-          sx={{
-            maxWidth: 370,
-            borderRadius: "9px",
-            border: "1.8px solid #1E2D3D",
-            background: "rgb(1, 18, 33)",
-          }}
-        >
-          <CardActionArea
-            onMouseOver={() => onHover(project.id)}
-            onMouseLeave={onLeave}
-          >
-            <div className="relative">
-              <CardMedia
-                component="img"
-                height="140"
-                image={project.img}
-                alt={project.name}
-                className="transition-transform duration-300 ease-in-out transform hover:scale-110 hover:blur-sm"
-              />
-              {hoveredCard === project.id && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm p-4">
-                  <div className="flex flex-wrap gap-5">
-                    {getSkillIcons(project.teckstack)}
-                  </div>
-                </div>
-              )}
-            </div>
-            <CardContent>
-              <Typography gutterBottom variant="h2" component="div">
-                <span className="text-[1.8rem] text-greyText font-[450]">
-                  {project.name}
-                </span>
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions
+      {filteredProjects.map((project, index) => (
+        <div key={project.id}>
+          <h1 className="text-[15px] pl-[1rem] pb-[1rem] text-[#5565E8] font-[700]">
+            {`Project ${index + 1}`}{" "}
+            <span className="text-[1.6rem] text-greyText font-[450]">
+              {`// ${project.name}`}
+            </span>
+          </h1>
+          <Card
             sx={{
-              justifyContent: "space-around",
-              paddingInline: "2rem",
-              marginBottom: "1.5rem",
+              maxWidth: 370,
+              borderRadius: "9px",
+              border: "1.8px solid #1E2D3D",
+              background: "rgb(1, 18, 33)",
             }}
           >
-            <Button
-              className="px-[3rem] py-[1.7rem] transition-all duration-[1s]"
-              size="large"
-              variant="outlined"
-              target="_blank"
-              href={project.liveLink}
+            <CardActionArea
+              onMouseOver={() => onHover(project.id)}
+              onMouseLeave={onLeave}
             >
-              View Project
-            </Button>
-            <Link href={project.githubLink} target="_blank">
-              <Image
-                className="cursor-pointer hover:w-[50px] transition-all duration-[1s]"
-                height={40}
-                width={40}
-                src="/shared/github.svg"
-                alt="GitHub Icon"
-              />
-            </Link>
-          </CardActions>
-        </Card>
+              <div className="relative">
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={project.img}
+                  alt={project.name}
+                  className="transition-transform duration-300 ease-in-out transform hover:scale-110 hover:blur-sm"
+                />
+                {hoveredCard === project.id && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm p-4">
+                    <div className="flex flex-wrap gap-5">
+                      {getSkillIcons(project.teckstack)}
+                    </div>
+                  </div>
+                )}
+              </div>
+              <CardContent></CardContent>
+            </CardActionArea>
+            <CardActions
+              sx={{
+                justifyContent: "space-around",
+                paddingInline: "2rem",
+                marginBottom: "1.5rem",
+              }}
+            >
+              <Button
+                className="px-[3rem] py-[1.7rem] transition-all duration-[1s]"
+                size="large"
+                variant="outlined"
+                target="_blank"
+                href={project.liveLink}
+              >
+                View Project
+              </Button>
+              <Link href={project.githubLink} target="_blank">
+                <Image
+                  className="cursor-pointer hover:w-[50px] transition-all duration-[1s]"
+                  height={40}
+                  width={40}
+                  src="/shared/github.svg"
+                  alt="GitHub Icon"
+                />
+              </Link>
+            </CardActions>
+          </Card>
+        </div>
       ))}
     </div>
   );
