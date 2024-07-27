@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Menu, Drawer, Button } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import Link from "next/link";
-import CloseIcon from "/public/shared/vercel.svg";
-import Image from "next/image";
+import CloseIcon from "@mui/icons-material/Close";
 const NavBar: React.FC = () => {
   const [visible, setVisible] = useState(false);
 
@@ -18,14 +17,14 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <div className="navbar h-[55px]  ">
+    <div className="navbar h-[55px]">
       <div className="logo">
         <h2 className="sm:pr-[14rem] pr-[0px]">Mariam Davitashvili</h2>
       </div>
       <div className="menu text-greyText">
-        <Menu style={{}} className="bg-[#011627]" mode="horizontal">
+        <Menu className="bg-[#011627]" mode="horizontal">
           <Menu.Item
-            className=" border-l-[1px] border-r-[1px] border-[#1E2D3D]"
+            className="border-l-[1px] border-r-[1px] border-[#1E2D3D]"
             key="/"
           >
             <Link
@@ -36,16 +35,13 @@ const NavBar: React.FC = () => {
               _hello
             </Link>
           </Menu.Item>
-          <Menu.Item
-            className="border-l-[1px] border-r-[1px] border-[#1E2D3D]"
-            key="about"
-          >
+          <Menu.Item className="border-r-[1px] border-[#1E2D3D]" key="about">
             <Link
               style={{ color: "#607B96" }}
               className="text-greyText"
               href="/about"
             >
-              _about-me
+              _About-me
             </Link>
           </Menu.Item>
           <Menu.Item className="border-r-[1px] border-[#1E2D3D]" key="services">
@@ -69,78 +65,69 @@ const NavBar: React.FC = () => {
         className="menu-button xl:hidden bg-[transparent] shadow-none"
         type="primary"
         onClick={showDrawer}
+        style={{ zIndex: 1050 }}
       >
         <MenuOutlined />
       </Button>
 
-      {visible && (
-        <Drawer
-          title="Mariam Davitashvili"
-          placement="right"
-          onClose={onClose}
-          open={visible}
-          closeIcon={
-            <Image
-              src={CloseIcon}
-              alt="Close"
-              width={24}
-              height={24}
-              style={{ cursor: "pointer" }}
-            />
-          }
-        >
-          <div className="menuDiv ">
-            <Menu mode="vertical">
-              <Menu.Item className="border-t-[1px] border-[#1E2D3D]" key="home">
-                <Link
-                  onClick={() => setVisible(false)}
-                  style={{ color: "#fff" }}
-                  href="/"
-                >
-                  {" "}
-                  _hello
-                </Link>
-              </Menu.Item>
-              <Menu.Item
-                className="border-t-[1px] border-[#1E2D3D]"
-                key="about"
+      <Drawer
+        title="Mariam Davitashvili"
+        placement="right"
+        onClose={onClose}
+        open={visible}
+        closeIcon={
+          <CloseIcon sx={{ width: 24, height: 24, color: "#607B96" }} />
+        }
+        style={{ zIndex: 1040 }}
+      >
+        <div className="menuDiv">
+          <Menu mode="vertical">
+            <Menu.Item className="border-t-[1px] border-[#1E2D3D]" key="home">
+              <Link
+                onClick={() => setVisible(false)}
+                style={{ color: "#fff" }}
+                href="/"
               >
-                <Link
-                  onClick={() => setVisible(false)}
-                  style={{ color: "#fff" }}
-                  href="/about"
-                >
-                  _About-me
-                </Link>
-              </Menu.Item>
-              <Menu.Item
-                className="border-t-[1px] border-[#1E2D3D]"
-                key="projects"
+                _hello
+              </Link>
+            </Menu.Item>
+            <Menu.Item className="border-t-[1px] border-[#1E2D3D]" key="about">
+              <Link
+                onClick={() => setVisible(false)}
+                style={{ color: "#fff" }}
+                href="/about"
               >
-                <Link
-                  onClick={() => setVisible(false)}
-                  style={{ color: "#fff" }}
-                  href="/projects"
-                >
-                  _projects
-                </Link>
-              </Menu.Item>
-              <Menu.Item
-                className="border-t-[1px] border-[#1E2D3D]"
-                key="contact"
+                _About-me
+              </Link>
+            </Menu.Item>
+            <Menu.Item
+              className="border-t-[1px] border-[#1E2D3D]"
+              key="projects"
+            >
+              <Link
+                onClick={() => setVisible(false)}
+                style={{ color: "#fff" }}
+                href="/projects"
               >
-                <Link
-                  onClick={() => setVisible(false)}
-                  style={{ color: "#fff" }}
-                  href="/contact"
-                >
-                  _contact-me
-                </Link>
-              </Menu.Item>
-            </Menu>
-          </div>
-        </Drawer>
-      )}
+                _projects
+              </Link>
+            </Menu.Item>
+            <Menu.Item
+              className="border-t-[1px] border-[#1E2D3D]"
+              key="contact"
+            >
+              <Link
+                onClick={() => setVisible(false)}
+                style={{ color: "#fff" }}
+                href="/contact"
+              >
+                _contact-me
+              </Link>
+            </Menu.Item>
+          </Menu>
+        </div>
+      </Drawer>
+
       <style jsx>{`
         .navbar {
           display: flex;

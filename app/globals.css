@@ -422,3 +422,10 @@ form {
 .css-ahj2mt-MuiTypography-root {
   min-width: 140% !important;
 }
+.codeDemo {
+  span {
+    font-size: 1.8rem;
+    font-weight: 450;
+    line-height: 150%;
+  }
+}
