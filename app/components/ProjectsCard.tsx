@@ -54,7 +54,7 @@ export default function MultiActionAreaCard({
   }, [checked]);
 
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-center ">
       <div
         className="grid gap-[14rem] w-full px-[1rem] xl:px-[10rem] py-[5rem] place-items-center"
         style={{ gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))" }}

@@ -21,9 +21,9 @@ export interface ISetFilteredProducts {
 export default function Projects() {
   const [checked, setChecked] = React.useState<string[]>([]);
   return (
-    <div className="flex flex-col xl:flex-row w-[100%] ">
+    <div className="flex flex-col xl:flex-row w-[100%] h-[100%] overflow-y-hidden">
       <CustomizedAccordions setChecked={setChecked} checked={checked} />
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full overflow-y-auto">
         <MultiActionAreaCard checked={checked} />
         <div className="mt-4">
           <OnGithubBTN />

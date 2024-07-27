@@ -88,22 +88,22 @@ export default function CustomizedAccordions({
         >
           <h2>TechStacks</h2>
         </AccordionSummary>
-        {Data.skills.map((skill) => (
+        {Data.techStacks.map((skill) => (
           <AccordionDetails
             sx={{
-              color: checked.includes(skill.name) ? "#fff" : "#607b96",
+              color: checked.includes(skill) ? "#fff" : "#607b96",
             }}
             className="animate-fadeIn"
-            key={skill.name}
+            key={skill}
           >
             <FormControlLabel
-              label={skill.name}
+              label={skill}
               control={
                 <Checkbox
-                  checked={checked.includes(skill.name)}
-                  onChange={() => handleCheckboxChange(skill.name)}
+                  checked={checked.includes(skill)}
+                  onChange={() => handleCheckboxChange(skill)}
                   aria-label="controlled"
-                  value={skill.name}
+                  value={skill}
                   className="custom-checkbox"
                 />
               }

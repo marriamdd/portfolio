@@ -84,50 +84,41 @@
   "projects": [
     {
       "id": 1,
-      "name": "task management web",
+      "name": "Task Management Web",
       "teckstack": ["React", "Tailwind CSS", "Typescript"],
       "img": "/projects/Screenshot 2024-07-24 at 8.38.41 PM.png",
       "liveLink": "https://task-manager-web1.vercel.app/",
       "githubLink": "https://github.com/marriamdd/task_manager"
     },
-
-    {
-      "id": 3,
-      "name": "Ecommerce Website",
-      "teckstack": ["React", "Styled Components", "Typescript"],
-      "img": "/projects/audiophile-ecommerce-website.png",
-      "liveLink": "https://audiophile-ecommerce-website-mocha.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/audiophile-ecommerce-website-"
-    },
-    {
-      "id": 4,
-      "name": "planets-fact-site",
-      "teckstack": ["React", "Styled Components", "Typescript"],
-      "img": "/projects/Screenshot 2024-07-24 at 8.48.37 PM.png",
-      "liveLink": "https://planets-fact-site-eight-ashen.vercel.app/Saturn",
-      "githubLink": "https://github.com/marriamdd/Planets-fact-site"
-    },
     {
       "id": 5,
-      "name": "audiophile-ecommerce-website",
+      "name": "Audiophile Ecommerce",
       "teckstack": ["React", "Styled Components", "Typescript"],
-      "img": "/assets/projects/audiophile-ecommerce-website.png",
+      "img": "/projects/audiophile-ecommerce-website.png",
       "liveLink": "https://audiophile-ecommerce-website-theta.vercel.app/",
       "githubLink": "https://github.com/beqa200/audiophile-ecommerce-website"
     },
 
     {
-      "id": 7,
-      "name": "cv-generator-redberry",
-      "teckstack": ["React", "Styled Components", "Rest API", "Typescript"],
-      "img": "/projects/Screenshot 2024-07-24 at 8.58.00 PM.png",
-      "liveLink": "https://team-6-cyan.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/RedBerry_resume-Website"
+      "id": 4,
+      "name": "Planets Fact-site",
+      "teckstack": ["React", "Styled Components", "Typescript"],
+      "img": "/projects/Screenshot 2024-07-24 at 8.48.37 PM.png",
+      "liveLink": "https://e-commerce-product-page-iota-virid.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/E-commerce-product-page"
+    },
+    {
+      "id": 3,
+      "name": "Ecommerce Website",
+      "teckstack": ["React", "Styled Components", "Typescript"],
+      "img": "/projects/ecommerce-product-page.png",
+      "liveLink": "https://e-commerce-product-page-iota-virid.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/E-commerce-product-page"
     },
 
     {
       "id": 11,
-      "name": "github-user-search",
+      "name": "Github User-search",
       "teckstack": ["React", "Javascript", "Styled Components", "Rest API"],
       "img": "/projects/Screenshot 2024-07-24 at 8.49.33 PM.png",
       "liveLink": "https://github-user-search-app-xi-peach.vercel.app/",
@@ -144,10 +135,19 @@
     },
 
     {
-      "id": 16,
-      "name": "single-page-design-portfolio",
+      "id": 14,
+      "name": "Interactive-Card-Form ",
       "teckstack": ["React", "Typescript", "Javascript", "Styled Components"],
-      "img": "/assets/projects/single-page-design-portfolio.png",
+      "img": "/projects/Screenshot 2024-07-27 at 5.26.20 PM.png",
+      "liveLink": "https://pomodoro-app-lyart.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/pomodoro-App"
+    },
+
+    {
+      "id": 16,
+      "name": "Single Page-portfolio",
+      "teckstack": ["React", "Typescript", "Rest API", "Styled Components"],
+      "img": "/projects/Screenshot 2024-07-24 at 8.58.00 PM.png",
       "liveLink": "https://beqa200.github.io/single-page-design-portfolio/",
       "githubLink": "https://github.com/beqa200/single-page-design-portfolio"
     },
@@ -155,7 +155,7 @@
       "id": 17,
       "name": "Netflix inspired web",
       "teckstack": ["React", "Typescript", "Styled Components"],
-      "img": "/projects/Screenshot 2024-07-24 at 8.47.14 PM.png",
+      "img": "/projects/Screenshot 2024-07-27 at 4.48.33 PM.png",
       "liveLink": "https://netflix1-yn6u.vercel.app/MainPage",
       "githubLink": "https://github.com/marriamdd/netfilx"
     }
