@@ -4,6 +4,7 @@ import FormComp from "../components/Form";
 import ContactAccord from "../components/ContactAccord";
 import CodeDemo from "../components/CodeDemo";
 import HeadForContact from "../components/HeadForContact";
+import Head from "next/head";
 
 export interface EemployerInfo {
   name: string;
@@ -16,13 +17,24 @@ export default function ContactMe() {
     gmail: "",
     message: "",
   });
-  return (
-    <div className="flex flex-col xl:flex-row xl:h-[80vh] ">
-      <HeadForContact />
-      <ContactAccord />
+  const title = "Contact Me";
+  const description = "Contact Me";
 
-      <FormComp setEmployer={setEmployer} />
-      <CodeDemo employerInfo={employerInfo} />
-    </div>
+  React.useEffect(() => {
+    document.title = title;
+  }, [title]);
+  return (
+    <>
+      <Head>
+        <meta name="description" content={description} />
+      </Head>
+      <div className="flex flex-col xl:flex-row xl:h-[80vh] ">
+        <HeadForContact />
+        <ContactAccord />
+
+        <FormComp setEmployer={setEmployer} />
+        <CodeDemo employerInfo={employerInfo} />
+      </div>
+    </>
   );
 }

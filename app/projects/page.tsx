@@ -1,14 +1,10 @@
 "use client";
-import React from "react";
-// import { Metadata } from "next";
+import React, { useEffect } from "react";
+import Head from "next/head";
 import CustomizedAccordions from "../components/Accordion";
 import MultiActionAreaCard from "../components/ProjectsCard";
 import OnGithubBTN from "../components/OnGithubBTN";
 
-// export const metadata: Metadata = {
-//   title: "Projects",
-//   description: "Projects",
-// };
 export interface ISetFilteredProducts {
   id: number;
   name: string;
@@ -20,15 +16,29 @@ export interface ISetFilteredProducts {
 
 export default function Projects() {
   const [checked, setChecked] = React.useState<string[]>([]);
+
+  const title = "Projects";
+  const description =
+    "Projects page with dynamic content, showcasing various tech stacks and projects.";
+
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+
   return (
-    <div className="flex flex-col xl:flex-row w-[100%] h-[100%] overflow-y-hidden">
-      <CustomizedAccordions setChecked={setChecked} checked={checked} />
-      <div className="flex flex-col w-full overflow-y-auto">
-        <MultiActionAreaCard checked={checked} />
-        <div className="mt-4">
-          <OnGithubBTN />
+    <>
+      <Head>
+        <meta name="description" content={description} />
+      </Head>
+      <div className="flex flex-col xl:flex-row w-[100%] h-[100%] overflow-y-hidden">
+        <CustomizedAccordions setChecked={setChecked} checked={checked} />
+        <div className="flex flex-col w-full overflow-y-auto">
+          <MultiActionAreaCard checked={checked} />
+          <div className="mt-4">
+            <OnGithubBTN />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
