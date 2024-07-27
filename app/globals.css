@@ -418,3 +418,7 @@ form {
 .css-1gmt4nj-MuiAccordionDetails-root {
   padding: 0;
 }
+
+.css-ahj2mt-MuiTypography-root {
+  min-width: 140% !important;
+}

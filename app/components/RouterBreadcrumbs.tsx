@@ -18,11 +18,11 @@ import fileIcon2 from "/public/shared/Vector (4).svg";
 import DownloadBtn from "./DownloadBtn";
 import SkillsIcons from "./SkillsIcons";
 import Data from "/Users/mariamidavitashvili/portfolio/data.json";
+
 export default function RouterBreadcrumbs() {
   const [open, setOpen] = React.useState<string | null>("info");
-  const [selectedOptions, setSelectedOptions] = React.useState<string[]>([
-    "Personal",
-  ]);
+  const [selectedOption, setSelectedOption] =
+    React.useState<string>("Personal");
   const [chosenOptions, setChosenOptions] = React.useState<string[]>([
     "Personal",
   ]);
@@ -33,17 +33,15 @@ export default function RouterBreadcrumbs() {
   };
 
   const handleOptionClick = (option: string) => {
-    if (!selectedOptions.includes(option)) {
-      setSelectedOptions((prevSelected) => [option]);
-    }
+    setSelectedOption(option);
     if (!chosenOptions.includes(option)) {
       setChosenOptions((prevChosen) => [...prevChosen, option]);
     }
   };
-  console.log(chosenOptions, "chosenOptions");
+
   const handleInfoClick = (info: string) => {
     if (!click.includes(info)) {
-      setClick((prevClick) => [info]);
+      setClick([info]);
     }
   };
 
@@ -51,23 +49,18 @@ export default function RouterBreadcrumbs() {
     setChosenOptions((prevChosen) =>
       prevChosen.filter((item) => item !== option)
     );
-
-    setSelectedOptions((prevSelected) => {
-      if (option === "Professional" && prevSelected.includes("Professional")) {
-        return ["Personal"];
-      } else if (option === "Personal" && prevSelected.includes("Personal")) {
-        return ["Professional"];
-      }
-      return prevSelected;
-    });
   };
-  console.log(selectedOptions);
+  React.useEffect(() => {
+    if (chosenOptions.length == 1) {
+      setSelectedOption(chosenOptions[0]);
+    }
+  }, [chosenOptions]);
 
   return (
-    <div className="xl:flex xl:h-[80vh] ">
-      <div className="xl:h-[80vh] xl:w-[400px] xl:border-r-[1px] xl:border-[#1E2D3D]  ">
+    <div className="xl:flex xl:h-[80vh]">
+      <div className="xl:h-[80vh] xl:w-[400px] xl:border-r-[1px] xl:border-[#1E2D3D]">
         <div className="pt-[2rem] animate-fadeIn xl:w-[400px]">
-          <h2 className="about-me text-[1.4rem] text-[#fff] leading-140 font-[450] pl-[2rem] ">
+          <h2 className="about-me text-[1.4rem] text-[#fff] leading-140 font-[450] pl-[2rem]">
             _about-me
           </h2>
         </div>
@@ -80,7 +73,7 @@ export default function RouterBreadcrumbs() {
             component="nav"
             aria-label="mailbox folders"
           >
-            <List className="animate-fadeIn ">
+            <List className="animate-fadeIn">
               <ListItem onClick={() => handleClick("info")}>
                 <ListItemButton>
                   <ListItemText className="pl-[1rem]" primary="Info" />
@@ -99,16 +92,13 @@ export default function RouterBreadcrumbs() {
                     <ListItemButton sx={{ ml: -2 }}>
                       <Image
                         className={`mr-[1rem] h-[7px] all-transition duration-[0.5s] ease-out ${
-                          selectedOptions.includes("Personal")
-                            ? "rotate-90"
-                            : ""
+                          selectedOption === "Personal" ? "rotate-90" : ""
                         }`}
                         width={12.728}
                         height={4.778}
                         alt="arrowDown"
                         src="/shared/Vector (6).svg"
                       />
-
                       <Image
                         width={12.728}
                         height={7.8}
@@ -118,7 +108,7 @@ export default function RouterBreadcrumbs() {
                       />
                       <ListItemText
                         className={`${
-                          selectedOptions.includes("Personal")
+                          selectedOption === "Personal"
                             ? "text-[#fff]"
                             : "text-greyText"
                         }`}
@@ -130,9 +120,7 @@ export default function RouterBreadcrumbs() {
                     <ListItemButton sx={{ ml: -2 }}>
                       <Image
                         className={`mr-[1rem] h-[7px] all-transition duration-[0.5s] ease-out ${
-                          selectedOptions.includes("Professional")
-                            ? "rotate-90"
-                            : ""
+                          selectedOption === "Professional" ? "rotate-90" : ""
                         }`}
                         width={12.728}
                         height={4.778}
@@ -146,7 +134,7 @@ export default function RouterBreadcrumbs() {
                       />
                       <ListItemText
                         className={`${
-                          selectedOptions.includes("Professional")
+                          selectedOption === "Professional"
                             ? "text-[#fff]"
                             : "text-greyText"
                         }`}
@@ -208,17 +196,17 @@ export default function RouterBreadcrumbs() {
             <span className="text-[1.6rem] font-[450]">{"// Info "}</span>
 
             <span className="text-greyText font-[450] text-[1.6rem]">
-              {"/ " + selectedOptions.join(", ")}
+              {"/ " + selectedOption}
             </span>
           </Typography>
         </Box>
       </div>
-      <div className="w-[100%] ">
+      <div className="w-[100%]">
         <div className=" xl:w-[100%] border-b-[1px] border-r-[1px] border-[#1E2D3D] xl:bg  items-center  hidden xl:flex">
           {chosenOptions.map((option) => (
             <div
               key={option}
-              onClick={() => setSelectedOptions([option])}
+              onClick={() => setSelectedOption(option)}
               className="flex border-r-[1px] animate-fadeIn border-[#1E2D3D] items-center bg-gray-200 p-2 m-2 rounded"
             >
               <Typography className="text-[greyText]" sx={{ mr: 1 }}>
@@ -236,7 +224,6 @@ export default function RouterBreadcrumbs() {
           ))}
         </div>
         <div className="flex">
-          {" "}
           <div className="xl:border-r-[1px] animate-fadeIn xl:border-[#1E2D3D] xl:w-[50rem]  xl:min-h-[74vh]">
             <Typography
               className="pl-[2rem] hidden xl:flex "
@@ -247,33 +234,31 @@ export default function RouterBreadcrumbs() {
                 {"// Info "}&nbsp;
               </span>
               <span className="text-greyText font-[450] text-[1.6rem]">
-                {" / " + selectedOptions.join(", ")}
+                {" / " + selectedOption}
               </span>
             </Typography>
-            {selectedOptions.includes("Personal") && (
-              <div className="px-[2rem]   py-[2rem]">
+            {selectedOption === "Personal" && (
+              <div className="px-[2rem] py-[2rem]">
                 <p
                   className="text-greyText xl:w-[40rem]  
              animate-fadeIn leading-150 text-[1.6rem] font-[450]"
-                  // eslint-disable-next-line react/jsx-no-comment-textnodes
                 >
-                  /* {Data.personalInfo}*/
+                  {Data.personalInfo}
                 </p>
               </div>
             )}
-            {selectedOptions.includes("Professional") && (
+            {selectedOption === "Professional" && (
               <div className="px-[2rem] py-[2rem]">
                 <p
                   className="text-greyText xl:w-[40rem]
              animate-fadeIn leading-150 text-[1.6rem] font-[450]"
-                  // eslint-disable-next-line react/jsx-no-comment-textnodes
                 >
-                  /*{Data.proffesionalInfo} */
+                  {Data.proffesionalInfo}
                 </p>
               </div>
             )}
           </div>
-          <div className="skills  animate-fadeIn">
+          <div className="skills animate-fadeIn">
             <p>Skills</p>
             <SkillsIcons />
             <a download href="/Doc/CV Mariam Davitashvili .pdf">
