@@ -33,10 +33,10 @@ const FormComp: React.FC<FormCompProps> = ({ setEmployer }) => {
     setLoading(true);
     setSubmit(false);
     setEmailError(false);
-    console.log(values, "values");
+
     try {
       const response = await fetch("/api/sendMail", {
-        method: "POST", // Ensure this is POST
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
@@ -60,53 +60,72 @@ const FormComp: React.FC<FormCompProps> = ({ setEmployer }) => {
   };
 
   return (
-    <Form
-      className="xl:border-r-[1px] animate-fadeIn xl:border-[#1E2D3D]"
-      name="nest-messages"
-      onFinish={onFinish}
-      validateMessages={validateMessages}
-      layout="vertical"
-    >
-      <Form.Item
-        name={["user", "name"]}
-        label="_name:"
-        rules={[{ required: true }]}
-      >
-        <Input name="name" onChange={handleInputChange} />
-      </Form.Item>
-      <Form.Item
-        name={["user", "email"]}
-        label="_email:"
-        rules={[{ type: "email", required: true }]}
-      >
-        <Input name="email" onChange={handleInputChange} />
-      </Form.Item>
+    <>
+      {!submit && (
+        <Form
+          className="xl:border-r-[1px] animate-fadeIn xl:border-[#1E2D3D]"
+          name="nest-messages"
+          onFinish={onFinish}
+          validateMessages={validateMessages}
+          layout="vertical"
+        >
+          <Form.Item
+            name={["user", "name"]}
+            label="_name:"
+            rules={[{ required: true }]}
+          >
+            <Input name="name" onChange={handleInputChange} />
+          </Form.Item>
+          <Form.Item
+            name={["user", "email"]}
+            label="_email:"
+            rules={[{ type: "email", required: true }]}
+          >
+            <Input name="email" onChange={handleInputChange} />
+          </Form.Item>
 
-      <Form.Item
-        name={["user", "message"]}
-        rules={[{ required: true }]}
-        label="_message:"
-      >
-        <Input.TextArea name="message" onChange={handleInputChange} />
-      </Form.Item>
-      <Form.Item>
-        {loading ? (
-          <Spin />
-        ) : (
-          <>
-            {submit && (
-              <Alert message="Email sent successfully!" type="success" />
+          <Form.Item
+            name={["user", "message"]}
+            rules={[{ required: true }]}
+            label="_message:"
+          >
+            <Input.TextArea name="message" onChange={handleInputChange} />
+          </Form.Item>
+          <Form.Item>
+            {loading ? (
+              <Spin />
+            ) : (
+              <>
+                {emailError && (
+                  <Alert message="Error sending email." type="error" />
+                )}
+                <Button
+                  className="bg-[#1C2B3A]"
+                  type="primary"
+                  htmlType="submit"
+                >
+                  submit-message
+                </Button>
+              </>
             )}
-            {emailError && (
-              <Alert message="Error sending email." type="error" />
-            )}
-            <Button className="bg-[#1C2B3A]" type="primary" htmlType="submit">
-              submit-message
-            </Button>
-          </>
-        )}
-      </Form.Item>
-    </Form>
+          </Form.Item>
+        </Form>
+      )}
+      {submit && (
+        <div className="xl:border-r-[1px] gap-[1rem]  flex flex-col justify-center items-center animate-fadeIn xl:border-[#1E2D3D]">
+          <span className="text-[2.6rem] font-[450]">Thank you! 🤘</span>
+          <p className="text-[#607B96] py-[1rem] px-[3rem] text-[1.8rem] font-[450]">
+            Your message has been accepted. You will recieve answer really soon!
+          </p>
+          <button
+            onClick={() => setSubmit(false)}
+            className="bg-[#1C2B3A] rounded-[8px] py-[1rem] px-[1rem] text-[1.8rem] font-[450]"
+          >
+            send-new-message
+          </button>
+        </div>
+      )}
+    </>
   );
 };
 

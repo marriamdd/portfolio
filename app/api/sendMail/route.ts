@@ -4,7 +4,6 @@ import nodemailer from "nodemailer";
 export async function POST(req: Request) {
   try {
     const { name, email, message } = await req.json();
-    console.log("Received:", { name, email, message });
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -17,7 +16,7 @@ export async function POST(req: Request) {
     const mailForMe = {
       from: `${name} <${email}>`,
       to: process.env.EMAIL_USER,
-      subject: `Portfolio Response from ${name}`,
+      subject: `interested from portfolio  ${name}`,
       text: message,
     };
 
