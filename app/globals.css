@@ -401,12 +401,6 @@ form {
   animation: zoomInOut 1s infinite;
 }
 
-/* .css-h4y409-MuiList-root {
-  max-width: 100% !important;
-
-  მობაილზე კჯონტრაქტის საიზი 
-} */
-
 .css-ahj2mt-MuiTypography-root {
   font-size: 1.6rem !important;
 
@@ -428,4 +422,9 @@ form {
     font-weight: 450;
     line-height: 150%;
   }
+}
+
+:where(.css-dev-only-do-not-override-p8b6i).ant-menu-light
+  .ant-menu-item-selected {
+  background-color: transparent;
 }

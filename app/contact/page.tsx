@@ -8,13 +8,13 @@ import Head from "next/head";
 
 export interface EemployerInfo {
   name: string;
-  gmail: string;
+  email: string;
   message: string;
 }
 export default function ContactMe() {
   const [employerInfo, setEmployer] = React.useState<EemployerInfo>({
     name: "",
-    gmail: "",
+    email: "",
     message: "",
   });
   const title = "Contact Me";

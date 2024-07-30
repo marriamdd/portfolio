@@ -20,6 +20,7 @@ export default function CodeDemo({
     const dateString = today.toLocaleDateString("en-GB", options);
     setFormattedDate(dateString);
   }, []);
+  console.log(employerInfo.email);
   return (
     <div
       className="xl:flex hidden px-[2rem] p-[8rem]
@@ -54,7 +55,7 @@ export default function CodeDemo({
           <span className="grey">,</span>
           <br />
           <span className="blue">email:</span>&nbsp;
-          <span className="orange">&quot;{employerInfo.gmail}&quot;</span>{" "}
+          <span className="orange">&quot;{employerInfo.email}&quot;</span>{" "}
           <span className="grey">,</span>
           <br />
           <span className="blue">message</span>&nbsp;

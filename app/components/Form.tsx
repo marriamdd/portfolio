@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
-import { Button, Form, Input, Spin, Alert } from "antd";
+import { Button, Form, Input, Spin } from "antd";
 import { EemployerInfo } from "../contact/page";
 
 const validateMessages = {
-  required: "${label} is required!",
+  required: "${label} is required",
   types: {
-    email: "${label} is not a valid email!",
+    email: "${label} is not a valid email",
   },
 };
 
@@ -17,7 +17,8 @@ interface FormCompProps {
 const FormComp: React.FC<FormCompProps> = ({ setEmployer }) => {
   const [submit, setSubmit] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
-  const [emailError, setEmailError] = React.useState(false);
+
+  const [form] = Form.useForm();
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -31,8 +32,7 @@ const FormComp: React.FC<FormCompProps> = ({ setEmployer }) => {
 
   const onFinish = async (values: any) => {
     setLoading(true);
-    setSubmit(false);
-    setEmailError(false);
+    setSubmit(true);
 
     try {
       const response = await fetch("/api/sendMail", {
@@ -49,11 +49,10 @@ const FormComp: React.FC<FormCompProps> = ({ setEmployer }) => {
 
       if (response.ok) {
         setSubmit(true);
-      } else {
-        setEmailError(true);
+        form.resetFields();
       }
     } catch (error) {
-      setEmailError(true);
+      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -68,6 +67,7 @@ const FormComp: React.FC<FormCompProps> = ({ setEmployer }) => {
           onFinish={onFinish}
           validateMessages={validateMessages}
           layout="vertical"
+          form={form}
         >
           <Form.Item
             name={["user", "name"]}
@@ -79,7 +79,13 @@ const FormComp: React.FC<FormCompProps> = ({ setEmployer }) => {
           <Form.Item
             name={["user", "email"]}
             label="_email:"
-            rules={[{ type: "email", required: true }]}
+            rules={[
+              {
+                required: true,
+              },
+
+              { type: "email" },
+            ]}
           >
             <Input name="email" onChange={handleInputChange} />
           </Form.Item>
@@ -96,9 +102,6 @@ const FormComp: React.FC<FormCompProps> = ({ setEmployer }) => {
               <Spin />
             ) : (
               <>
-                {emailError && (
-                  <Alert message="Error sending email." type="error" />
-                )}
                 <Button
                   className="bg-[#1C2B3A]"
                   type="primary"
@@ -112,9 +115,9 @@ const FormComp: React.FC<FormCompProps> = ({ setEmployer }) => {
         </Form>
       )}
       {submit && (
-        <div className="xl:border-r-[1px] gap-[1rem]  flex flex-col justify-center items-center animate-fadeIn xl:border-[#1E2D3D]">
+        <div className="xl:border-r-[1px] gap-[1rem] xl:pt-[0] pt-[3rem] flex flex-col justify-center items-center animate-fadeIn xl:border-[#1E2D3D]">
           <span className="text-[2.6rem] font-[450]">Thank you! 🤘</span>
-          <p className="text-[#607B96] py-[1rem] px-[3rem] text-[1.8rem] font-[450]">
+          <p className="text-[#607B96] text-center py-[1rem] px-[3rem] text-[1.8rem] font-[450]">
             Your message has been accepted. You will recieve answer really soon!
           </p>
           <button

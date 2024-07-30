@@ -65,6 +65,7 @@ export default function MultiActionAreaCard({
               {`Project ${index + 1}`}{" "}
               <span className="text-[1.6rem] text-greyText font-[450]">
                 {`// ${project.name}`}
+                {/* {project.liveLink} */}
               </span>
             </h1>
             <Card

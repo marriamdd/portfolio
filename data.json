@@ -1,6 +1,6 @@
 {
   "position": "Front-End Developer",
-  "personalInfo": "blbl.",
+  "personalInfo": "blblmmmmmmm.",
   "gmail": "davitahvili.m3@gmail.com",
   "phone": "(+995) 551-10-48-62",
   "github": "https://github.com/marriamdd",
@@ -86,78 +86,60 @@
       "id": 1,
       "name": "Task Management Web",
       "teckstack": ["React", "Tailwind CSS", "Typescript"],
-      "img": "/projects/Screenshot 2024-07-24 at 8.38.41 PM.png",
-      "liveLink": "https://task-manager-web1.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/task_manager"
-    },
-    {
-      "id": 5,
-      "name": "Audiophile Ecommerce",
-      "teckstack": ["React", "Styled Components", "Typescript"],
-      "img": "/projects/audiophile-ecommerce-website.png",
-      "liveLink": "https://audiophile-ecommerce-website-theta.vercel.app/",
-      "githubLink": "https://github.com/beqa200/audiophile-ecommerce-website"
+      "img": "/projects/Screenshot 2024-07-24 at 8.38.41 PM.png"
     },
 
-    {
-      "id": 4,
-      "name": "Planets Fact-site",
-      "teckstack": ["React", "Styled Components", "Typescript"],
-      "img": "/projects/Screenshot 2024-07-24 at 8.48.37 PM.png",
-      "liveLink": "https://e-commerce-product-page-iota-virid.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/E-commerce-product-page"
-    },
     {
       "id": 3,
+      "name": "Planets Fact-site",
+      "teckstack": ["React", "Styled Components", "Typescript"],
+      "img": "/projects/Screenshot 2024-07-24 at 8.48.37 PM.png"
+    },
+    {
+      "id": 4,
       "name": "Ecommerce Website",
       "teckstack": ["React", "Styled Components", "Typescript"],
-      "img": "/projects/ecommerce-product-page.png",
-      "liveLink": "https://e-commerce-product-page-iota-virid.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/E-commerce-product-page"
+      "img": "/projects/ecommerce-product-page.png"
     },
 
     {
-      "id": 11,
+      "id": 5,
       "name": "Github User-search",
       "teckstack": ["React", "Javascript", "Styled Components", "Rest API"],
-      "img": "/projects/Screenshot 2024-07-24 at 8.49.33 PM.png",
-      "liveLink": "https://github-user-search-app-xi-peach.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/github-user-search-app"
+      "img": "/projects/Screenshot 2024-07-24 at 8.49.33 PM.png"
     },
 
     {
-      "id": 14,
+      "id": 6,
       "name": "Pomodoro ",
       "teckstack": ["React", "Typescript", "Javascript", "Styled Components"],
-      "img": "/projects/Screenshot 2024-07-24 at 8.46.43 PM.png",
-      "liveLink": "https://pomodoro-app-lyart.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/pomodoro-App"
+      "img": "/projects/Screenshot 2024-07-24 at 8.46.43 PM.png"
     },
 
     {
-      "id": 14,
+      "id": 7,
       "name": "Interactive-Card-Form ",
       "teckstack": ["React", "Typescript", "Javascript", "Styled Components"],
-      "img": "/projects/Screenshot 2024-07-27 at 5.26.20 PM.png",
-      "liveLink": "https://pomodoro-app-lyart.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/pomodoro-App"
+      "img": "/projects/Screenshot 2024-07-27 at 5.26.20 PM.png"
     },
 
     {
-      "id": 16,
+      "id": 8,
       "name": "Single Page-portfolio",
       "teckstack": ["React", "Typescript", "Rest API", "Styled Components"],
-      "img": "/projects/Screenshot 2024-07-24 at 8.58.00 PM.png",
-      "liveLink": "https://beqa200.github.io/single-page-design-portfolio/",
-      "githubLink": "https://github.com/beqa200/single-page-design-portfolio"
+      "img": "/projects/Screenshot 2024-07-24 at 8.58.00 PM.png"
     },
     {
-      "id": 17,
+      "id": 9,
       "name": "Netflix inspired web",
       "teckstack": ["React", "Typescript", "Styled Components"],
-      "img": "/projects/Screenshot 2024-07-27 at 4.48.33 PM.png",
-      "liveLink": "https://netflix1-yn6u.vercel.app/MainPage",
-      "githubLink": "https://github.com/marriamdd/netfilx"
+      "img": "/projects/Screenshot 2024-07-27 at 4.48.33 PM.png"
+    },
+    {
+      "id": 10,
+      "name": "Netflix inspired web",
+      "teckstack": ["React", "Typescript", "Styled Components"],
+      "img": "/projects/Screenshot 2024-07-27 at 4.48.33 PM.png"
     }
   ]
 }
