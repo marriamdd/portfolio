@@ -16,16 +16,17 @@ const SkillsIcons = () => {
   };
 
   return (
-    <div className="flex gap-[2rem] flex-col items-center pt-[3rem] pb-[5rem]">
-      <div className="grid grid-cols-5 gap-[4rem] p-4">
+    <div className="flex gap-[5rem] flex-col justify-center items-center pt-[3rem] pb-[5rem]">
+      <div className="grid grid-cols-5 gap-[2.5rem] p-4">
         {Data.skills.slice(0, 5).map((icon, index) => (
           <motion.div
+            className="flex flex-col "
             key={index}
             onMouseEnter={() => handleIconMouseEnter(index)}
             onMouseLeave={handleIconMouseLeave}
             animate={{
               scale: [1, 1.2, 1],
-              rotate: hoveredIndex === index ? 360 : 0,
+              //   // rotate: hoveredIndex === index ? 30 : 0,
             }}
             transition={{
               scale: {
@@ -43,6 +44,14 @@ const SkillsIcons = () => {
               justifyContent: "center",
             }}
           >
+            <span
+              className={`text-container ${
+                hoveredIndex === index ? "" : "hidden"
+              }`}
+            >
+              {Data.skills[index].name}
+            </span>
+
             <Image
               width={50}
               height={50}
@@ -52,15 +61,16 @@ const SkillsIcons = () => {
           </motion.div>
         ))}
       </div>
-      <div className="grid grid-cols-4 gap-[3rem] p-4 align-middle">
+      <div className="grid grid-cols-4 gap-[3.4rem] p-4 align-middle">
         {Data.skills.slice(5, 9).map((icon, index) => (
           <motion.div
+            className="flex flex-col "
             key={index}
             onMouseEnter={() => handleIconMouseEnter(index + 5)}
             onMouseLeave={handleIconMouseLeave}
             animate={{
               scale: [1, 1.2, 1],
-              rotate: hoveredIndex === index + 5 ? 360 : 0,
+              // rotate: hoveredIndex === index + 5 ? 360 : 0,
             }}
             transition={{
               scale: {
@@ -78,6 +88,14 @@ const SkillsIcons = () => {
               justifyContent: "center",
             }}
           >
+            {" "}
+            <span
+              className={`text-container ${
+                hoveredIndex === index + 5 ? "" : "hidden"
+              }`}
+            >
+              {Data.skills[index + 5].name}
+            </span>
             <Image
               width={50}
               height={50}
@@ -87,15 +105,16 @@ const SkillsIcons = () => {
           </motion.div>
         ))}
       </div>
-      <div className="grid grid-cols-3 gap-[2rem] p-4">
+      <div className="grid grid-cols-3 gap-[2.5rem] p-4">
         {Data.skills.slice(9, 12).map((icon, index) => (
           <motion.div
+            className="flex flex-col "
             key={index}
             onMouseEnter={() => handleIconMouseEnter(index + 9)}
             onMouseLeave={handleIconMouseLeave}
             animate={{
               scale: [1, 1.2, 1],
-              rotate: hoveredIndex === index + 9 ? 360 : 0,
+              // rotate: hoveredIndex === index + 9 ? 360 : 0,
             }}
             transition={{
               scale: {
@@ -113,6 +132,13 @@ const SkillsIcons = () => {
               justifyContent: "center",
             }}
           >
+            <span
+              className={`text-container ${
+                hoveredIndex === index + 9 ? "" : "hidden"
+              }`}
+            >
+              {Data.skills[index + 9].name}
+            </span>
             <Image
               width={50}
               height={50}

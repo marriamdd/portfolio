@@ -165,6 +165,14 @@
       "img": "/projects/Screenshot 2024-07-24 at 8.58.00 PM.png",
       "liveLink": "https://team-6-cyan.vercel.app/",
       "githubLink": "https://github.com/marriamdd/RedBerry_resume-Website"
+    },
+    {
+      "id": 18,
+      "name": "Notifications page",
+      "teckstack": ["React", "Styled Components"],
+      "img": "/projects/Screenshot 2024-07-30 at 6.58.38 PM.png",
+      "liveLink": "https://notifications-page-three-tawny.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/notifications-page"
     }
   ]
 }

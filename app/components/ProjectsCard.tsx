@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Data from "../../data.json";
+import { motion } from "framer-motion";
 
 export default function MultiActionAreaCard({
   checked,
@@ -56,11 +57,16 @@ export default function MultiActionAreaCard({
   return (
     <div className="w-full flex justify-center ">
       <div
-        className="grid gap-[14rem] w-full px-[1rem] xl:px-[10rem] py-[5rem] place-items-center"
+        className="grid gap-[14rem]   w-full px-[1rem] xl:px-[10rem] py-[5rem] place-items-center"
         style={{ gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))" }}
       >
         {filteredProjects.map((project, index) => (
-          <div key={project.id}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1.5 }}
+            key={project.id}
+          >
             <h1 className="text-[15px] pl-[1rem] pb-[1rem] text-[#5565E8] font-[700]">
               {`Project ${index + 1}`}{" "}
               <span className="text-[1.6rem] text-greyText font-[450]">
@@ -95,7 +101,6 @@ export default function MultiActionAreaCard({
                     </div>
                   )}
                 </div>
-                <CardContent></CardContent>
               </CardActionArea>
               <CardActions
                 sx={{
@@ -124,7 +129,7 @@ export default function MultiActionAreaCard({
                 </Link>
               </CardActions>
             </Card>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
