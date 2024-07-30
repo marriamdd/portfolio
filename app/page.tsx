@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import Link from "next/link";
-import Data from "/Users/mariamidavitashvili/portfolio/data.json";
+import Data from "./../data.json";
 
 import code from "/public/shared/code-snippet-no-opacity (1).svg";
 import codeOp from "/public/shared/code-snippet.png";

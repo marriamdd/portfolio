@@ -17,7 +17,7 @@ import Image from "next/image";
 import fileIcon2 from "/public/shared/Vector (4).svg";
 import DownloadBtn from "./DownloadBtn";
 import SkillsIcons from "./SkillsIcons";
-import Data from "/Users/mariamidavitashvili/portfolio/data.json";
+import Data from "../../data.json";
 
 export default function RouterBreadcrumbs() {
   const [open, setOpen] = React.useState<string | null>("info");

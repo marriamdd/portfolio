@@ -2,11 +2,11 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import Data from "/Users/mariamidavitashvili/portfolio/data.json";
+
+import Data from "../../data.json";
 
 export default function MultiActionAreaCard({
   checked,
@@ -52,7 +52,7 @@ export default function MultiActionAreaCard({
       );
     }
   }, [checked]);
-
+  console.log(Data);
   return (
     <div className="w-full flex justify-center ">
       <div
@@ -65,7 +65,6 @@ export default function MultiActionAreaCard({
               {`Project ${index + 1}`}{" "}
               <span className="text-[1.6rem] text-greyText font-[450]">
                 {`// ${project.name}`}
-                {/* {project.liveLink} */}
               </span>
             </h1>
             <Card

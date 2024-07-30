@@ -7,7 +7,7 @@ import MuiAccordionSummary, {
   AccordionSummaryProps,
 } from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
-import Data from "/Users/mariamidavitashvili/portfolio/data.json";
+import Data from "../../data.json";
 import { Checkbox } from "antd";
 import { FormControlLabel } from "@mui/material";
 import { ISetFilteredProducts } from "../projects/page";

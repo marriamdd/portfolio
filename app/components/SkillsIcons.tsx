@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import Data from "/Users/mariamidavitashvili/portfolio/data.json";
+import Data from "../../data.json";
 
 const SkillsIcons = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);

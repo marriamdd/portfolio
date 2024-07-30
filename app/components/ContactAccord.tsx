@@ -8,7 +8,7 @@ import {
   ListItemButton,
   ListItemText,
 } from "@mui/material";
-import Data from "/Users/mariamidavitashvili/portfolio/data.json";
+import Data from "../../data.json";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";

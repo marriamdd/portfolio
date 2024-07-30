@@ -84,62 +84,87 @@
   "projects": [
     {
       "id": 1,
-      "name": "Task Management Web",
+      "name": "Task_manager",
       "teckstack": ["React", "Tailwind CSS", "Typescript"],
-      "img": "/projects/Screenshot 2024-07-24 at 8.38.41 PM.png"
+      "img": "/projects/Screenshot 2024-07-24 at 8.38.41 PM.png",
+      "liveLink": "https://task-manager-web1.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/task_manager"
     },
-
+    {
+      "id": 10,
+      "name": "Invoice_manager",
+      "teckstack": ["React", "Typescript", "Tailwind CSS", "Rest API"],
+      "img": "/projects/Screenshot 2024-07-24 at 8.46.22 PM.png",
+      "liveLink": "https://invoice-app-seven-gamma.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/invoice_app"
+    },
     {
       "id": 3,
       "name": "Planets Fact-site",
       "teckstack": ["React", "Styled Components", "Typescript"],
-      "img": "/projects/Screenshot 2024-07-24 at 8.48.37 PM.png"
+      "img": "/projects/Screenshot 2024-07-24 at 8.48.37 PM.png",
+      "liveLink": "https://planets-fact-site-eight-ashen.vercel.app/Earth",
+      "githubLink": "https://github.com/marriamdd/Planets-fact-site"
+    },
+    {
+      "id": 9,
+      "name": "Audiophile ecommerce",
+      "teckstack": ["React", "Styled Components", "Typescript"],
+      "img": "/projects/audiophile-ecommerce-website.png",
+      "liveLink": "https://audiophile-ecommerce-website-mocha.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/audiophile-ecommerce-website-"
     },
     {
       "id": 4,
       "name": "Ecommerce Website",
       "teckstack": ["React", "Styled Components", "Typescript"],
-      "img": "/projects/ecommerce-product-page.png"
+      "img": "/projects/ecommerce-product-page.png",
+      "liveLink": "https://e-commerce-product-page-iota-virid.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/E-commerce-product-page"
     },
 
     {
       "id": 5,
       "name": "Github User-search",
       "teckstack": ["React", "Javascript", "Styled Components", "Rest API"],
-      "img": "/projects/Screenshot 2024-07-24 at 8.49.33 PM.png"
+      "img": "/projects/Screenshot 2024-07-24 at 8.49.33 PM.png",
+      "liveLink": "https://github-user-search-app-xi-peach.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/github-user-search-app"
     },
 
+    {
+      "id": 9,
+      "name": "Netflix inspired web",
+      "teckstack": ["React", "Typescript", "Styled Components"],
+      "img": "/projects/Screenshot 2024-07-27 at 4.48.33 PM.png",
+      "liveLink": "https://netflix1-alpha.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/netflix1"
+    },
     {
       "id": 6,
       "name": "Pomodoro ",
       "teckstack": ["React", "Typescript", "Javascript", "Styled Components"],
-      "img": "/projects/Screenshot 2024-07-24 at 8.46.43 PM.png"
+      "img": "/projects/Screenshot 2024-07-24 at 8.46.43 PM.png",
+      "liveLink": "https://pomodoro-app-lyart.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/pomodoro-App"
     },
 
     {
       "id": 7,
       "name": "Interactive-Card-Form ",
       "teckstack": ["React", "Typescript", "Javascript", "Styled Components"],
-      "img": "/projects/Screenshot 2024-07-27 at 5.26.20 PM.png"
+      "img": "/projects/Screenshot 2024-07-27 at 5.26.20 PM.png",
+      "liveLink": "https://interactive-card-details-form-jgag.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/interactive-card-details-form"
     },
 
     {
       "id": 8,
-      "name": "Single Page-portfolio",
+      "name": "Single Page portfolio",
       "teckstack": ["React", "Typescript", "Rest API", "Styled Components"],
-      "img": "/projects/Screenshot 2024-07-24 at 8.58.00 PM.png"
-    },
-    {
-      "id": 9,
-      "name": "Netflix inspired web",
-      "teckstack": ["React", "Typescript", "Styled Components"],
-      "img": "/projects/Screenshot 2024-07-27 at 4.48.33 PM.png"
-    },
-    {
-      "id": 10,
-      "name": "Netflix inspired web",
-      "teckstack": ["React", "Typescript", "Styled Components"],
-      "img": "/projects/Screenshot 2024-07-27 at 4.48.33 PM.png"
+      "img": "/projects/Screenshot 2024-07-24 at 8.58.00 PM.png",
+      "liveLink": "https://team-6-cyan.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/RedBerry_resume-Website"
     }
   ]
 }
