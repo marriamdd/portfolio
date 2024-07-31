@@ -1,3 +1,4 @@
+"use client";
 import React, { useContext } from "react";
 import { Button, ConfigProvider, Space } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";

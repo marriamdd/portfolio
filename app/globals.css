@@ -133,12 +133,6 @@ h2 {
     background-position: center !important;
   }
 }
-.menuDiv {
-  .ant-menu-item {
-    padding-block: 3rem;
-    height: 10rem !important;
-  }
-}
 
 @keyframes fadeIn {
   from {
@@ -444,7 +438,18 @@ form {
 .text-container.hidden {
   opacity: 0;
 }
-.menu-button {
+/* .menu-button {
+  display: flex !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  @media screen and (min-width: 1280px) {
+    display: none !important;
+  }
+} */
+
+.anticon-menu {
+  margin-left: auto !important;
   display: flex !important;
   background-color: transparent !important;
   border: none !important;
@@ -453,7 +458,6 @@ form {
     display: none !important;
   }
 }
-
 :where(.css-dev-only-do-not-override-1pg9a38).ant-menu-light
   .ant-menu-item-selected {
   background-color: transparent !important;
@@ -467,4 +471,28 @@ form {
   @media screen and (min-width: 1280px) {
     /* width: 19.6vw; */
   }
+}
+.ant-drawer-content-wrapper {
+  width: 100% !important;
+}
+
+.name {
+  color: #607b96;
+  font-size: 16px;
+  font-weight: 550;
+}
+.headerNav {
+  a {
+    padding-inline: 3rem;
+    color: #607b96;
+    font-size: 16px;
+    font-weight: 450;
+  }
+}
+/* .border {
+  border-color: #607b96 !important;
+} */
+.ant-drawer-close {
+  color: #607b96 !important;
+  font: 700 !important;
 }
