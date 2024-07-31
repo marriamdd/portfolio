@@ -4,7 +4,7 @@
   "gmail": "davitahvili.m3@gmail.com",
   "phone": "(+995) 551-10-48-62",
   "github": "https://github.com/marriamdd",
-  "proffesionalInfo": "As a Software developer I am constantly striving to improve my skills and learn new technologies.  I stepped into this big Tech world 2 years ago and I found myself very flexible and adaptive to learning new things. At the moment I am a Co-founder/Lecturer/Mentor at AlgoUni and Full-Stack Developer at Tetrobyte.",
+  "proffesionalInfo": "As an enthusiastic Junior Front-end Developer, I'm dedicated to continuous self-improvement and staying ahead of emerging technologies. With a strong work ethic and disciplined approach, I efficiently complete tasks and deliver results. While I'm currently seeking to gain professional experience, my passion and determination drive me to embrace new challenges and opportunities.",
   "techStacks": [
     "React",
     "Javascript",
@@ -173,6 +173,14 @@
       "img": "/projects/Screenshot 2024-07-30 at 6.58.38 PM.png",
       "liveLink": "https://notifications-page-three-tawny.vercel.app/",
       "githubLink": "https://github.com/marriamdd/notifications-page"
+    },
+    {
+      "id": 19,
+      "name": "Password generator",
+      "teckstack": ["React", "Styled Components"],
+      "img": "/projects/Screenshot 2024-07-31 at 2.12.21 AM.png",
+      "liveLink": "https://password-generator-plum-two-94.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/password-generator"
     }
   ]
 }

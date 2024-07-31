@@ -71,7 +71,7 @@ export default function CustomizedAccordions({
   };
 
   return (
-    <div className="flex w-[100%] xl:w-[23%] xl:border-r border-[#1E2D3D] animate-fadeIn">
+    <div className="flex  w-[100%] px-[2rem] xl:w-[23%] xl:border-r border-[#1E2D3D] animate-fadeIn">
       <Accordion
         expanded={expanded === "panel1"}
         onChange={handleAccordionChange("panel1")}
@@ -79,6 +79,7 @@ export default function CustomizedAccordions({
         <AccordionSummary
           sx={{
             width: "100%",
+            gap: "1rem",
             "&:hover": {
               background: "#1E2D3D",
             },
@@ -86,7 +87,7 @@ export default function CustomizedAccordions({
           aria-controls="panel1d-content"
           id="panel1d-header"
         >
-          <h2>TechStacks</h2>
+          <h2 className="font-[900] text-[18px] ">TechStacks</h2>
         </AccordionSummary>
         {Data.techStacks.map((skill) => (
           <AccordionDetails

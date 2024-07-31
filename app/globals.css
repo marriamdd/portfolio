@@ -36,8 +36,11 @@ a {
 }
 .ant-drawer-content {
   background-color: rgb(1, 22, 39) !important;
-  height: 92vh !important ;
+  height: 100vh !important ;
   border-radius: 0.8rem;
+  @media screen and (min-width: 1280px) {
+    /* display: none !important; */
+  }
 }
 .ant-menu {
   background-color: rgb(1, 22, 39) !important;
@@ -424,10 +427,6 @@ form {
   }
 }
 
-:where(.css-dev-only-do-not-override-p8b6i).ant-menu-light
-  .ant-menu-item-selected {
-  background-color: transparent;
-}
 .text-container {
   height: 10px;
   padding-bottom: 1.5rem;
@@ -444,4 +443,28 @@ form {
 
 .text-container.hidden {
   opacity: 0;
+}
+.menu-button {
+  display: flex !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  @media screen and (min-width: 1280px) {
+    display: none !important;
+  }
+}
+
+:where(.css-dev-only-do-not-override-1pg9a38).ant-menu-light
+  .ant-menu-item-selected {
+  background-color: transparent !important;
+}
+.MuiAccordion-region {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.css-12fbt3k-MuiButtonBase-root-MuiAccordionSummary-root {
+  @media screen and (min-width: 1280px) {
+    /* width: 19.6vw; */
+  }
 }

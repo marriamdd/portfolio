@@ -30,7 +30,7 @@ export default function Projects() {
       <Head>
         <meta name="description" content={description} />
       </Head>
-      <div className="flex flex-col xl:flex-row w-[100%] h-[100%] overflow-y-hidden">
+      <div className="flex flex-col xl:flex-row w-[100%] xl:h-[100%] xl:overflow-y-scroll">
         <CustomizedAccordions setChecked={setChecked} checked={checked} />
         <div className="flex flex-col w-full overflow-y-auto">
           <MultiActionAreaCard checked={checked} />

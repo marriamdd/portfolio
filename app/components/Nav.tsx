@@ -1,10 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
 import { Menu, Drawer, Button } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import CloseIcon from "@mui/icons-material/Close";
+
 const NavBar: React.FC = () => {
   const [visible, setVisible] = useState(false);
 
@@ -15,7 +17,19 @@ const NavBar: React.FC = () => {
   const onClose = () => {
     setVisible(false);
   };
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1280) {
+        setVisible(false);
+      }
+    };
 
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div className="navbar h-[55px]">
       <div className="logo">
@@ -62,7 +76,7 @@ const NavBar: React.FC = () => {
       </div>
 
       <Button
-        className="menu-button xl:hidden bg-[transparent] shadow-none"
+        className="menu-button  bg-[transparent] shadow-none"
         type="primary"
         onClick={showDrawer}
         style={{ zIndex: 1050 }}
@@ -71,6 +85,7 @@ const NavBar: React.FC = () => {
       </Button>
 
       <Drawer
+        className="xl:hidden"
         title="Mariam Davitashvili"
         placement="right"
         onClose={onClose}
@@ -80,7 +95,7 @@ const NavBar: React.FC = () => {
         }
         style={{ zIndex: 1040 }}
       >
-        <div className="menuDiv">
+        <div className="menuDiv  ">
           <Menu mode="vertical">
             <Menu.Item className="border-t-[1px] border-[#1E2D3D]" key="home">
               <Link
@@ -134,7 +149,6 @@ const NavBar: React.FC = () => {
           justify-content: space-between;
           align-items: center;
           padding: 0 20px;
-          background: #001529;
         }
         .logo a {
           color: #fff;
@@ -161,7 +175,7 @@ const NavBar: React.FC = () => {
             display: none;
           }
           .menu-button {
-            display: block;
+            display: none;
           }
         }
       `}</style>
