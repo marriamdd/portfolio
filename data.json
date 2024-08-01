@@ -1,6 +1,6 @@
 {
   "position": "Front-End Developer",
-  "personalInfo": "blblmmmmmmm.",
+  "personalInfo": "Hello, I’m Mariam Davitashvili, a 23-year-old based in Tbilisi, Georgia. I’m a highly motivated and goal-oriented individual who passionately pursues my objectives every day. My dedication and focus have driven me to achieve a high level of proficiency in a remarkably short time. I invite you to explore my portfolio to see firsthand the skills and accomplishments that reflect my commitment and drive..",
   "gmail": "davitahvili.m3@gmail.com",
   "phone": "(+995) 551-10-48-62",
   "github": "https://github.com/marriamdd",
@@ -107,7 +107,7 @@
       "githubLink": "https://github.com/marriamdd/Planets-fact-site"
     },
     {
-      "id": 9,
+      "id": 49,
       "name": "Audiophile ecommerce",
       "teckstack": ["React", "Styled Components", "Typescript"],
       "img": "/projects/audiophile-ecommerce-website.png",

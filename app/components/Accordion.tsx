@@ -10,7 +10,6 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Data from "../../data.json";
 import { Checkbox } from "antd";
 import { FormControlLabel } from "@mui/material";
-import { ISetFilteredProducts } from "../projects/page";
 
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -95,7 +94,7 @@ export default function CustomizedAccordions({
               color: checked.includes(skill) ? "#fff" : "#607b96",
             }}
             className="animate-fadeIn"
-            key={skill}
+            key={skill.toLowerCase()}
           >
             <FormControlLabel
               label={skill}

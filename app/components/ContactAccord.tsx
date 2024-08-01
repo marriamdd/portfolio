@@ -38,7 +38,7 @@ export default function ContactAccord() {
        xl:border-r-[1px] xl:border-[#1E2D3D]  "
       >
         <div className="pt-[2rem] animate-fadeIn xl:w-[400px]">
-          <h2 className="about-me text-[1.4rem] text-[#fff] leading-140 font-[450] pl-[2rem] ">
+          <h2 className="about-me text-[1.4rem] pb-[3rem] text-[#fff] leading-140 font-[450] pl-[2rem] ">
             _Contact-me
           </h2>
         </div>
@@ -52,7 +52,7 @@ export default function ContactAccord() {
             component="nav"
             aria-label="mailbox folders"
           >
-            <List className="animate-fadeIn ">
+            <List className="animate-fadeIn gap-[1rem]  ">
               <ListItem onClick={() => handleClick("contact")}>
                 <ListItemButton>
                   <ListItemText className="pl-[1rem]" primary="Contacts" />
@@ -67,9 +67,9 @@ export default function ContactAccord() {
                   >
                     <EmailIcon style={{ color: "#607B96" }} />
                     <h2
-                      className={`${
+                      className={`ml-[-3rem] ${
                         click.includes("email")
-                          ? "text-[#3f5161]  all-transition duration-[1s] ease-out"
+                          ? "text-[#3f5161]   all-transition duration-[1s] ease-out"
                           : "text-greyText all-transition duration-[1s] ease-out"
                       }`}
                     >
@@ -82,7 +82,7 @@ export default function ContactAccord() {
                   >
                     <PhoneIcon style={{ color: "#607B96" }} />
                     <h2
-                      className={` number ${
+                      className={`ml-[-3rem] number ${
                         click.includes("number")
                           ? "text-[#3f5161]  all-transition duration-[1s] ease-out"
                           : "text-greyText all-transition duration-[1s] ease-out"

@@ -38,9 +38,6 @@ a {
   background-color: rgb(1, 22, 39) !important;
   height: 100vh !important ;
   border-radius: 0.8rem;
-  @media screen and (min-width: 1280px) {
-    /* display: none !important; */
-  }
 }
 .ant-menu {
   background-color: rgb(1, 22, 39) !important;
@@ -264,13 +261,13 @@ h2 {
     margin-top: 2rem;
   }
 }
-.css-dev-only-do-not-override-p8b6i.ant-form-item
+/* .css-dev-only-do-not-override-p8b6i.ant-form-item
   .ant-form-item-label
   > label.ant-form-item-required:not(
     .ant-form-item-required-mark-optional
   )::before {
   content: "";
-}
+} */
 
 form {
   width: 100% !important;
@@ -458,11 +455,7 @@ form {
   flex-direction: column;
   gap: 2rem;
 }
-.css-12fbt3k-MuiButtonBase-root-MuiAccordionSummary-root {
-  @media screen and (min-width: 1280px) {
-    /* width: 19.6vw; */
-  }
-}
+
 .ant-drawer-content-wrapper {
   width: 100% !important;
 }
@@ -495,10 +488,7 @@ form {
   display: flex !important;
   flex-direction: column;
   padding-top: 0 !important;
-  /* gap: 1.5rem !important; */
   a {
-    /* padding: 0 !important */
-
     color: #fff !important;
     font-family: "Fira Code", monospace !important;
     font-size: 16px !important;
@@ -508,4 +498,34 @@ form {
     padding-block: 2.3rem !important;
     border-bottom: 0.2px solid #1e2d3d !important ;
   }
+}
+
+.css-15rkx7f-MuiCardActions-root {
+  padding-block: 10rem !important;
+}
+.css-4rgx9o-MuiPaper-root-MuiCard-root:hover {
+  scale: 1.03;
+  transition: all 1s ease-in-out;
+}
+.css-4rgx9o-MuiPaper-root-MuiCard-root {
+  scale: 1;
+  border: 1px solid #1e2d3d;
+  transition: all 1s ease-in-out;
+}
+.css-1mk9mw3-MuiList-root {
+  gap: 1.2rem !important;
+}
+.css-i4bv87-MuiSvgIcon-root {
+  margin-right: 4rem !important;
+  transition: all 1s ease-in-out;
+}
+
+.css-1fbouff-MuiTypography-root {
+  margin-right: 5rem !important;
+}
+.css-12fbt3k-MuiButtonBase-root-MuiAccordionSummary-root:hover {
+  background: none !important;
+}
+.gmail {
+  margin-left: 3rem !important;
 }

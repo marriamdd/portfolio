@@ -1,6 +1,6 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
+
 import CardMedia from "@mui/material/CardMedia";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import Image from "next/image";
@@ -30,7 +30,7 @@ export default function MultiActionAreaCard({
       .filter((skill) => techstack.includes(skill.name))
       .map((skill) => (
         <Image
-          key={skill.name}
+          key={skill.name.toLocaleLowerCase()}
           className={`w-[32px] h-[32px] mx-2 transition-transform duration-500 ease-in-out ${
             hoveredCard ? "animate-zoom" : ""
           }`}
@@ -106,17 +106,17 @@ export default function MultiActionAreaCard({
                 sx={{
                   justifyContent: "space-around",
                   paddingInline: "2rem",
-                  marginBottom: "1.5rem",
+                  height: "60px",
                 }}
               >
                 <Button
-                  className="px-[3rem] py-[1.7rem] transition-all duration-[1s]"
+                  className="px-[3rem] bg-[#1e2d3d] hover:text-[#5565E8] text-[white] py-[1.7rem] transition-all duration-[1s]"
                   size="large"
                   variant="outlined"
                   target="_blank"
                   href={project.liveLink}
                 >
-                  View Project
+                  View_Project
                 </Button>
                 <Link href={project.githubLink} target="_blank">
                   <Image

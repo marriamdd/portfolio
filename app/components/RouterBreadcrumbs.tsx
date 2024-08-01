@@ -60,12 +60,20 @@ export default function RouterBreadcrumbs() {
     <div className="xl:flex xl:h-[80vh]">
       <div className="xl:h-[80vh] xl:w-[400px] xl:border-r-[1px] xl:border-[#1E2D3D]">
         <div className="pt-[2rem] animate-fadeIn xl:w-[400px]">
-          <h2 className="about-me text-[1.4rem] text-[#fff] leading-140 font-[450] pl-[2rem]">
+          <h2 className="about-me text-[1.4rem] pb-[2rem] text-[#fff] leading-140 font-[450] pl-[2rem]">
             _About-me
           </h2>
         </div>
-        <Box sx={{ display: "flex", flexDirection: "column", width: 360 }}>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            width: 360,
+            gap: "1rem",
+          }}
+        >
           <Box
+            className="box"
             sx={{
               bgcolor: "background.paper",
               mt: 1,
@@ -73,7 +81,7 @@ export default function RouterBreadcrumbs() {
             component="nav"
             aria-label="mailbox folders"
           >
-            <List className="animate-fadeIn">
+            <List className="animate-fadeIn gap-[1rem]">
               <ListItem onClick={() => handleClick("info")}>
                 <ListItemButton>
                   <ListItemText className="pl-[1rem]" primary="Info" />
@@ -88,7 +96,10 @@ export default function RouterBreadcrumbs() {
                 unmountOnExit
               >
                 <List disablePadding>
-                  <ListItem onClick={() => handleOptionClick("Personal")}>
+                  <ListItem
+                    className="mb-[3rem]]"
+                    onClick={() => handleOptionClick("Personal")}
+                  >
                     <ListItemButton sx={{ ml: -2 }}>
                       <Image
                         className={`mr-[1rem] h-[7px] all-transition duration-[0.5s] ease-out ${
@@ -158,10 +169,11 @@ export default function RouterBreadcrumbs() {
                   >
                     <EmailIcon style={{ color: "#607B96" }} />
                     <h2
-                      className={`${
+                      style={{ marginLeft: "-3rem" }}
+                      className={`  ${
                         click.includes("email")
-                          ? "text-[#3f5161] all-transition duration-[1s] ease-out"
-                          : "text-greyText all-transition duration-[1s] ease-out"
+                          ? "text-[#3f5161]  all-transition duration-[1s] ease-out"
+                          : "text-greyText  all-transition duration-[1s] ease-out"
                       }`}
                     >
                       {Data.gmail}
@@ -171,7 +183,10 @@ export default function RouterBreadcrumbs() {
                     onClick={() => handleInfoClick("number")}
                     className="flex gap-[1rem] items-center"
                   >
-                    <PhoneIcon style={{ color: "#607B96" }} />
+                    <PhoneIcon
+                      className="PhoneIcon"
+                      style={{ color: "#607B96" }}
+                    />
                     <h2
                       className={`${
                         click.includes("number")
@@ -189,7 +204,7 @@ export default function RouterBreadcrumbs() {
           </Box>
 
           <Typography
-            className="pl-[2rem] xl:hidden"
+            className="pl-[2rem]  xl:hidden"
             variant="body1"
             sx={{ mt: 2 }}
           >
@@ -205,7 +220,7 @@ export default function RouterBreadcrumbs() {
         <div className=" xl:w-[100%] border-b-[1px] border-r-[1px] border-[#1E2D3D] xl:bg  items-center  hidden xl:flex">
           {chosenOptions.map((option) => (
             <div
-              key={option}
+              key={option.toLocaleLowerCase()}
               onClick={() => setSelectedOption(option)}
               className="flex border-r-[1px] animate-fadeIn border-[#1E2D3D] items-center bg-gray-200 p-2 m-2 rounded"
             >
@@ -224,7 +239,7 @@ export default function RouterBreadcrumbs() {
           ))}
         </div>
         <div className="flex">
-          <div className="xl:border-r-[1px] animate-fadeIn xl:border-[#1E2D3D] xl:w-[50rem]  xl:min-h-[74vh]">
+          <div className="xl:border-r-[1px] animate-fadeIn xl:border-[#1E2D3D] xl:w-[50rem] xl:pt-[2rem]   xl:min-h-[74vh]">
             <Typography
               className="pl-[2rem] hidden xl:flex "
               variant="body1"
