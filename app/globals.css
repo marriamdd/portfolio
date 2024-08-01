@@ -438,15 +438,6 @@ form {
 .text-container.hidden {
   opacity: 0;
 }
-/* .menu-button {
-  display: flex !important;
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  @media screen and (min-width: 1280px) {
-    display: none !important;
-  }
-} */
 
 .anticon-menu {
   margin-left: auto !important;
@@ -489,10 +480,32 @@ form {
     font-weight: 450;
   }
 }
-/* .border {
-  border-color: #607b96 !important;
-} */
+
 .ant-drawer-close {
   color: #607b96 !important;
   font: 700 !important;
+}
+
+.ant-drawer-header {
+  padding-bottom: 2.5rem !important;
+  border-bottom: 1px solid #1e2d3d !important;
+  font-family: "Fira Code", monospace !important;
+}
+.ant-drawer-body {
+  display: flex !important;
+  flex-direction: column;
+  padding-top: 0 !important;
+  /* gap: 1.5rem !important; */
+  a {
+    /* padding: 0 !important */
+
+    color: #fff !important;
+    font-family: "Fira Code", monospace !important;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 300 !important;
+    line-height: normal;
+    padding-block: 2.3rem !important;
+    border-bottom: 0.2px solid #1e2d3d !important ;
+  }
 }

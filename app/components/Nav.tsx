@@ -34,6 +34,12 @@ const NavBar: React.FC = () => {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  const handleDrawerClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    if (target.tagName === "A") {
+      setOpen(false);
+    }
+  };
   return (
     <div className="flex items-center h-[57px] px-[2rem] animate-fadeIn">
       <div className="w-[350px] pl-[2rem]">
@@ -46,7 +52,7 @@ const NavBar: React.FC = () => {
           className="border-r-[1px] py-[1.4rem] border-[#1E2D3D]  all-transition duration-[1s] ease"
           href={"/"}
         >
-          _home
+          _hello
         </Link>
         <Link
           className="border-r-[1px] py-[1.4rem] border-[#1E2D3D]"
@@ -74,10 +80,17 @@ const NavBar: React.FC = () => {
         onClick={showDrawer}
       />
 
-      <Drawer title="Basic Drawer " onClose={onClose} open={open}>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+      <Drawer
+        className="h-[55px] border-b-[1px] border-[red]"
+        title="Mariam Davitashvili"
+        onClose={onClose}
+        open={open}
+        onClick={handleDrawerClick}
+      >
+        <Link href={"/"}> _hello</Link>
+        <Link href={"/about"}> _about</Link>
+        <Link href={"/projects"}> _projects</Link>
+        <Link href={"/contact"}> _contact</Link>
       </Drawer>
     </div>
   );
