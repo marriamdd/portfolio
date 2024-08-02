@@ -1,11 +1,7 @@
 "use client";
-
 import React, { useEffect } from "react";
-
 import Link from "next/link";
-
 import { Drawer } from "antd";
-
 import MenuIcon from "@mui/icons-material/Menu";
 
 const NavBar: React.FC = () => {
@@ -98,16 +94,28 @@ const NavBar: React.FC = () => {
       />
 
       <Drawer
-        className="h-[55px] border-b-[1px] "
+        className="h-[55px]   border-b-[1px] "
         title="Mariam Davitashvili"
         onClose={onClose}
         open={open}
         onClick={handleDrawerClick}
       >
-        <Link href={"/"}> _hello</Link>
-        <Link href={"/about"}> _about</Link>
-        <Link href={"/projects"}> _projects</Link>
-        <Link href={"/contact"}> _contact</Link>
+        <Link className="hover:bg-[#607b96]  pl-[2rem]" href={"/"}>
+          {" "}
+          _hello
+        </Link>
+        <Link className="hover:bg-[#607b96]  pl-[2rem]" href={"/about"}>
+          {" "}
+          _about
+        </Link>
+        <Link className="hover:bg-[#607b96]  pl-[2rem]" href={"/projects"}>
+          {" "}
+          _projects
+        </Link>
+        <Link className="hover:bg-[#607b96]  pl-[2rem]" href={"/contact"}>
+          {" "}
+          _contact
+        </Link>
       </Drawer>
     </div>
   );

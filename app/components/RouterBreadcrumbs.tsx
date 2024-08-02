@@ -1,14 +1,8 @@
 "use client";
 import * as React from "react";
-import Box from "@mui/material/Box";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import Collapse from "@mui/material/Collapse";
-import ListItemText from "@mui/material/ListItemText";
+
 import Typography from "@mui/material/Typography";
-import ExpandLess from "@mui/icons-material/ExpandLess";
-import ExpandMore from "@mui/icons-material/ExpandMore";
+
 import IconButton from "@mui/material/IconButton";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
@@ -60,49 +54,45 @@ export default function RouterBreadcrumbs() {
     <div className="xl:flex xl:h-[80vh]">
       <div className="xl:h-[80vh] xl:w-[400px] xl:border-r-[1px] xl:border-[#1E2D3D]">
         <div className="pt-[2rem] animate-fadeIn xl:w-[400px]">
-          <h2 className="about-me text-[1.4rem] pb-[2rem] text-[#fff] leading-140 font-[450] pl-[2rem]">
+          <h2 className="about-me text-[1.6rem] pb-[2rem] text-[#fff] leading-140 font-[650] pl-[2rem]">
             _About-me
           </h2>
         </div>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            width: 360,
-            gap: "1rem",
-          }}
-        >
-          <Box
-            className="box"
-            sx={{
-              bgcolor: "background.paper",
-              mt: 1,
-            }}
-            component="nav"
+        <div className="flex flex-col w-[full] gap-[1rem]">
+          <nav
+            className="box mt-[1rem] gap-[1rem]"
             aria-label="mailbox folders"
           >
-            <List className="animate-fadeIn gap-[1rem]">
-              <ListItem onClick={() => handleClick("info")}>
-                <ListItemButton>
-                  <ListItemText className="pl-[1rem]" primary="Info" />
-                  {open === "info" ? <ExpandLess /> : <ExpandMore />}
-                </ListItemButton>
-              </ListItem>
-              <Collapse
-                className="animate-fadeIn"
-                component="li"
-                in={open === "info"}
-                timeout="auto"
-                unmountOnExit
+            <ul className="animate-fadeIn flex flex-col gap-[0.5rem]">
+              <li
+                className="pl-[2rem] py-[1rem] bg-[#1E2D3D]"
+                onClick={() => handleClick("info")}
               >
-                <List disablePadding>
-                  <ListItem
-                    className="mb-[3rem]]"
-                    onClick={() => handleOptionClick("Personal")}
-                  >
-                    <ListItemButton sx={{ ml: -2 }}>
+                <div className="flex items-center ">
+                  <Image
+                    className={` h-[7px] all-transition duration-[0.5s] ease-out ${
+                      open === "info" ? "rotate-90" : ""
+                    }`}
+                    width={12.728}
+                    height={4.778}
+                    alt="arrowDown"
+                    src="/shared/Vector (6).svg"
+                  />
+                  <span className="pl-[1rem] text-[1.6rem] font-[500]">
+                    Info
+                  </span>
+                </div>
+              </li>
+              <div className="animate-fadeIn ">
+                <ul
+                  className={`${
+                    open === "info" ? "flex " : " hidden "
+                  }  animate-fadeIn  all-transition duration-[0.5s] ease-out flex-col gap-[1rem] my-[1rem] ml-[3rem]`}
+                >
+                  <li onClick={() => handleOptionClick("Personal")}>
+                    <div className="ml-[2px] flex items-center">
                       <Image
-                        className={`mr-[1rem] h-[7px] all-transition duration-[0.5s] ease-out ${
+                        className={`mr-[0.5rem] h-[7px] all-transition duration-[0.5s] ease-out ${
                           selectedOption === "Personal" ? "rotate-90" : ""
                         }`}
                         width={12.728}
@@ -117,50 +107,56 @@ export default function RouterBreadcrumbs() {
                         src="/shared/Vector (5).svg"
                         alt="fileIcon"
                       />
-                      <ListItemText
-                        className={`${
-                          selectedOption === "Personal"
-                            ? "text-[#fff]"
-                            : "text-greyText"
-                        }`}
-                        primary="Personal"
-                      />
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem onClick={() => handleOptionClick("Professional")}>
-                    <ListItemButton sx={{ ml: -2 }}>
+                      <span className="text-greyText hover:text-[white] text-[16px] font-[550]">
+                        Personal
+                      </span>
+                    </div>
+                  </li>
+                  <li onClick={() => handleOptionClick("Professional")}>
+                    <div className="ml-[2px] flex items-center">
                       <Image
-                        className={`mr-[1rem] h-[7px] all-transition duration-[0.5s] ease-out ${
+                        className={`mr-[0.5rem] h-[7px] all-transition duration-[0.5s] ease-out ${
                           selectedOption === "Professional" ? "rotate-90" : ""
                         }`}
                         width={12.728}
-                        height={4.778}
+                        height={7.8}
                         alt="arrowDown"
                         src="/shared/Vector (6).svg"
                       />
                       <Image
-                        className="pr-[0.7rem]"
                         src={fileIcon2}
                         alt="fileIcon"
+                        width={12.728}
+                        height={7.8}
+                        className="mr-[0.7rem]"
                       />
-                      <ListItemText
-                        className={`${
-                          selectedOption === "Professional"
-                            ? "text-[#fff]"
-                            : "text-greyText"
-                        }`}
-                        primary="Professional"
-                      />
-                    </ListItemButton>
-                  </ListItem>
-                </List>
-              </Collapse>
-              <ListItem onClick={() => handleClick("contact")}>
-                <ListItemButton>
-                  <ListItemText className="pl-[1rem]" primary="Contact" />
-                  {open === "contact" ? <ExpandLess /> : <ExpandMore />}
-                </ListItemButton>
-              </ListItem>
+                      <span className="text-greyText hover:text-[white] text-[16px] font-[550]">
+                        Professional
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <li
+                className="pl-[2rem] py-[1rem] bg-[#1E2D3D]"
+                onClick={() => handleClick("contact")}
+              >
+                <div className="  flex items-center">
+                  <Image
+                    className={` h-[7px] all-transition duration-[0.5s] ease-out ${
+                      open === "contact" ? "rotate-90" : ""
+                    }`}
+                    width={12.728}
+                    height={4.778}
+                    alt="arrowDown"
+                    src="/shared/Vector (6).svg"
+                  />
+                  <span className="pl-[1rem] text-[16px] font-[550]">
+                    {" "}
+                    Contact{" "}
+                  </span>
+                </div>
+              </li>
               {open === "contact" && (
                 <div className="px-[2rem] py-[1rem] animate-fadeIn flex gap-[1.3rem] flex-col">
                   <div
@@ -168,14 +164,7 @@ export default function RouterBreadcrumbs() {
                     className="flex gap-[1rem] items-center"
                   >
                     <EmailIcon style={{ color: "#607B96" }} />
-                    <h2
-                      style={{ marginLeft: "-3rem" }}
-                      className={`  ${
-                        click.includes("email")
-                          ? "text-[#3f5161]  all-transition duration-[1s] ease-out"
-                          : "text-greyText  all-transition duration-[1s] ease-out"
-                      }`}
-                    >
+                    <h2 className="text-greyText hover:text-[#3f5161] all-transition duration-[1s] ease-out">
                       {Data.gmail}
                     </h2>
                   </div>
@@ -187,21 +176,15 @@ export default function RouterBreadcrumbs() {
                       className="PhoneIcon"
                       style={{ color: "#607B96" }}
                     />
-                    <h2
-                      className={`${
-                        click.includes("number")
-                          ? "text-[#3f5161] all-transition duration-[1s] ease-out"
-                          : "text-greyText all-transition duration-[1s] ease-out"
-                      }`}
-                    >
+                    <h2 className="text-greyText hover:text-[#3f5161] all-transition duration-[1s] ease-out">
                       {" "}
                       {Data.phone}
                     </h2>
                   </div>
                 </div>
               )}
-            </List>
-          </Box>
+            </ul>
+          </nav>
 
           <Typography
             className="pl-[2rem]  xl:hidden"
@@ -214,7 +197,7 @@ export default function RouterBreadcrumbs() {
               {"/ " + selectedOption}
             </span>
           </Typography>
-        </Box>
+        </div>
       </div>
       <div className="w-[100%]">
         <div className=" xl:w-[100%] border-b-[1px] border-r-[1px] border-[#1E2D3D] xl:bg  items-center  hidden xl:flex">

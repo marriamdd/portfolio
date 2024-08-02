@@ -23,17 +23,6 @@ button {
 a {
   cursor: pointer !important;
 }
-:where(.css-dev-only-do-not-override-p8b6i).ant-drawer-right
-  > .ant-drawer-content-wrapper {
-  width: 92vw !important;
-  height: calc(-58px + 95.8vh);
-  top: 2rem;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  @media screen and (min-width: 1280px) {
-    display: none;
-  }
-}
 .ant-drawer-content {
   background-color: rgb(1, 22, 39) !important;
   height: 100vh !important ;
@@ -42,35 +31,12 @@ a {
 .ant-menu {
   background-color: rgb(1, 22, 39) !important;
 }
-.ant-drawer-header {
-  all: unset !important;
-  padding-top: 3rem !important;
-  padding-inline: 3rem !important;
-  display: flex !important;
-  justify-content: space-between !important;
-}
+
 .ant-drawer-title {
   all: unset !important;
   color: #607b96 !important;
 }
-.ant-drawer-header-title {
-  all: unset !important;
-  width: 100% !important;
-  display: flex !important;
-}
-.anticon {
-  all: unset !important;
-}
-/* .ant-drawer-close {
-  margin-left: auto !important;
-  order: 2 !important;
-} */
 
-/* .ant-drawer-mask {
-  @media screen and (min-width: 1280px) {
-    display: none;
-  }
-} */
 header {
   width: 92vw !important;
   position: fixed;
@@ -108,13 +74,6 @@ h2 {
   font-weight: 450;
   line-height: normal;
 }
-/* .ant-drawer-header .ant-drawer-title {
-  color: #607b96 !important;
-  font-family: "Fira Code", monospace !important;
-  font-size: 1.6rem !important;
-  font-style: normal !important;
-  font-weight: 450 !important;
-} */
 .mainPage {
   background-image: url("/shared/code-snippet.png") !important;
   background-size: contain !important;
@@ -142,30 +101,6 @@ h2 {
   }
 }
 
-/* .MuiBox-root {
-  background-color: transparent !important;
-  display: flex !important;
-  width: 20rem !important;
-  @media screen and (min-width: 1280px) {
-    width: 30rem !important;
-  }
-  li {
-    @media screen and (min-width: 1280px) {
-      width: 30rem !important;
-    }
-  }
-} */
-/* .css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root {
-  background-color: transparent !important;
-  width: 100% !important;
-  height: 3.1rem;
-  flex-shrink: 0;
-  background-color: rgb(0, 30, 54) !important;
-  @media screen and (min-width: 1280px) {
-    width: 30rem !important;
-  }
-} */
-
 .about-me {
   font-size: 18px !important;
   font-family: "Fira Code", sans-serif;
@@ -175,22 +110,9 @@ h2 {
   }
 }
 
-.css-ix1f03-MuiTypography-root {
-  p {
-    width: 100% !important;
-  }
-}
-
 .grey {
   color: rgb(96, 123, 150);
 }
-/* .MuiList-root {
-  display: flex !important;
-  flex-direction: column !important;
-  li {
-    padding: 0 !important;
-  }
-} */
 
 ::-webkit-scrollbar {
   width: 1.2rem;
@@ -232,17 +154,6 @@ h2 {
   margin-right: 2rem !important;
 }
 
-.css-10hburv-MuiTypography-root {
-  font-size: 1.6rem !important;
-
-  font-style: normal !important;
-  font-weight: 560 !important;
-  line-height: normal !important;
-}
-.css-i4bv87-MuiSvgIcon-root {
-  color: #607b96;
-  width: 1.2em;
-}
 .skills {
   width: 100% !important;
   display: flex;
@@ -261,13 +172,6 @@ h2 {
     margin-top: 2rem;
   }
 }
-/* .css-dev-only-do-not-override-p8b6i.ant-form-item
-  .ant-form-item-label
-  > label.ant-form-item-required:not(
-    .ant-form-item-required-mark-optional
-  )::before {
-  content: "";
-} */
 
 form {
   width: 100% !important;
@@ -321,13 +225,6 @@ form {
 .orange {
   color: #fea55f;
 }
-
-.css-1fderfv-MuiPaper-root-MuiAccordion-root {
-  background-color: transparent !important;
-}
-.css-v84d5j-MuiSvgIcon-root {
-  color: white;
-}
 .css-ta84vm-MuiAccordionDetails-root {
   display: flex !important;
   align-items: center !important;
@@ -340,43 +237,12 @@ form {
     line-height: normal;
   }
 }
-/* .ant-checkbox-inner {
-  border: 1px solid #607b96 !important;
-
-  background-color: transparent !important;
-} */
-
-/* .ant-checkbox-checked .ant-checkbox-inner {
-  background-color: #607b96 !important;
-  border-color: #607b96 !important;
-}
-
-.custom-checkbox .ant-checkbox-wrapper:hover .ant-checkbox-inner,
-.custom-checkbox .ant-checkbox:hover .ant-checkbox-inner {
-  border-color: rgb(240, 240, 244) !important;
-}
-
-.css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label {
-  margin-left: 1rem;
-}
-
-.css-ta84vm-MuiAccordionDetails-root {
-  padding: 0 !important;
-}
-
-.css-uvvswg-MuiButtonBase-root-MuiAccordionSummary-root {
-  padding: 0 !important;
-} */
 
 .css-1fderfv-MuiPaper-root-MuiAccordion-root {
   width: 100% !important;
   @media screen and (min-width: 1220px) {
     width: 52% !important;
   }
-}
-
-.css-pwcg7p-MuiCollapse-root {
-  margin-left: 2rem;
 }
 
 @keyframes zoomInOut {
@@ -477,7 +343,7 @@ form {
 .ant-drawer-body {
   display: flex !important;
   flex-direction: column;
-  padding-top: 0 !important;
+  padding: 0 !important;
   a {
     color: #fff !important;
     font-family: "Fira Code", monospace !important;
@@ -490,32 +356,6 @@ form {
   }
 }
 
-.css-15rkx7f-MuiCardActions-root {
-  padding-block: 10rem !important;
-}
-.css-4rgx9o-MuiPaper-root-MuiCard-root:hover {
-  scale: 1.03;
-  transition: all 1s ease-in-out;
-}
-.css-4rgx9o-MuiPaper-root-MuiCard-root {
-  scale: 1;
-  border: 1px solid #1e2d3d;
-  transition: all 1s ease-in-out;
-}
-.css-1mk9mw3-MuiList-root {
-  gap: 1.2rem !important;
-}
-.css-i4bv87-MuiSvgIcon-root {
-  margin-right: 4rem !important;
-  transition: all 1s ease-in-out;
-}
-
-.css-1fbouff-MuiTypography-root {
-  margin-right: 5rem !important;
-}
-.css-12fbt3k-MuiButtonBase-root-MuiAccordionSummary-root:hover {
-  background: none !important;
-}
 .gmail {
   margin-left: 3rem !important;
 }
@@ -549,4 +389,11 @@ input[type="checkbox"]:checked::before {
   position: absolute;
   top: 0.25rem;
   left: 0.3rem;
+}
+.css-pwcg7p-MuiCollapse-root {
+  margin-left: 5rem;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out;
 }

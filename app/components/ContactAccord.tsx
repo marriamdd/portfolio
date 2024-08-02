@@ -1,17 +1,8 @@
 "use client";
 import React from "react";
-import {
-  Box,
-  Collapse,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-} from "@mui/material";
 import Data from "../../data.json";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
-import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import Image from "next/image";
 import Link from "next/link";
 export default function ContactAccord() {
@@ -43,22 +34,28 @@ export default function ContactAccord() {
           </h2>
         </div>
 
-        <Box>
-          <Box
-            sx={{
-              bgcolor: "background.paper",
-              mt: 1,
-            }}
-            component="nav"
+        <div>
+          <nav
+            className="box mt-[1rem] gap-[1rem]"
             aria-label="mailbox folders"
           >
-            <List className="animate-fadeIn gap-[1rem]  ">
-              <ListItem onClick={() => handleClick("contact")}>
-                <ListItemButton>
-                  <ListItemText className="pl-[1rem]" primary="Contacts" />
-                  {open.includes("contact") ? <ExpandLess /> : <ExpandMore />}
-                </ListItemButton>
-              </ListItem>
+            <ul className="animate-fadeIn flex flex-col gap-[0.5rem]">
+              <li onClick={() => handleClick("contact")}>
+                <div className="flex items-center pl-[2rem] py-[1rem] bg-[#1E2D3D]">
+                  <Image
+                    className={`mr-[0.5rem] h-[7px] all-transition duration-[0.5s] ease-out ${
+                      open.includes("contact") ? "rotate-90" : ""
+                    }`}
+                    width={12.728}
+                    height={4.778}
+                    alt="arrowDown"
+                    src="/shared/Vector (6).svg"
+                  />
+                  <span className="pl-[1rem] text-[1.6rem] font-[500]">
+                    Contacts
+                  </span>
+                </div>
+              </li>
               {open.includes("contact") && (
                 <div className="px-[2rem] py-[1rem] animate-fadeIn  flex gap-[1.3rem] flex-col">
                   <div
@@ -67,10 +64,8 @@ export default function ContactAccord() {
                   >
                     <EmailIcon style={{ color: "#607B96" }} />
                     <h2
-                      className={`ml-[-3rem] ${
-                        click.includes("email")
-                          ? "text-[#3f5161]   all-transition duration-[1s] ease-out"
-                          : "text-greyText all-transition duration-[1s] ease-out"
+                      className={`
+                         "text-[#3f5161]  hover:text-[#99a3ac]  all-transition duration-[1s] ease-out"
                       }`}
                     >
                       davitahvili.m3@gmail.com
@@ -82,11 +77,9 @@ export default function ContactAccord() {
                   >
                     <PhoneIcon style={{ color: "#607B96" }} />
                     <h2
-                      className={`ml-[-3rem] number ${
-                        click.includes("number")
-                          ? "text-[#3f5161]  all-transition duration-[1s] ease-out"
-                          : "text-greyText all-transition duration-[1s] ease-out"
-                      }`}
+                      className={`
+                      "text-[#3f5161]  hover:text-[#99a3ac]  all-transition duration-[1s] ease-out"
+                   }`}
                     >
                       (+995) 551-10-48-62
                     </h2>
@@ -94,48 +87,51 @@ export default function ContactAccord() {
                 </div>
               )}
 
-              <ListItem onClick={() => handleClick("info")}>
-                <ListItemButton>
-                  <ListItemText
-                    className="pl-[1rem] "
-                    primary="Find-me-also-in"
+              <li onClick={() => handleClick("info")}>
+                <div className="flex items-center pl-[2rem] py-[1rem] bg-[#1E2D3D]">
+                  <Image
+                    className={`mr-[0.5rem] h-[7px] all-transition duration-[0.5s] ease-out ${
+                      open.includes("info") ? "rotate-90" : ""
+                    }`}
+                    width={12.728}
+                    height={4.778}
+                    alt="arrowDown"
+                    src="/shared/Vector (6).svg"
                   />
-                  {open.includes("info") ? <ExpandLess /> : <ExpandMore />}
-                </ListItemButton>
-              </ListItem>
-              <Collapse
-                className="animate-fadeIn"
-                component="li"
-                in={open.includes("info")}
-                timeout="auto"
-                unmountOnExit
-              >
-                <List disablePadding>
-                  {Data.social.map((social) => (
-                    <ListItem key={social.name}>
-                      <ListItemButton sx={{ pl: 0.5 }}>
-                        <Image
-                          className="mr-[0.8rem]"
-                          width={10}
-                          height={10}
-                          alt="blank"
-                          src="/shared/Vector (8).svg"
-                        />
-                        <Link
-                          className="text-[16px] hover:text-[#99a3ac] text-greyText font-[450]"
-                          target="_blank"
-                          href={social.link}
-                        >
-                          {social.name}
-                        </Link>
-                      </ListItemButton>
-                    </ListItem>
-                  ))}
-                </List>
-              </Collapse>
-            </List>
-          </Box>
-        </Box>
+                  <span className="pl-[1rem] text-[1.6rem] font-[500] ">
+                    Find-me-also-in
+                  </span>
+                </div>
+              </li>
+              <div className="animate-fadeIn">
+                {open.includes("info") && (
+                  <ul className="animate-fadeIn pt-[1rem] flex flex-col gap-[1rem]">
+                    {Data.social.map((social) => (
+                      <li key={social.name}>
+                        <div className=" flex gap-[0.5rem] pl-[4rem] ">
+                          <Image
+                            className="mr-[0.8rem]"
+                            width={13}
+                            height={13}
+                            alt="blank"
+                            src="/shared/Vector (8).svg"
+                          />
+                          <Link
+                            className="text-[16px] hover:text-[#c7d3dd] text-greyText font-[450]"
+                            target="_blank"
+                            href={social.link}
+                          >
+                            {social.name}
+                          </Link>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   );

@@ -26,7 +26,6 @@ const SkillsIcons = () => {
             onMouseLeave={handleIconMouseLeave}
             animate={{
               scale: [1, 1.2, 1],
-              //   // rotate: hoveredIndex === index ? 30 : 0,
             }}
             transition={{
               scale: {
@@ -70,7 +69,6 @@ const SkillsIcons = () => {
             onMouseLeave={handleIconMouseLeave}
             animate={{
               scale: [1, 1.2, 1],
-              // rotate: hoveredIndex === index + 5 ? 360 : 0,
             }}
             transition={{
               scale: {
@@ -114,7 +112,6 @@ const SkillsIcons = () => {
             onMouseLeave={handleIconMouseLeave}
             animate={{
               scale: [1, 1.2, 1],
-              // rotate: hoveredIndex === index + 9 ? 360 : 0,
             }}
             transition={{
               scale: {

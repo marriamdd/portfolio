@@ -21,13 +21,13 @@ export default function CustomizedAccordions({
   };
 
   return (
-    <div className="flex flex-col pt-7 gap-8 w-full px-8 xl:w-1/2 xl:border-r border-[#1E2D3D] animate-fadeIn">
-      <h2 className="text-[1.8rem] border-b-[1px] border-[#1E2D3D]  pb-[2rem] font-[500]">
+    <div className="flex flex-col pt-7  gap-8 w-full  xl:w-1/2 xl:border-r border-[#1E2D3D] animate-fadeIn">
+      <h2 className="text-[1.8rem] text-[white] px-[3rem] pb-[0.5rem] font-[500]">
         _Projects
       </h2>
       <div
         onClick={() => setShowCheckbox((prev) => !prev)}
-        className="flex gap-4  items-center cursor-pointer"
+        className="flex gap-4 px-[3rem] py-[1.2rem] bg-[#1E2D3D] items-center cursor-pointer"
       >
         <Image
           className={`transition-transform duration-500 ease-in-out ${
@@ -38,13 +38,18 @@ export default function CustomizedAccordions({
           height={5}
           src="/shared/Vector (6).svg"
         />
-        <h2 className="text-[1.8rem]">TechStacks</h2>
+        <h2 className="text-[1.8rem] text-[white]">TechStacks</h2>
       </div>
       <div
-        className={`flex flex-col gap-4 ${showCheckbox ? "block" : "hidden"}`}
+        className={`flex flex-col animate-fadeIn gap-4 ${
+          showCheckbox ? "block" : "hidden"
+        }`}
       >
         {Data.techStacks.map((skill) => (
-          <div key={skill} className="flex items-center gap-4 cursor-pointer">
+          <div
+            key={skill}
+            className="flex px-[3rem] items-center gap-4 cursor-pointer"
+          >
             <input
               id={`checkbox-${skill}`}
               type="checkbox"
