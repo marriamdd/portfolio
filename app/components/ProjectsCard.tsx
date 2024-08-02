@@ -1,11 +1,10 @@
+"use client";
 import * as React from "react";
 import Card from "@mui/material/Card";
-
 import CardMedia from "@mui/material/CardMedia";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-
 import Data from "../../data.json";
 import { motion } from "framer-motion";
 
@@ -30,8 +29,8 @@ export default function MultiActionAreaCard({
       .filter((skill) => techstack.includes(skill.name))
       .map((skill) => (
         <Image
-          key={skill.name.toLocaleLowerCase()}
-          className={`w-[32px] h-[32px] mx-2 transition-transform duration-500 ease-in-out ${
+          key={skill.name.toLowerCase()}
+          className={`w-8 h-8 mx-2 transition-transform duration-500 ease-in-out ${
             hoveredCard ? "animate-zoom" : ""
           }`}
           height={32}
@@ -53,12 +52,12 @@ export default function MultiActionAreaCard({
       );
     }
   }, [checked]);
-  console.log(Data);
+
   return (
-    <div className="w-full flex justify-center ">
+    <div className="w-full flex justify-center">
       <div
-        className="grid gap-[14rem]   w-full px-[1rem] xl:px-[10rem] py-[5rem] place-items-center"
-        style={{ gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))" }}
+        className="grid gap-[5rem] w-full px-4 md:px-6 lg:px-10 py-10 place-items-center"
+        style={{ gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }}
       >
         {filteredProjects.map((project, index) => (
           <motion.div
@@ -66,16 +65,22 @@ export default function MultiActionAreaCard({
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
             key={project.id}
+            className="flex flex-col items-center"
           >
-            <h1 className="text-[15px] pl-[1rem] pb-[1rem] text-[#5565E8] font-[700]">
-              {`Project ${index + 1}`}{" "}
-              <span className="text-[1.6rem] text-greyText font-[450]">
-                {`// ${project.name}`}
-              </span>
-            </h1>
+            <div className="flex w-full">
+              <h1 className="text-[15px] text-left pl-[1rem] pb-[1rem] text-[#5565E8] font-[700]">
+                {`Project ${index + 1}`}{" "}
+                <span className="text-xl text-[#607b96] font-normal">
+                  {`// ${project.name}`}
+                </span>
+              </h1>
+            </div>
+
             <Card
               sx={{
+                width: "100%",
                 maxWidth: 370,
+
                 borderRadius: "9px",
                 border: "1.8px solid #1E2D3D",
                 background: "rgb(1, 18, 33)",
@@ -88,13 +93,13 @@ export default function MultiActionAreaCard({
                 <div className="relative">
                   <CardMedia
                     component="img"
-                    height="140"
+                    height="160"
                     image={project.img}
                     alt={project.name}
                     className="transition-transform duration-300 ease-in-out transform hover:scale-110 hover:blur-sm"
                   />
                   {hoveredCard === project.id && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm p-4">
+                    <div className="absolute inset-0 flex items-center rounded-[8px] justify-center bg-black bg-opacity-50 backdrop-blur-sm p-4">
                       <div className="flex flex-wrap gap-5">
                         {getSkillIcons(project.teckstack)}
                       </div>
@@ -110,7 +115,7 @@ export default function MultiActionAreaCard({
                 }}
               >
                 <Button
-                  className="px-[3rem] bg-[#1e2d3d] hover:text-[#5565E8] text-[white] py-[1.7rem] transition-all duration-[1s]"
+                  className="px-6 bg-[#1e2d3d] hover:text-[#5565E8] text-white py-4 transition-all duration-1000"
                   size="large"
                   variant="outlined"
                   target="_blank"
@@ -120,7 +125,7 @@ export default function MultiActionAreaCard({
                 </Button>
                 <Link href={project.githubLink} target="_blank">
                   <Image
-                    className="cursor-pointer hover:w-[50px] transition-all duration-[1s]"
+                    className="cursor-pointer hover:w-12 transition-all duration-1000"
                     height={40}
                     width={40}
                     src="/shared/github.svg"

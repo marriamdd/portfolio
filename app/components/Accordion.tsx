@@ -1,51 +1,7 @@
 "use client";
 import * as React from "react";
-import { styled } from "@mui/material/styles";
-import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
-import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
-import MuiAccordionSummary, {
-  AccordionSummaryProps,
-} from "@mui/material/AccordionSummary";
-import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Data from "../../data.json";
-import { Checkbox } from "antd";
-import { FormControlLabel } from "@mui/material";
-
-const Accordion = styled((props: AccordionProps) => (
-  <MuiAccordion disableGutters elevation={0} square {...props} />
-))(({ theme }) => ({
-  border: `1px solid ${theme.palette.divider}`,
-  "&:not(:last-child)": {
-    borderBottom: 0,
-  },
-  "&::before": {
-    display: "none",
-  },
-}));
-
-const AccordionSummary = styled((props: AccordionSummaryProps) => (
-  <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
-    {...props}
-  />
-))(({ theme }) => ({
-  backgroundColor:
-    theme.palette.mode === "dark"
-      ? "rgba(255, 255, 255, .05)"
-      : "rgba(0, 0, 0, .03)",
-  flexDirection: "row-reverse",
-  "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-    transform: "rotate(90deg)",
-  },
-  "& .MuiAccordionSummary-content": {
-    marginLeft: theme.spacing(1),
-  },
-}));
-
-const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: theme.spacing(2),
-  borderTop: "1px solid rgba(0, 0, 0, .125)",
-}));
+import Image from "next/image";
 
 export default function CustomizedAccordions({
   setChecked,
@@ -54,12 +10,7 @@ export default function CustomizedAccordions({
   setChecked: React.Dispatch<React.SetStateAction<string[]>>;
   checked: string[];
 }) {
-  const [expanded, setExpanded] = React.useState<string | false>("panel1");
-
-  const handleAccordionChange =
-    (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
-      setExpanded(newExpanded ? panel : false);
-    };
+  const [showCheckbox, setShowCheckbox] = React.useState<boolean>(true);
 
   const handleCheckboxChange = (name: string) => {
     setChecked((prevChecked) =>
@@ -70,47 +21,49 @@ export default function CustomizedAccordions({
   };
 
   return (
-    <div className="flex  w-[100%] px-[2rem] xl:w-[23%] xl:border-r border-[#1E2D3D] animate-fadeIn">
-      <Accordion
-        expanded={expanded === "panel1"}
-        onChange={handleAccordionChange("panel1")}
+    <div className="flex flex-col pt-7 gap-8 w-full px-8 xl:w-1/2 xl:border-r border-[#1E2D3D] animate-fadeIn">
+      <h2 className="text-[1.8rem] border-b-[1px] border-[#1E2D3D]  pb-[2rem] font-[500]">
+        _Projects
+      </h2>
+      <div
+        onClick={() => setShowCheckbox((prev) => !prev)}
+        className="flex gap-4  items-center cursor-pointer"
       >
-        <AccordionSummary
-          sx={{
-            width: "100%",
-            gap: "1rem",
-            "&:hover": {
-              background: "#1E2D3D",
-            },
-          }}
-          aria-controls="panel1d-content"
-          id="panel1d-header"
-        >
-          <h2 className="font-[900] text-[18px] ">TechStacks</h2>
-        </AccordionSummary>
+        <Image
+          className={`transition-transform duration-500 ease-in-out ${
+            showCheckbox ? "rotate-90" : ""
+          }`}
+          alt="arrow"
+          width={10}
+          height={5}
+          src="/shared/Vector (6).svg"
+        />
+        <h2 className="text-[1.8rem]">TechStacks</h2>
+      </div>
+      <div
+        className={`flex flex-col gap-4 ${showCheckbox ? "block" : "hidden"}`}
+      >
         {Data.techStacks.map((skill) => (
-          <AccordionDetails
-            sx={{
-              color: checked.includes(skill) ? "#fff" : "#607b96",
-            }}
-            className="animate-fadeIn"
-            key={skill.toLowerCase()}
-          >
-            <FormControlLabel
-              label={skill}
-              control={
-                <Checkbox
-                  checked={checked.includes(skill)}
-                  onChange={() => handleCheckboxChange(skill)}
-                  aria-label="controlled"
-                  value={skill}
-                  className="custom-checkbox"
-                />
-              }
+          <div key={skill} className="flex items-center gap-4 cursor-pointer">
+            <input
+              id={`checkbox-${skill}`}
+              type="checkbox"
+              checked={checked.includes(skill)}
+              onChange={() => handleCheckboxChange(skill)}
+              className="mr-3"
             />
-          </AccordionDetails>
+            <label htmlFor={`checkbox-${skill}`}>
+              <span
+                className={`text-[1.8rem] font-[500] transition-all duration-[0.5s] ease-in ${
+                  checked.includes(skill) ? "text-white" : "text-[#607B96]"
+                }`}
+              >
+                {skill}
+              </span>
+            </label>
+          </div>
         ))}
-      </Accordion>
+      </div>
     </div>
   );
 }

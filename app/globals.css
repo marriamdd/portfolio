@@ -61,16 +61,16 @@ a {
 .anticon {
   all: unset !important;
 }
-.ant-drawer-close {
+/* .ant-drawer-close {
   margin-left: auto !important;
   order: 2 !important;
-}
+} */
 
-.ant-drawer-mask {
+/* .ant-drawer-mask {
   @media screen and (min-width: 1280px) {
     display: none;
   }
-}
+} */
 header {
   width: 92vw !important;
   position: fixed;
@@ -108,13 +108,13 @@ h2 {
   font-weight: 450;
   line-height: normal;
 }
-.ant-drawer-header .ant-drawer-title {
+/* .ant-drawer-header .ant-drawer-title {
   color: #607b96 !important;
   font-family: "Fira Code", monospace !important;
   font-size: 1.6rem !important;
   font-style: normal !important;
   font-weight: 450 !important;
-}
+} */
 .mainPage {
   background-image: url("/shared/code-snippet.png") !important;
   background-size: contain !important;
@@ -142,7 +142,7 @@ h2 {
   }
 }
 
-.MuiBox-root {
+/* .MuiBox-root {
   background-color: transparent !important;
   display: flex !important;
   width: 20rem !important;
@@ -154,8 +154,8 @@ h2 {
       width: 30rem !important;
     }
   }
-}
-.css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root {
+} */
+/* .css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root {
   background-color: transparent !important;
   width: 100% !important;
   height: 3.1rem;
@@ -164,7 +164,7 @@ h2 {
   @media screen and (min-width: 1280px) {
     width: 30rem !important;
   }
-}
+} */
 
 .about-me {
   font-size: 18px !important;
@@ -184,13 +184,13 @@ h2 {
 .grey {
   color: rgb(96, 123, 150);
 }
-.MuiList-root {
+/* .MuiList-root {
   display: flex !important;
   flex-direction: column !important;
   li {
     padding: 0 !important;
   }
-}
+} */
 
 ::-webkit-scrollbar {
   width: 1.2rem;
@@ -225,7 +225,7 @@ h2 {
   }
 }
 .css-1fbouff-MuiTypography-root {
-  color: #607b96;
+  color: #faf8f6;
   font-size: 16px !important;
   line-height: 200% !important;
   font-weight: 700 !important;
@@ -340,13 +340,13 @@ form {
     line-height: normal;
   }
 }
-.ant-checkbox-inner {
+/* .ant-checkbox-inner {
   border: 1px solid #607b96 !important;
 
   background-color: transparent !important;
-}
+} */
 
-.ant-checkbox-checked .ant-checkbox-inner {
+/* .ant-checkbox-checked .ant-checkbox-inner {
   background-color: #607b96 !important;
   border-color: #607b96 !important;
 }
@@ -366,7 +366,7 @@ form {
 
 .css-uvvswg-MuiButtonBase-root-MuiAccordionSummary-root {
   padding: 0 !important;
-}
+} */
 
 .css-1fderfv-MuiPaper-root-MuiAccordion-root {
   width: 100% !important;
@@ -436,16 +436,6 @@ form {
   opacity: 0;
 }
 
-.anticon-menu {
-  margin-left: auto !important;
-  display: flex !important;
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  @media screen and (min-width: 1280px) {
-    display: none !important;
-  }
-}
 :where(.css-dev-only-do-not-override-1pg9a38).ant-menu-light
   .ant-menu-item-selected {
   background-color: transparent !important;
@@ -528,4 +518,35 @@ form {
 }
 .gmail {
   margin-left: 3rem !important;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid #607b96;
+  border-radius: 0.25rem;
+  background-color: rgb(0, 33, 59);
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]:checked {
+  border-color: #607b96;
+  background-color: #607b96;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border: solid white;
+  border-width: 0 0.2rem 0.2rem 0;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0.25rem;
+  left: 0.3rem;
 }

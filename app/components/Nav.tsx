@@ -39,7 +39,7 @@ const NavBar: React.FC = () => {
     }
   };
 
-  const [activeLink, setActiveLink] = React.useState<string>("/");
+  const [activeLink, setActiveLink] = React.useState<string | null>(null);
   return (
     <div className="flex items-center h-[57px] px-[2rem] animate-fadeIn">
       <div className="w-[350px] pl-[2rem]">
