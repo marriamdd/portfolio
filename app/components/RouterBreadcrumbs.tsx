@@ -205,18 +205,18 @@ export default function RouterBreadcrumbs() {
             <div
               key={option.toLocaleLowerCase()}
               onClick={() => setSelectedOption(option)}
-              className="flex border-r-[1px] animate-fadeIn border-[#1E2D3D] items-center bg-gray-200 p-2 m-2 rounded"
+              className="flex cursor-pointer border-r-[1px] animate-fadeIn border-[#1E2D3D] items-center bg-gray-200 p-2 m-2 rounded"
             >
-              <Typography className="text-[greyText]" sx={{ mr: 1 }}>
+              <span className="text-[#607B96] text-[17px] font-[500] mr-[3rem]">
                 {option}
-              </Typography>
+              </span>
               <IconButton
                 onClick={() => {
                   handleDelete(option);
                 }}
                 disabled={chosenOptions.length <= 1}
               >
-                <CloseIcon style={{ color: "#607B96" }} />
+                <CloseIcon className="text-[#607B96] mr-[0.5rem] hover:text-[white] transition-colors duration-300" />
               </IconButton>
             </div>
           ))}
