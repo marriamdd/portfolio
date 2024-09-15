@@ -14,7 +14,10 @@
     "Styled Components",
     "Rest API",
     "Ant Design",
-    "MUI"
+    "MUI",
+    "i18next",
+    "shadcn/ui",
+    "Rest API"
   ],
   "skills": [
     {
@@ -33,6 +36,20 @@
       "name": "React",
       "logo": "/skills/reactLogo.png"
     },
+    {
+      "name": "Clerk",
+      "logo": "/skills/png-transparent-clerk-computer-icons-clerk-thumbnail.png"
+    },
+    {
+      "name": "i18next",
+      "logo": "/skills/inext_logo_icon_170002.webp"
+    },
+    {
+      "name": "shadcn/ui",
+      "logo": "/skills/1708620984606.png"
+    },
+
+    "shadcn/ui",
     {
       "name": "Styled Components",
       "logo": "/skills/styled-components.png"
@@ -99,7 +116,22 @@
       "githubLink": "https://github.com/marriamdd/invoice_app"
     },
     {
-      "id": 3,
+      "id": 4,
+      "name": "Todo_List",
+      "teckstack": [
+        "React",
+        "Tailwind CSS",
+        "Clerk",
+        "i18next",
+        "shadcn/ui",
+        "Rest API"
+      ],
+      "img": "/projects/Screenshot 2024-09-15 at 8.10.49 PM.png",
+      "liveLink": "https://todo-list-ylqr.vercel.app",
+      "githubLink": "https://github.com/marriamdd/Todo_List"
+    },
+    {
+      "id": 2345,
       "name": "Planets Fact-site",
       "teckstack": ["React", "Styled Components", "Typescript"],
       "img": "/projects/Screenshot 2024-07-24 at 8.48.37 PM.png",
