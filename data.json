@@ -79,7 +79,7 @@
       "logo": "/skills/antd (1).png"
     },
     {
-      "name": "MIU",
+      "name": "MUI",
       "logo": "/skills/png-transparent-material-ui-logo.png"
     }
   ],
@@ -156,7 +156,7 @@
     {
       "id": 7,
       "name": "FreshLime_gym",
-      "teckstack": ["React", "Tailwind CSS", "MIU", "Ant Design"],
+      "teckstack": ["React", "Tailwind CSS", "MUI", "Ant Design"],
       "img": "/projects/Screenshot 2024-09-25 at 9.01.05 PM.png",
       "liveLink": "https://fresh-lime-gym.vercel.app",
       "githubLink": "https://github.com/marriamdd/freshLime_gym"
