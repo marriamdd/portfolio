@@ -7,7 +7,7 @@
   "proffesionalInfo": "As an enthusiastic Junior Front-end Developer, I'm dedicated to continuous self-improvement and staying ahead of emerging technologies. With a strong work ethic and disciplined approach, I efficiently complete tasks and deliver results. While I'm currently seeking to gain professional experience, my passion and determination drive me to embrace new challenges and opportunities.",
   "techStacks": [
     "React",
-    "Javascript",
+
     "Typescript",
     "Next",
     "Tailwind CSS",
@@ -53,10 +53,7 @@
       "name": "Styled Components",
       "logo": "/skills/styled-components.png"
     },
-    {
-      "name": "Javascript",
-      "logo": "/skills/js.png"
-    },
+  
     {
       "name": "Typescript",
       "logo": "/skills/typescript.png"
@@ -100,22 +97,33 @@
   "projects": [
     {
       "id": 1,
+      "name": "Lano_Pat_Shop",
+      "teckstack": ["i18next", "Tailwind CSS", "Typescript","Next","Rest API"],
+      "img": "/projects/Screenshot 2024-11-22 at 12.19.36 AM.png",
+      "liveLink": "https://lano.vercel.app/ka",
+      "githubLink": "https://github.com/marriamdd/lano",
+      "collaborative":"true"
+    },
+    {
+      "id": 2,
       "name": "Task_manager",
       "teckstack": ["React", "Tailwind CSS", "Typescript"],
       "img": "/projects/Screenshot 2024-07-24 at 8.38.41 PM.png",
       "liveLink": "https://task-manager-web1.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/task_manager"
+      "githubLink": "https://github.com/marriamdd/task_manager",
+       "collaborative":"false"
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "Invoice_manager",
       "teckstack": ["React", "Typescript", "Tailwind CSS", "Rest API"],
       "img": "/projects/Screenshot 2024-07-24 at 8.46.22 PM.png",
       "liveLink": "https://invoice-app-seven-gamma.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/invoice_app"
+      "githubLink": "https://github.com/marriamdd/invoice_app",
+       "collaborative":"true"
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Todo_List",
       "teckstack": [
         "React",
@@ -127,98 +135,110 @@
       ],
       "img": "/projects/Screenshot 2024-09-15 at 8.10.49 PM.png",
       "liveLink": "https://todo-list-ylqr.vercel.app",
-      "githubLink": "https://github.com/marriamdd/Todo_List"
+      "githubLink": "https://github.com/marriamdd/Todo_List",
+       "collaborative":"false"
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "Planets Fact-site",
       "teckstack": ["React", "Styled Components", "Typescript"],
       "img": "/projects/Screenshot 2024-07-24 at 8.48.37 PM.png",
       "liveLink": "https://planets-fact-site-eight-ashen.vercel.app/Earth",
-      "githubLink": "https://github.com/marriamdd/Planets-fact-site"
+      "githubLink": "https://github.com/marriamdd/Planets-fact-site",
+       "collaborative":"false"
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "Audiophile ecommerce",
       "teckstack": ["React", "Styled Components", "Typescript"],
       "img": "/projects/audiophile-ecommerce-website.png",
       "liveLink": "https://audiophile-ecommerce-website-mocha.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/audiophile-ecommerce-website-"
+      "githubLink": "https://github.com/marriamdd/audiophile-ecommerce-website-",
+       "collaborative":"false"
     },
     {
-      "id": 6,
+      "id": 7,
       "name": "Ecommerce Website",
       "teckstack": ["React", "Styled Components", "Typescript"],
       "img": "/projects/ecommerce-product-page.png",
       "liveLink": "https://e-commerce-product-page-iota-virid.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/E-commerce-product-page"
+      "githubLink": "https://github.com/marriamdd/E-commerce-product-page",
+       "collaborative":"false"
     },
     {
-      "id": 7,
+      "id": 8,
       "name": "FreshLime_gym",
       "teckstack": ["React", "Tailwind CSS", "MUI", "Ant Design"],
       "img": "/projects/Screenshot 2024-09-25 at 9.01.05 PM.png",
       "liveLink": "https://fresh-lime-gym.vercel.app",
-      "githubLink": "https://github.com/marriamdd/freshLime_gym"
+      "githubLink": "https://github.com/marriamdd/freshLime_gym",
+       "collaborative":"false"
     },
     {
-      "id": 8,
+      "id": 9,
       "name": "Github User-search",
-      "teckstack": ["React", "Javascript", "Styled Components", "Rest API"],
+      "teckstack": ["React", "Styled Components", "Rest API"],
       "img": "/projects/Screenshot 2024-07-24 at 8.49.33 PM.png",
       "liveLink": "https://github-user-search-app-xi-peach.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/github-user-search-app"
+      "githubLink": "https://github.com/marriamdd/github-user-search-app",
+       "collaborative":"false"
     },
 
     {
-      "id": 9,
+      "id": 10,
       "name": "Netflix inspired web",
       "teckstack": ["React", "Typescript", "Styled Components"],
       "img": "/projects/Screenshot 2024-07-27 at 4.48.33 PM.png",
       "liveLink": "https://netflix1-alpha.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/netflix1"
+      "githubLink": "https://github.com/marriamdd/netflix1",
+       "collaborative":"false"
     },
-    {
-      "id": 10,
-      "name": "Pomodoro ",
-      "teckstack": ["React", "Typescript", "Javascript", "Styled Components"],
-      "img": "/projects/Screenshot 2024-07-24 at 8.46.43 PM.png",
-      "liveLink": "https://pomodoro-app-lyart.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/pomodoro-App"
-    },
-
     {
       "id": 11,
-      "name": "Interactive-Card-Form ",
-      "teckstack": ["React", "Typescript", "Javascript", "Styled Components"],
-      "img": "/projects/Screenshot 2024-07-27 at 5.26.20 PM.png",
-      "liveLink": "https://interactive-card-details-form-jgag.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/interactive-card-details-form"
+      "name": "Pomodoro ",
+      "teckstack": ["React", "Typescript",  "Styled Components"],
+      "img": "/projects/Screenshot 2024-07-24 at 8.46.43 PM.png",
+      "liveLink": "https://pomodoro-app-lyart.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/pomodoro-App",
+       "collaborative":"false"
     },
 
     {
       "id": 12,
+      "name": "Interactive-Card-Form ",
+      "teckstack": ["React", "Typescript",  "Styled Components"],
+      "img": "/projects/Screenshot 2024-07-27 at 5.26.20 PM.png",
+      "liveLink": "https://interactive-card-details-form-jgag.vercel.app/",
+      "githubLink": "https://github.com/marriamdd/interactive-card-details-form",
+       "collaborative":"false"
+    },
+
+    {
+      "id": 13,
       "name": "Single Page portfolio",
       "teckstack": ["React", "Typescript", "Rest API", "Styled Components"],
       "img": "/projects/Screenshot 2024-07-24 at 8.58.00 PM.png",
       "liveLink": "https://team-6-cyan.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/RedBerry_resume-Website"
+      "githubLink": "https://github.com/marriamdd/RedBerry_resume-Website",
+       "collaborative":"false"
     },
     {
-      "id": 13,
+      "id": 14,
       "name": "Notifications page",
       "teckstack": ["React", "Styled Components"],
       "img": "/projects/Screenshot 2024-07-30 at 6.58.38 PM.png",
       "liveLink": "https://notifications-page-three-tawny.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/notifications-page"
+      "githubLink": "https://github.com/marriamdd/notifications-page",
+       "collaborative":"false"
     },
     {
-      "id": 14,
+      "id": 15,
       "name": "Password generator",
       "teckstack": ["React", "Styled Components"],
       "img": "/projects/Screenshot 2024-07-31 at 2.12.21 AM.png",
       "liveLink": "https://password-generator-plum-two-94.vercel.app/",
-      "githubLink": "https://github.com/marriamdd/password-generator"
+      "githubLink": "https://github.com/marriamdd/password-generator",
+       "collaborative":"false"
     }
   ]
 }

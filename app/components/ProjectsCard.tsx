@@ -99,13 +99,15 @@ export default function MultiActionAreaCard({
                       height="160"
                       image={project.img}
                       alt={project.name}
-                      className="transition-transform duration-300 ease-in-out"
+                      className="transition-transform overflow-hidden duration-300 ease-in-out"
                     />
                     {hoveredCard === project.id && (
-                      <div className="absolute inset-0 flex items-center rounded-[8px] justify-center bg-black bg-opacity-50 backdrop-blur-sm p-4">
+                      <div className="absolute flex-col gap-[10px] inset-0 flex items-center rounded-[8px] justify-center bg-black bg-opacity-50 backdrop-blur-sm p-4">
                         <div className="flex flex-wrap gap-5">
                           {getSkillIcons(project.teckstack)}
                         </div>
+                        {project.collaborative=="true"&&  <p className="text-[#4545a1] text-[15px]">collaborative</p>}
+                      
                       </div>
                     )}
                   </div>
