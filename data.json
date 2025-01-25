@@ -96,6 +96,15 @@
   ],
   "projects": [
     {
+      "id": 110,
+      "name": "BotnetX-PDF",
+      "teckstack": ["React", "Tailwind CSS", "Typescript","shadcn/ui","Rest API"],
+      "img": "/projects/Screenshot 2025-01-25 at 8.26.02 PM.png",
+      "liveLink": "https://pdf.botnetx.com/",
+      "githubLink": "https://github.com/marriamdd/botnet_xPDF_client",
+      "collaborative":"false"
+    },
+    {
       "id": 1,
       "name": "Lano_Pat_Shop",
       "teckstack": ["i18next", "Tailwind CSS", "Typescript","Next","Rest API"],
