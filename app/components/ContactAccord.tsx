@@ -81,7 +81,7 @@ export default function ContactAccord() {
                       "text-[#3f5161]  hover:text-[#99a3ac]  all-transition duration-[1s] ease-out"
                    }`}
                     >
-                      (+995) 551-10-48-62
+                      +1(347)992-8113
                     </h2>
                   </div>
                 </div>

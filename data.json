@@ -1,8 +1,8 @@
 {
   "position": "Front-End Developer",
-  "personalInfo": "Hello, I’m Mariam Davitashvili, a 23-year-old based in Tbilisi, Georgia. I’m a highly motivated and goal-oriented individual who passionately pursues my objectives every day. My dedication and focus have driven me to achieve a high level of proficiency in a remarkably short time. I invite you to explore my portfolio to see firsthand the skills and accomplishments that reflect my commitment and drive..",
+  "personalInfo": "Hello, I’m Mariam Davitashvili, a 24-year-old based in brooklyn,USA. I’m a highly motivated and goal-oriented individual who passionately pursues my objectives every day. My dedication and focus have driven me to achieve a high level of proficiency in a remarkably short time. I invite you to explore my portfolio to see firsthand the skills and accomplishments that reflect my commitment and drive..",
   "gmail": "davitahvili.m3@gmail.com",
-  "phone": "(+995) 551-10-48-62",
+  "phone": "+1(347)992-8113",
   "github": "https://github.com/marriamdd",
   "proffesionalInfo": "As an enthusiastic Junior Front-end Developer, I'm dedicated to continuous self-improvement and staying ahead of emerging technologies. With a strong work ethic and disciplined approach, I efficiently complete tasks and deliver results. While I'm currently seeking to gain professional experience, my passion and determination drive me to embrace new challenges and opportunities.",
   "techStacks": [
@@ -100,7 +100,7 @@
       "name": "BotnetX-PDF",
       "teckstack": ["React", "Tailwind CSS", "Typescript","shadcn/ui","Rest API"],
       "img": "/projects/Screenshot 2025-01-25 at 8.26.02 PM.png",
-      "liveLink": "https://pdf.botnetx.com/",
+      "liveLink": "https://www.steady2be.com/",
       "githubLink": "https://github.com/marriamdd/botnet_xPDF_client",
       "collaborative":"false"
     },
@@ -109,7 +109,7 @@
       "name": "Lano_Pat_Shop",
       "teckstack": ["i18next", "Tailwind CSS", "Typescript","Next","Rest API"],
       "img": "/projects/Screenshot 2024-11-22 at 12.19.36 AM.png",
-      "liveLink": "https://lano.vercel.app/ka",
+      "liveLink": "https://www.linkedin.com/posts/linedevltd_%E1%83%92%E1%83%95%E1%83%98%E1%83%9C%E1%83%93%E1%83%90-%E1%83%92%E1%83%90%E1%83%92%E1%83%98%E1%83%96%E1%83%98%E1%83%90%E1%83%A0%E1%83%9D%E1%83%97-%E1%83%A9%E1%83%95%E1%83%94%E1%83%9C%E1%83%98-%E1%83%9E%E1%83%98%E1%83%A0%E1%83%95%E1%83%94%E1%83%9A%E1%83%98-%E1%83%9D%E1%83%A4%E1%83%98%E1%83%AA%E1%83%98%E1%83%90%E1%83%9A%E1%83%A3%E1%83%A0%E1%83%90%E1%83%93-activity-7256620976245776386-vIQ4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEc7kG0BDI7gv4cpFQrLI8aZojOqDGILabQ",
       "githubLink": "https://github.com/marriamdd/lano",
       "collaborative":"true"
     },
